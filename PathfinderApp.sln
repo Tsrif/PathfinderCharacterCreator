@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderApp", "PathfinderApp\PathfinderApp.csproj", "{634FA24F-6EE2-4D8E-834B-572A5F1FFD9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{634FA24F-6EE2-4D8E-834B-572A5F1FFD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634FA24F-6EE2-4D8E-834B-572A5F1FFD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634FA24F-6EE2-4D8E-834B-572A5F1FFD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634FA24F-6EE2-4D8E-834B-572A5F1FFD9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DC33CDB-8B63-4CE8-B19F-0B4BA2EF29B2}
+	EndGlobalSection
+EndGlobal
