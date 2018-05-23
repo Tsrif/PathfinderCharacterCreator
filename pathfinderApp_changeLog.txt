@@ -24,13 +24,19 @@
 - added in next level xp calculations and the appropriate event connections
 - Bug: Doesn't account for if you put in a value that is larger than the next level xp
 
+5/23/18
+- Character level is recalculated if the player puts in a current xp value that is larger than the next level xp value
+- Fixed ArgumentOutOfRange issue when putting in a very large number for the current xp 
+- certain boxes no longer contain the "+" from the dexModifier value
+- change certain text boxes to read only 
+- Changed so you can't use tab key to set focus to certain textboxes 
+
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
 - ability mods should be labels?
-- Not stuff inline for somethings 
+- Not in line for some things 
 - Fix tabbing issue 
-- Fix some boxes to accomodate plus, or remove plus 
 - UI fine tuning 
 - Fix saving???
-- add in an option to set xp 
+
 

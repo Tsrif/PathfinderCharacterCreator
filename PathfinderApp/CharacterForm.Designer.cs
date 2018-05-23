@@ -319,7 +319,7 @@
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 0;
+            this.Character_TabControl.SelectedIndex = 1;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1938,6 +1938,7 @@
             this.CMB_amount_textbox.MaxLength = 32767;
             this.CMB_amount_textbox.Name = "CMB_amount_textbox";
             this.CMB_amount_textbox.PasswordChar = '\0';
+            this.CMB_amount_textbox.ReadOnly = true;
             this.CMB_amount_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CMB_amount_textbox.SelectedText = "";
             this.CMB_amount_textbox.SelectionLength = 0;
@@ -1945,6 +1946,7 @@
             this.CMB_amount_textbox.ShortcutsEnabled = true;
             this.CMB_amount_textbox.Size = new System.Drawing.Size(48, 23);
             this.CMB_amount_textbox.TabIndex = 9;
+            this.CMB_amount_textbox.TabStop = false;
             this.CMB_amount_textbox.Text = "0";
             this.CMB_amount_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CMB_amount_textbox.UseSelectable = true;
@@ -1998,6 +2000,7 @@
             this.CMD_amount_textbox.MaxLength = 32767;
             this.CMD_amount_textbox.Name = "CMD_amount_textbox";
             this.CMD_amount_textbox.PasswordChar = '\0';
+            this.CMD_amount_textbox.ReadOnly = true;
             this.CMD_amount_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CMD_amount_textbox.SelectedText = "";
             this.CMD_amount_textbox.SelectionLength = 0;
@@ -2005,6 +2008,7 @@
             this.CMD_amount_textbox.ShortcutsEnabled = true;
             this.CMD_amount_textbox.Size = new System.Drawing.Size(48, 23);
             this.CMD_amount_textbox.TabIndex = 9;
+            this.CMD_amount_textbox.TabStop = false;
             this.CMD_amount_textbox.Text = "0";
             this.CMD_amount_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CMD_amount_textbox.UseSelectable = true;
@@ -2268,6 +2272,7 @@
             this.initiative_dexModifier_textbox.MaxLength = 32767;
             this.initiative_dexModifier_textbox.Name = "initiative_dexModifier_textbox";
             this.initiative_dexModifier_textbox.PasswordChar = '\0';
+            this.initiative_dexModifier_textbox.ReadOnly = true;
             this.initiative_dexModifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.initiative_dexModifier_textbox.SelectedText = "";
             this.initiative_dexModifier_textbox.SelectionLength = 0;
@@ -2275,6 +2280,7 @@
             this.initiative_dexModifier_textbox.ShortcutsEnabled = true;
             this.initiative_dexModifier_textbox.Size = new System.Drawing.Size(26, 25);
             this.initiative_dexModifier_textbox.TabIndex = 9;
+            this.initiative_dexModifier_textbox.TabStop = false;
             this.initiative_dexModifier_textbox.Text = "0";
             this.initiative_dexModifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.initiative_dexModifier_textbox.UseSelectable = true;
@@ -2414,6 +2420,7 @@
             this.cha_abilitymodifier_textbox.MaxLength = 32767;
             this.cha_abilitymodifier_textbox.Name = "cha_abilitymodifier_textbox";
             this.cha_abilitymodifier_textbox.PasswordChar = '\0';
+            this.cha_abilitymodifier_textbox.ReadOnly = true;
             this.cha_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.cha_abilitymodifier_textbox.SelectedText = "";
             this.cha_abilitymodifier_textbox.SelectionLength = 0;
@@ -2421,6 +2428,7 @@
             this.cha_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.cha_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.cha_abilitymodifier_textbox.TabIndex = 4;
+            this.cha_abilitymodifier_textbox.TabStop = false;
             this.cha_abilitymodifier_textbox.Text = "0";
             this.cha_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cha_abilitymodifier_textbox.UseSelectable = true;
@@ -2512,6 +2520,7 @@
             this.wis_abilitymodifier_textbox.MaxLength = 32767;
             this.wis_abilitymodifier_textbox.Name = "wis_abilitymodifier_textbox";
             this.wis_abilitymodifier_textbox.PasswordChar = '\0';
+            this.wis_abilitymodifier_textbox.ReadOnly = true;
             this.wis_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.wis_abilitymodifier_textbox.SelectedText = "";
             this.wis_abilitymodifier_textbox.SelectionLength = 0;
@@ -2519,6 +2528,7 @@
             this.wis_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.wis_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.wis_abilitymodifier_textbox.TabIndex = 4;
+            this.wis_abilitymodifier_textbox.TabStop = false;
             this.wis_abilitymodifier_textbox.Text = "0";
             this.wis_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.wis_abilitymodifier_textbox.UseSelectable = true;
@@ -2610,6 +2620,7 @@
             this.int_abilitymodifier_textbox.MaxLength = 32767;
             this.int_abilitymodifier_textbox.Name = "int_abilitymodifier_textbox";
             this.int_abilitymodifier_textbox.PasswordChar = '\0';
+            this.int_abilitymodifier_textbox.ReadOnly = true;
             this.int_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.int_abilitymodifier_textbox.SelectedText = "";
             this.int_abilitymodifier_textbox.SelectionLength = 0;
@@ -2617,6 +2628,7 @@
             this.int_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.int_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.int_abilitymodifier_textbox.TabIndex = 4;
+            this.int_abilitymodifier_textbox.TabStop = false;
             this.int_abilitymodifier_textbox.Text = "0";
             this.int_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.int_abilitymodifier_textbox.UseSelectable = true;
@@ -2708,6 +2720,7 @@
             this.con_abilitymodifier_textbox.MaxLength = 32767;
             this.con_abilitymodifier_textbox.Name = "con_abilitymodifier_textbox";
             this.con_abilitymodifier_textbox.PasswordChar = '\0';
+            this.con_abilitymodifier_textbox.ReadOnly = true;
             this.con_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.con_abilitymodifier_textbox.SelectedText = "";
             this.con_abilitymodifier_textbox.SelectionLength = 0;
@@ -2715,6 +2728,7 @@
             this.con_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.con_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.con_abilitymodifier_textbox.TabIndex = 4;
+            this.con_abilitymodifier_textbox.TabStop = false;
             this.con_abilitymodifier_textbox.Text = "0";
             this.con_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.con_abilitymodifier_textbox.UseSelectable = true;
@@ -2806,6 +2820,7 @@
             this.dex_abilitymodifier_textbox.MaxLength = 32767;
             this.dex_abilitymodifier_textbox.Name = "dex_abilitymodifier_textbox";
             this.dex_abilitymodifier_textbox.PasswordChar = '\0';
+            this.dex_abilitymodifier_textbox.ReadOnly = true;
             this.dex_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dex_abilitymodifier_textbox.SelectedText = "";
             this.dex_abilitymodifier_textbox.SelectionLength = 0;
@@ -2813,6 +2828,7 @@
             this.dex_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.dex_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.dex_abilitymodifier_textbox.TabIndex = 4;
+            this.dex_abilitymodifier_textbox.TabStop = false;
             this.dex_abilitymodifier_textbox.Text = "0";
             this.dex_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dex_abilitymodifier_textbox.UseSelectable = true;
@@ -2924,6 +2940,7 @@
             this.str_abilitymodifier_textbox.MaxLength = 32767;
             this.str_abilitymodifier_textbox.Name = "str_abilitymodifier_textbox";
             this.str_abilitymodifier_textbox.PasswordChar = '\0';
+            this.str_abilitymodifier_textbox.ReadOnly = true;
             this.str_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.str_abilitymodifier_textbox.SelectedText = "";
             this.str_abilitymodifier_textbox.SelectionLength = 0;
@@ -2931,6 +2948,7 @@
             this.str_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.str_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.str_abilitymodifier_textbox.TabIndex = 4;
+            this.str_abilitymodifier_textbox.TabStop = false;
             this.str_abilitymodifier_textbox.Text = "0";
             this.str_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.str_abilitymodifier_textbox.UseSelectable = true;

@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*This Script handles basically everything for the Character Form
+ * There's code in here that could definitely use improvement. 
+ * Since this project is very early, efficiency isn't a big concern at the moment, functionality is.
+ */
 
 namespace PathfinderApp
 {
     public partial class CharacterForm : MetroFramework.Forms.MetroForm
     {
+        //Create new charactet Object
         Character character = new Character();
         Dictionary<string, string> slow = new Dictionary<string, string>
         {
@@ -115,6 +120,7 @@ namespace PathfinderApp
         }
 
         //add input to appropriate player info 
+        //This is probably going to be changed later on
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             character.characterInfo.characterName = characterName_textBox.Text;
@@ -142,11 +148,48 @@ namespace PathfinderApp
         //Change level based off xp
         private void CurXp_textbox_TextChanged(object sender, EventArgs e)
         {
-            if (CurXp_textbox.Text == nextLevel_textbox.Text)
+            int curXp_int = 0;
+            int nextLevel_int = 0;
+            Int32.TryParse(CurXp_textbox.Text.Replace(",", ""), out curXp_int);
+            Int32.TryParse(nextLevel_textbox.Text.Replace(",", ""), out nextLevel_int);
+            Console.WriteLine("curxp = " + curXp_int);
+            Console.WriteLine("next level = " + nextLevel_int);
+            if (curXp_int == nextLevel_int)
             {
-                characterLevel_comboBox.SelectedIndex += 1;
+                //Eventually you can put in a number so large that it'll just reset back to 0
+                // and curXp_int == nextLevel_int will be true again which will break the program
+                // if you're level 20
+                try
+                {
+                    characterLevel_comboBox.SelectedIndex += 1;
+                }
+                catch (ArgumentOutOfRangeException) {
+                    Console.WriteLine("Congrats, you exceeded the max amount of XP and tried to break my program.");
+                }
                 CalculateNextLevel();
             }
+            //Recalculate character level while curXp is greater than next level XP
+            else if (curXp_int > nextLevel_int)
+            {
+                int characterLevel = 0;
+               
+                while (curXp_int > nextLevel_int)
+                {
+                    Int32.TryParse(characterLevel_comboBox.Text, out characterLevel);
+                    Console.WriteLine("Character LeVEL " + characterLevel);
+                    //Stop the loop if we are greater than or equal to level 20
+                    if (characterLevel >= 20) {
+                        break;
+                    }
+                    //add 1 to the level
+                    characterLevel_comboBox.SelectedIndex += 1;
+                    //subtract 
+                    curXp_int -= nextLevel_int;
+                    //Recalculate
+                    CalculateNextLevel();
+                }
+            }
+
         }
 
         #endregion
@@ -164,9 +207,9 @@ namespace PathfinderApp
             //change the appropriate text around or whatever
             ac_dexMod_textbox.Text = dex_abilityScore_textbox.Text;
 
-            initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text;
+            initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+","");
 
-            reflex_abilityMod_textbox.Text = dex_abilityScore_textbox.Text;
+            reflex_abilityMod_textbox.Text = dex_abilityScore_textbox.Text.Replace("+", ""); ;
             CalculateCMD();
         }
         private void con_abilityScore_textbox_TextChanged(object sender, EventArgs e)
@@ -174,14 +217,14 @@ namespace PathfinderApp
             //calculate ability mod
             con_abilitymodifier_textbox.Text = CalculateModifier(con_abilityScore_textbox.Text);
 
-            fortitude_abilityMod_textbox.Text = con_abilityScore_textbox.Text;
+            fortitude_abilityMod_textbox.Text = con_abilityScore_textbox.Text.Replace("+", ""); ;
         }
 
         private void wis_abilityScore_textbox_TextChanged(object sender, EventArgs e)
         {
             //calculate ability mod
             wis_abilitymodifier_textbox.Text = CalculateModifier(wis_abilityScore_textbox.Text);
-            will_abilityMod_textbox.Text = wis_abilityScore_textbox.Text;
+            will_abilityMod_textbox.Text = wis_abilityScore_textbox.Text.Replace("+", ""); ;
         }
         private void str_abilityScore_textbox_TextChanged(object sender, EventArgs e)
         {
@@ -270,6 +313,7 @@ namespace PathfinderApp
             return x.ToString();
         }
 
+        //Calculates AC for TotalAc, flatFooted, and Touch
         private void CalculateAC()
         {
             int totalAC = 0;
@@ -296,6 +340,7 @@ namespace PathfinderApp
             touchAmount_lbl.Text = touch.ToString();
         }
 
+        //Calculates fortitude saving throw total
         private void CalculateFortSaves()
         {
             int total = 0;
@@ -308,7 +353,7 @@ namespace PathfinderApp
             total = baseSave + abilityMod + magicMod + miscMod + tempMod;
             fortitudeSave_total_textbox.Text = total.ToString();
         }
-
+        //Calculates Reflex saving throw total
         private void CalculateReflexSaves()
         {
             int total = 0;
@@ -321,7 +366,7 @@ namespace PathfinderApp
             total = baseSave + abilityMod + magicMod + miscMod + tempMod;
             reflexSave_total_textbox.Text = total.ToString();
         }
-
+        //Calculates Will saving throw total
         private void CalculateWillSaves()
         {
             int total = 0;
@@ -334,7 +379,7 @@ namespace PathfinderApp
             total = baseSave + abilityMod + magicMod + miscMod + tempMod;
             willSave_total_textbox.Text = total.ToString();
         }
-
+        //Calculates the ability modifier value
         private string CalculateModifier(string abilityScore)
         {
             int rawScore = 0;
@@ -348,7 +393,7 @@ namespace PathfinderApp
             else
                 return "+" + output.ToString();
         }
-
+        //Calculate initiative value 
         private void CalculateInitiative()
         {
             int total = 0;
@@ -358,6 +403,8 @@ namespace PathfinderApp
             total = dexMod + miscMod;
             initiativeTotal_lbl.Text = total.ToString();
         }
+
+        //Calculates CMD value
 
         private void CalculateCMD()
         {
@@ -373,7 +420,7 @@ namespace PathfinderApp
 
             CMD_amount_textbox.Text = cmd.ToString();
         }
-
+        //Calculates CMB value
         private void CalculateCMB()
         {
             //CMB = BaseAttackBonus + strength + sizeMod
@@ -387,13 +434,16 @@ namespace PathfinderApp
             CMB_amount_textbox.Text = cmb.ToString();
         }
 
+        //Calculates the experience needed for the next level
         private void CalculateNextLevel()
         {
+
             string currentProgressionRate = XP_point_total_comboBox.Text;
             string currentLevel = characterLevel_comboBox.Text;
             string nextLevelXP = "";
-        
-            //If we are progressing slowly
+
+            /*Might change this logic to switch statements?*/
+            //If we are progressing slow 
             if (currentProgressionRate == "Slow")
             {
                 //If slow dict contains current level
@@ -477,7 +527,7 @@ namespace PathfinderApp
 
         private void ac_dexMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            ac_dexMod_textbox.Text = dex_abilitymodifier_textbox.Text;
+            ac_dexMod_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
             CalculateAC();
         }
 
@@ -513,7 +563,7 @@ namespace PathfinderApp
 
         private void fortitude_abilityMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            fortitude_abilityMod_textbox.Text = con_abilitymodifier_textbox.Text;
+            fortitude_abilityMod_textbox.Text = con_abilitymodifier_textbox.Text.Replace("+", ""); ;
             CalculateFortSaves();
         }
 
@@ -541,7 +591,7 @@ namespace PathfinderApp
 
         private void reflex_abilityMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            reflex_abilityMod_textbox.Text = dex_abilitymodifier_textbox.Text;
+            reflex_abilityMod_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
             CalculateReflexSaves();
         }
 
@@ -569,7 +619,7 @@ namespace PathfinderApp
 
         private void will_abilityMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            will_abilityMod_textbox.Text = wis_abilitymodifier_textbox.Text;
+            will_abilityMod_textbox.Text = wis_abilitymodifier_textbox.Text.Replace("+", ""); ;
             CalculateWillSaves();
         }
 
@@ -598,6 +648,6 @@ namespace PathfinderApp
 
         #endregion
 
-       
+
     }
 }
