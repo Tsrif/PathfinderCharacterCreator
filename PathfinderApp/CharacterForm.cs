@@ -14,6 +14,78 @@ namespace PathfinderApp
     public partial class CharacterForm : MetroFramework.Forms.MetroForm
     {
         Character character = new Character();
+        Dictionary<string, string> slow = new Dictionary<string, string>
+        {
+            { "1", "3,000" },
+            { "2", "7,500" },
+            { "3", "14,000" },
+            { "4", "23,000" },
+            { "5", "35,000" },
+            { "6", "53,000" },
+            { "7", "77,000" },
+            { "8", "115,000" },
+            { "9", "160,000" },
+            { "10", "235,000" },
+            { "11", "330,000" },
+            { "12", "475,000" },
+            { "13", "665,000" },
+            { "14", "955,000" },
+            { "15", "1,350,000" },
+            { "16", "1,900,000" },
+            { "17", "2,700,000" },
+            { "18", "3,850,000" },
+            { "19", "5,350,000" },
+            { "20", ">5,350,000" }
+        };
+        Dictionary<string, string> medium = new Dictionary<string, string>
+        {
+            { "1", "2,000" },
+            { "2", "5,000" },
+            { "3", "9,000" },
+            { "4", "15,000" },
+            { "5", "23,000" },
+            { "6", "35,000" },
+            { "7", "51,000" },
+            { "8", "75,000" },
+            { "9", "105,000" },
+            { "10", "155,000" },
+            { "11", "220,000" },
+            { "12", "315,000" },
+            { "13", "445,000" },
+            { "14", "635,000" },
+            { "15", "890,000" },
+            { "16", "1,300,000" },
+            { "17", "1,800,000" },
+            { "18", "2,550,000" },
+            { "19", "3,600,000" },
+            { "20", ">3,600,000" }
+        };
+
+        Dictionary<string, string> fast = new Dictionary<string, string>
+        {
+            { "1", "1,300" },
+            { "2", "3,300" },
+            { "3", "6,000" },
+            { "4", "10,000" },
+            { "5", "15,000" },
+            { "6", "23,000" },
+            { "7", "34,000" },
+            { "8", "50,000" },
+            { "9", "71,000" },
+            { "10", "105,000" },
+            { "11", "145,000" },
+            { "12", "210,000" },
+            { "13", "295,000" },
+            { "14", "425,000" },
+            { "15", "600,000" },
+            { "16", "850,000" },
+            { "17", "1,200,000" },
+            { "18", "1,700,000" },
+            { "19", "2,400,000" },
+            { "20", ">2,400,000" }
+        };
+
+
 
         public CharacterForm()
         {
@@ -27,6 +99,10 @@ namespace PathfinderApp
             Allignment_comboBox.SelectedIndex = 0;
             characterLevel_comboBox.SelectedIndex = 0;
             size_comboBox.SelectedIndex = 0;
+            XP_point_total_comboBox.SelectedIndex = 0;
+            gender_ComboBox.SelectedIndex = 0;
+
+            CalculateNextLevel();
         }
 
         //Create a new character
@@ -49,7 +125,7 @@ namespace PathfinderApp
             character.characterInfo.homeland = HomeLand__textBox.Text;
             character.characterInfo.race = Race_textBox.Text;
             character.characterInfo.size = size_comboBox.Text;
-            character.characterInfo.gender = Gender_textBox.Text;
+            character.characterInfo.gender = gender_ComboBox.SelectedText;
             character.characterInfo.age = Age_textBox.Text;
             character.characterInfo.height = Height_textBox.Text;
             character.characterInfo.weight = Weight_textBox.Text;
@@ -69,6 +145,7 @@ namespace PathfinderApp
             if (CurXp_textbox.Text == nextLevel_textbox.Text)
             {
                 characterLevel_comboBox.SelectedIndex += 1;
+                CalculateNextLevel();
             }
         }
 
@@ -82,11 +159,11 @@ namespace PathfinderApp
         {
             //calculate ability mod
             dex_abilitymodifier_textbox.Text = CalculateModifier(dex_abilityScore_textbox.Text);
-            
+
 
             //change the appropriate text around or whatever
             ac_dexMod_textbox.Text = dex_abilityScore_textbox.Text;
-            
+
             initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text;
 
             reflex_abilityMod_textbox.Text = dex_abilityScore_textbox.Text;
@@ -168,6 +245,16 @@ namespace PathfinderApp
             }
         }
 
+        private void characterLevel_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateNextLevel();
+        }
+
+        private void XP_point_total_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateNextLevel();
+        }
+
         #endregion
 
         #region CALCULATIONS
@@ -209,7 +296,8 @@ namespace PathfinderApp
             touchAmount_lbl.Text = touch.ToString();
         }
 
-        private void CalculateFortSaves() {
+        private void CalculateFortSaves()
+        {
             int total = 0;
             int baseSave, abilityMod, magicMod, miscMod, tempMod = 0;
             Int32.TryParse(fortitude_baseSave_textbox.Text, out baseSave);
@@ -221,7 +309,8 @@ namespace PathfinderApp
             fortitudeSave_total_textbox.Text = total.ToString();
         }
 
-        private void CalculateReflexSaves() {
+        private void CalculateReflexSaves()
+        {
             int total = 0;
             int baseSave, abilityMod, magicMod, miscMod, tempMod = 0;
             Int32.TryParse(reflex_baseSave_textbox.Text, out baseSave);
@@ -233,7 +322,8 @@ namespace PathfinderApp
             reflexSave_total_textbox.Text = total.ToString();
         }
 
-        private void CalculateWillSaves() {
+        private void CalculateWillSaves()
+        {
             int total = 0;
             int baseSave, abilityMod, magicMod, miscMod, tempMod = 0;
             Int32.TryParse(will_baseSave_textbox.Text, out baseSave);
@@ -245,19 +335,22 @@ namespace PathfinderApp
             willSave_total_textbox.Text = total.ToString();
         }
 
-        private string CalculateModifier(string abilityScore) {
+        private string CalculateModifier(string abilityScore)
+        {
             int rawScore = 0;
             int output = 0;
             Int32.TryParse(abilityScore, out rawScore);
             output = (rawScore - 10) / 2;
-            if (output < 0) {
+            if (output < 0)
+            {
                 return output.ToString();
             }
-            else 
-            return "+" + output.ToString();
+            else
+                return "+" + output.ToString();
         }
 
-        private void CalculateInitiative() {
+        private void CalculateInitiative()
+        {
             int total = 0;
             int dexMod, miscMod = 0;
             Int32.TryParse(initiative_dexModifier_textbox.Text, out dexMod);
@@ -266,7 +359,8 @@ namespace PathfinderApp
             initiativeTotal_lbl.Text = total.ToString();
         }
 
-        private void CalculateCMD() {
+        private void CalculateCMD()
+        {
             //CMD = Base Attack Bonus + strength mod + size mod + dexMod+base mod(10)
             int cmd = 0;
             int baseAttackBonus, strMod, sizeMod = 0, dexMod = 0;
@@ -280,7 +374,8 @@ namespace PathfinderApp
             CMD_amount_textbox.Text = cmd.ToString();
         }
 
-        private void CalculateCMB() {
+        private void CalculateCMB()
+        {
             //CMB = BaseAttackBonus + strength + sizeMod
             int cmb = 0;
             int baseAttackBonus, strMod, sizeMod = 0;
@@ -290,6 +385,46 @@ namespace PathfinderApp
             cmb = baseAttackBonus + strMod + sizeMod;
 
             CMB_amount_textbox.Text = cmb.ToString();
+        }
+
+        private void CalculateNextLevel()
+        {
+            string currentProgressionRate = XP_point_total_comboBox.Text;
+            string currentLevel = characterLevel_comboBox.Text;
+            string nextLevelXP = "";
+        
+            //If we are progressing slowly
+            if (currentProgressionRate == "Slow")
+            {
+                //If slow dict contains current level
+                if (slow.ContainsKey(currentLevel))
+                {
+                    nextLevelXP = slow[currentLevel];
+                }
+            }
+            //If we are progressing medium
+            else if (currentProgressionRate == "Medium")
+            {
+                //If slow dict contains current level
+                if (medium.ContainsKey(currentLevel))
+                {
+                    //next level xp = value at currentLevel key
+                    nextLevelXP = medium[currentLevel];
+                }
+            }
+
+            //If we are progressing fast
+            else if (currentProgressionRate == "Fast")
+            {
+                //If slow dict contains current level
+                if (fast.ContainsKey(currentLevel))
+                {
+                    //next level xp = value at currentLevel key
+                    nextLevelXP = fast[currentLevel];
+                }
+            }
+
+            nextLevel_textbox.Text = nextLevelXP;
         }
         #endregion
 
@@ -457,10 +592,12 @@ namespace PathfinderApp
 
 
 
-        #endregion
+
 
         #endregion
 
-        
+        #endregion
+
+       
     }
 }

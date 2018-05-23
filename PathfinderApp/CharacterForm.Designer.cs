@@ -36,6 +36,10 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.Character_TabControl = new MetroFramework.Controls.MetroTabControl();
             this.CharacterInfo_TabPage = new MetroFramework.Controls.MetroTabPage();
+            this.CharacterInfo_Panel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.XP_point_total_comboBox = new MetroFramework.Controls.MetroComboBox();
+            this.gender_ComboBox = new MetroFramework.Controls.MetroComboBox();
             this.XP_Panel = new MetroFramework.Controls.MetroPanel();
             this.class_textbox = new MetroFramework.Controls.MetroTextBox();
             this.class_lbl = new MetroFramework.Controls.MetroLabel();
@@ -43,7 +47,6 @@
             this.nextLevel_textbox = new MetroFramework.Controls.MetroTextBox();
             this.CurXp_textbox = new MetroFramework.Controls.MetroTextBox();
             this.XP_lbl = new MetroFramework.Controls.MetroLabel();
-            this.CharacterInfo_Panel = new MetroFramework.Controls.MetroPanel();
             this.Weight_textBox = new MetroFramework.Controls.MetroTextBox();
             this.Age_textBox = new MetroFramework.Controls.MetroTextBox();
             this.Eyes_lbl = new MetroFramework.Controls.MetroLabel();
@@ -71,7 +74,6 @@
             this.Race_textBox = new MetroFramework.Controls.MetroTextBox();
             this.Deity_lbl = new MetroFramework.Controls.MetroLabel();
             this.Homeland_lbl = new MetroFramework.Controls.MetroLabel();
-            this.Gender_textBox = new MetroFramework.Controls.MetroTextBox();
             this.Abilities_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.Saves_panel = new MetroFramework.Controls.MetroPanel();
             this.savingThrow_checkbox = new MetroFramework.Controls.MetroCheckBox();
@@ -216,17 +218,17 @@
             this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
             this.Skills_TabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.Equipment_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.Feats_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.Spells_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.SpecialAbilities_TabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.MenuStrip.SuspendLayout();
             this.Character_TabControl.SuspendLayout();
             this.CharacterInfo_TabPage.SuspendLayout();
-            this.XP_Panel.SuspendLayout();
             this.CharacterInfo_Panel.SuspendLayout();
+            this.XP_Panel.SuspendLayout();
             this.Abilities_TabPage.SuspendLayout();
             this.Saves_panel.SuspendLayout();
             this.acMods_Panel.SuspendLayout();
@@ -276,7 +278,7 @@
             // 
             this.newCharacterToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.newCharacterToolStripMenuItem.Name = "newCharacterToolStripMenuItem";
-            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newCharacterToolStripMenuItem.Text = "New Character";
             this.newCharacterToolStripMenuItem.Click += new System.EventHandler(this.newCharacterToolStripMenuItem_Click);
             // 
@@ -284,7 +286,7 @@
             // 
             this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -292,7 +294,7 @@
             // 
             this.loadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // MenuStrip
@@ -317,7 +319,7 @@
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 1;
+            this.Character_TabControl.SelectedIndex = 0;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -340,6 +342,207 @@
             this.CharacterInfo_TabPage.VerticalScrollbarBarColor = true;
             this.CharacterInfo_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.CharacterInfo_TabPage.VerticalScrollbarSize = 10;
+            // 
+            // CharacterInfo_Panel
+            // 
+            this.CharacterInfo_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CharacterInfo_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterInfo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CharacterInfo_Panel.Controls.Add(this.metroLabel14);
+            this.CharacterInfo_Panel.Controls.Add(this.XP_point_total_comboBox);
+            this.CharacterInfo_Panel.Controls.Add(this.gender_ComboBox);
+            this.CharacterInfo_Panel.Controls.Add(this.XP_Panel);
+            this.CharacterInfo_Panel.Controls.Add(this.Weight_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Age_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Eyes_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Weight_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Hair_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.characterLevel_comboBox);
+            this.CharacterInfo_Panel.Controls.Add(this.size_comboBox);
+            this.CharacterInfo_Panel.Controls.Add(this.characterName_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Height_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.CharacterName_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Age_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Allignment_comboBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Player_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Allignment_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Gender_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Eyes_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Deity_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Player_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Size_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Hair_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.HomeLand__textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.CharacterLevel_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Race_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Height_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Race_textBox);
+            this.CharacterInfo_Panel.Controls.Add(this.Deity_lbl);
+            this.CharacterInfo_Panel.Controls.Add(this.Homeland_lbl);
+            this.CharacterInfo_Panel.ForeColor = System.Drawing.Color.White;
+            this.CharacterInfo_Panel.HorizontalScrollbarBarColor = false;
+            this.CharacterInfo_Panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.CharacterInfo_Panel.HorizontalScrollbarSize = 10;
+            this.CharacterInfo_Panel.Location = new System.Drawing.Point(0, 3);
+            this.CharacterInfo_Panel.Name = "CharacterInfo_Panel";
+            this.CharacterInfo_Panel.Size = new System.Drawing.Size(428, 703);
+            this.CharacterInfo_Panel.TabIndex = 2;
+            this.CharacterInfo_Panel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CharacterInfo_Panel.VerticalScrollbarBarColor = true;
+            this.CharacterInfo_Panel.VerticalScrollbarHighlightOnWheel = false;
+            this.CharacterInfo_Panel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(284, 525);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(136, 19);
+            this.metroLabel14.TabIndex = 95;
+            this.metroLabel14.Text = "Experience Point Total";
+            // 
+            // XP_point_total_comboBox
+            // 
+            this.XP_point_total_comboBox.FormattingEnabled = true;
+            this.XP_point_total_comboBox.ItemHeight = 23;
+            this.XP_point_total_comboBox.Items.AddRange(new object[] {
+            "Slow",
+            "Medium",
+            "Fast"});
+            this.XP_point_total_comboBox.Location = new System.Drawing.Point(284, 551);
+            this.XP_point_total_comboBox.Name = "XP_point_total_comboBox";
+            this.XP_point_total_comboBox.Size = new System.Drawing.Size(136, 29);
+            this.XP_point_total_comboBox.TabIndex = 94;
+            this.XP_point_total_comboBox.UseSelectable = true;
+            this.XP_point_total_comboBox.SelectedIndexChanged += new System.EventHandler(this.XP_point_total_comboBox_SelectedIndexChanged);
+            // 
+            // gender_ComboBox
+            // 
+            this.gender_ComboBox.FormattingEnabled = true;
+            this.gender_ComboBox.ItemHeight = 23;
+            this.gender_ComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Abimegender",
+            "Adamasgender",
+            "Aerogender",
+            "Aesthetigender",
+            "Affectugender",
+            "Agender",
+            "Agenderflux",
+            "Alexigender",
+            "Aliusgender",
+            "Amaregender",
+            "Ambigender",
+            "Ambonec",
+            "Amicagender",
+            "Androgyne",
+            "Anesigender",
+            "Angenital",
+            "Anogender",
+            "Anongender",
+            "Antegender",
+            "Anxiegender",
+            "Apagender",
+            "Apconsugender",
+            "Astergender",
+            "Astralgender",
+            "Autigender",
+            "Autogender",
+            "Axigender",
+            "Bigender",
+            "Biogender",
+            "Blurgender",
+            "Boyflux",
+            "Burstgender",
+            "Caelgender",
+            "Cassgender",
+            "Cassflux",
+            "Cavusgender",
+            "Cendgender",
+            "Ceterofluid",
+            "Ceterogender",
+            "Cisgender",
+            "Cloudgender",
+            "Collgender",
+            "Colorgender",
+            "Commogender",
+            "Condigender",
+            "Deliciagender",
+            "Demifluid",
+            "Demiflux",
+            "Demigender",
+            "Domgender",
+            "Demi-vapor ",
+            "Demi-smoke ",
+            "Duragender",
+            "Egogender",
+            "Epicene",
+            "Espigender",
+            "Exgender",
+            "Existigender",
+            "Femfluid",
+            "Femgender",
+            "Fluidflux",
+            "Gemigender",
+            "Genderblank",
+            "Genderflow",
+            "Genderfluid",
+            "Genderflux",
+            "Genderfuzz",
+            "Gender Neutral",
+            "Genderpunk",
+            "Genderqueer",
+            "Genderwitched",
+            "Girlflux",
+            "Glassgender",
+            "Glimragender",
+            "Greygender",
+            "Gyragender",
+            "Healgender",
+            "Heliogender",
+            "Hemigender",
+            "Horogender",
+            "Hydrogender",
+            "Imperigender",
+            "Intergender",
+            "Juxera",
+            "Libragender",
+            "Magigender",
+            "Mascfluid",
+            "Mascgender",
+            "Maverique",
+            "Mirrorgender",
+            "Molligender",
+            "Multigender",
+            "Nanogender",
+            "Neutrois",
+            "Nonbinary",
+            "Omnigender",
+            "Oneirogender",
+            "Pangender",
+            "Paragender",
+            "Perigender",
+            "Polygender",
+            "Proxvir",
+            "Quoigender",
+            "Subgender",
+            "Surgender",
+            "Systemgender",
+            "Tragender",
+            "Transgender",
+            "Transneutral",
+            "Trigender",
+            "Vapogender",
+            "Venngender",
+            "Verangender",
+            "Vibragender",
+            "Vocigender"});
+            this.gender_ComboBox.Location = new System.Drawing.Point(179, 294);
+            this.gender_ComboBox.Name = "gender_ComboBox";
+            this.gender_ComboBox.Size = new System.Drawing.Size(139, 29);
+            this.gender_ComboBox.TabIndex = 93;
+            this.gender_ComboBox.UseSelectable = true;
             // 
             // XP_Panel
             // 
@@ -485,53 +688,6 @@
             this.XP_lbl.TabIndex = 2;
             this.XP_lbl.Text = "Current XP";
             // 
-            // CharacterInfo_Panel
-            // 
-            this.CharacterInfo_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.CharacterInfo_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.CharacterInfo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CharacterInfo_Panel.Controls.Add(this.XP_Panel);
-            this.CharacterInfo_Panel.Controls.Add(this.Weight_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Age_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Eyes_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Weight_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Hair_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.characterLevel_comboBox);
-            this.CharacterInfo_Panel.Controls.Add(this.size_comboBox);
-            this.CharacterInfo_Panel.Controls.Add(this.characterName_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Height_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.CharacterName_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Age_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Allignment_comboBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Player_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Allignment_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Gender_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Eyes_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Deity_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Player_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Size_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Hair_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.HomeLand__textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.CharacterLevel_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Race_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Height_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Race_textBox);
-            this.CharacterInfo_Panel.Controls.Add(this.Deity_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Homeland_lbl);
-            this.CharacterInfo_Panel.Controls.Add(this.Gender_textBox);
-            this.CharacterInfo_Panel.ForeColor = System.Drawing.Color.White;
-            this.CharacterInfo_Panel.HorizontalScrollbarBarColor = false;
-            this.CharacterInfo_Panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.CharacterInfo_Panel.HorizontalScrollbarSize = 10;
-            this.CharacterInfo_Panel.Location = new System.Drawing.Point(0, 3);
-            this.CharacterInfo_Panel.Name = "CharacterInfo_Panel";
-            this.CharacterInfo_Panel.Size = new System.Drawing.Size(428, 703);
-            this.CharacterInfo_Panel.TabIndex = 2;
-            this.CharacterInfo_Panel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.CharacterInfo_Panel.VerticalScrollbarBarColor = true;
-            this.CharacterInfo_Panel.VerticalScrollbarHighlightOnWheel = false;
-            this.CharacterInfo_Panel.VerticalScrollbarSize = 10;
-            // 
             // Weight_textBox
             // 
             // 
@@ -652,6 +808,7 @@
             this.characterLevel_comboBox.Size = new System.Drawing.Size(139, 29);
             this.characterLevel_comboBox.TabIndex = 87;
             this.characterLevel_comboBox.UseSelectable = true;
+            this.characterLevel_comboBox.SelectedIndexChanged += new System.EventHandler(this.characterLevel_comboBox_SelectedIndexChanged);
             // 
             // size_comboBox
             // 
@@ -738,7 +895,7 @@
             "Chaotic Good",
             "Lawful Neutral",
             "Neutral",
-            "Chaotic Good",
+            "Chaotic Neutral",
             "Lawful Evil",
             "Neutral Evil",
             "Chaotic Evil"});
@@ -1037,36 +1194,6 @@
             this.Homeland_lbl.Size = new System.Drawing.Size(72, 19);
             this.Homeland_lbl.TabIndex = 72;
             this.Homeland_lbl.Text = "Homeland";
-            // 
-            // Gender_textBox
-            // 
-            // 
-            // 
-            // 
-            this.Gender_textBox.CustomButton.Image = null;
-            this.Gender_textBox.CustomButton.Location = new System.Drawing.Point(111, 1);
-            this.Gender_textBox.CustomButton.Name = "";
-            this.Gender_textBox.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.Gender_textBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Gender_textBox.CustomButton.TabIndex = 1;
-            this.Gender_textBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Gender_textBox.CustomButton.UseSelectable = true;
-            this.Gender_textBox.CustomButton.Visible = false;
-            this.Gender_textBox.Lines = new string[0];
-            this.Gender_textBox.Location = new System.Drawing.Point(179, 294);
-            this.Gender_textBox.MaxLength = 32767;
-            this.Gender_textBox.Name = "Gender_textBox";
-            this.Gender_textBox.PasswordChar = '\0';
-            this.Gender_textBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Gender_textBox.SelectedText = "";
-            this.Gender_textBox.SelectionLength = 0;
-            this.Gender_textBox.SelectionStart = 0;
-            this.Gender_textBox.ShortcutsEnabled = true;
-            this.Gender_textBox.Size = new System.Drawing.Size(139, 29);
-            this.Gender_textBox.TabIndex = 82;
-            this.Gender_textBox.UseSelectable = true;
-            this.Gender_textBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Gender_textBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Abilities_TabPage
             // 
@@ -4062,15 +4189,6 @@
             this.Skills_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.Skills_TabPage.VerticalScrollbarSize = 10;
             // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = this;
-            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroStyleExtender1
-            // 
-            this.metroStyleExtender1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // Equipment_TabPage
             // 
             this.Equipment_TabPage.HorizontalScrollbarBarColor = true;
@@ -4127,6 +4245,15 @@
             this.SpecialAbilities_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.SpecialAbilities_TabPage.VerticalScrollbarSize = 10;
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroStyleExtender1
+            // 
+            this.metroStyleExtender1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4142,10 +4269,10 @@
             this.MenuStrip.PerformLayout();
             this.Character_TabControl.ResumeLayout(false);
             this.CharacterInfo_TabPage.ResumeLayout(false);
-            this.XP_Panel.ResumeLayout(false);
-            this.XP_Panel.PerformLayout();
             this.CharacterInfo_Panel.ResumeLayout(false);
             this.CharacterInfo_Panel.PerformLayout();
+            this.XP_Panel.ResumeLayout(false);
+            this.XP_Panel.PerformLayout();
             this.Abilities_TabPage.ResumeLayout(false);
             this.Abilities_TabPage.PerformLayout();
             this.Saves_panel.ResumeLayout(false);
@@ -4244,7 +4371,6 @@
         private MetroFramework.Controls.MetroTextBox Race_textBox;
         private MetroFramework.Controls.MetroLabel Deity_lbl;
         private MetroFramework.Controls.MetroLabel Homeland_lbl;
-        private MetroFramework.Controls.MetroTextBox Gender_textBox;
         private MetroFramework.Controls.MetroPanel XP_Panel;
         private MetroFramework.Controls.MetroLabel XP_lbl;
         private MetroFramework.Controls.MetroTextBox nextLevel_textbox;
@@ -4399,6 +4525,9 @@
         private MetroFramework.Controls.MetroTabPage Feats_TabPage;
         private MetroFramework.Controls.MetroTabPage Spells_TabPage;
         private MetroFramework.Controls.MetroTabPage SpecialAbilities_TabPage;
+        private MetroFramework.Controls.MetroComboBox gender_ComboBox;
+        private MetroFramework.Controls.MetroComboBox XP_point_total_comboBox;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
     }
 }
 

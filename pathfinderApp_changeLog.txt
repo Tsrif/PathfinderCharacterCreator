@@ -1,0 +1,36 @@
+5/16/18
+- Every time the text boxes for speed are changed, the correct squares value is changed 
+- named various components on the ability tab
+- AC, touch, and flat footed values correctly change when modifier values change 
+- added saving throw panels - no functionality yet
+- added a basic saving throw modifier panel
+
+
+5/17/18
+- cleaned up some code
+- Redesign saving throw modifier panel
+- add functionality to save modifier check box 
+- renamed a lot of variables
+- add in save throw calculation
+- calculate ability modifier values
+- calculate initiative
+- cmd calculation
+- cmb calculation
+
+
+5/22/18
+- Changed Gender from a textbox to a drop down list containing most genders(more are still needed)
+- Added in experience point total drop down list which will change the progression of next level xp
+- added in next level xp calculations and the appropriate event connections
+- Bug: Doesn't account for if you put in a value that is larger than the next level xp
+
+/*SHIT TO DO*/
+- attack Bonus increases are manual for now???
+- ability mods should be labels?
+- Not stuff inline for somethings 
+- Fix tabbing issue 
+- Fix some boxes to accomodate plus, or remove plus 
+- UI fine tuning 
+- Fix saving???
+- add in an option to set xp 
+
