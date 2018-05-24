@@ -100,6 +100,7 @@
     <Compile Include="clsResize.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skill.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

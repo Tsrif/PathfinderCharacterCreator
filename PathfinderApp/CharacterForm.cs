@@ -97,7 +97,6 @@ namespace PathfinderApp
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
             this.StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroStyleExtender1.SetApplyMetroTheme(MenuStrip, true);
             this.Character_TabControl.SelectedIndex = 0;
 
             //change the default selected values on the combo boxes
@@ -108,6 +107,7 @@ namespace PathfinderApp
             gender_ComboBox.SelectedIndex = 0;
 
             CalculateNextLevel();
+            CreateSkillPanel();
         }
 
         //Create a new character
@@ -143,6 +143,7 @@ namespace PathfinderApp
             character.characterInfo.saveCharacterInfo();
         }
 
+
         #region CharacterInfo tab functions
 
         //Change level based off xp
@@ -163,7 +164,8 @@ namespace PathfinderApp
                 {
                     characterLevel_comboBox.SelectedIndex += 1;
                 }
-                catch (ArgumentOutOfRangeException) {
+                catch (ArgumentOutOfRangeException)
+                {
                     Console.WriteLine("Congrats, you exceeded the max amount of XP and tried to break my program.");
                 }
                 CalculateNextLevel();
@@ -172,13 +174,14 @@ namespace PathfinderApp
             else if (curXp_int > nextLevel_int)
             {
                 int characterLevel = 0;
-               
+
                 while (curXp_int > nextLevel_int)
                 {
                     Int32.TryParse(characterLevel_comboBox.Text, out characterLevel);
                     Console.WriteLine("Character LeVEL " + characterLevel);
                     //Stop the loop if we are greater than or equal to level 20
-                    if (characterLevel >= 20) {
+                    if (characterLevel >= 20)
+                    {
                         break;
                     }
                     //add 1 to the level
@@ -207,7 +210,7 @@ namespace PathfinderApp
             //change the appropriate text around or whatever
             ac_dexMod_textbox.Text = dex_abilityScore_textbox.Text;
 
-            initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+","");
+            initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
 
             reflex_abilityMod_textbox.Text = dex_abilityScore_textbox.Text.Replace("+", ""); ;
             CalculateCMD();
@@ -296,6 +299,23 @@ namespace PathfinderApp
         private void XP_point_total_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalculateNextLevel();
+        }
+
+        private void Menu_Dropdown_label_MouseEnter(object sender, EventArgs e)
+        {
+            Menu_Dropdown_label.BackColor = Color.LightGray;
+        }
+
+        private void Menu_Dropdown_label_MouseLeave(object sender, EventArgs e)
+        {
+            Color newColor = new Color();
+            newColor = Color.FromArgb(1111111);
+            Menu_Dropdown_label.BackColor = newColor;
+        }
+
+        private void Menu_Dropdown_label_MouseClick(object sender, MouseEventArgs e)
+        {
+            ctxMenu.Show(Menu_Dropdown_label, 0, Menu_Dropdown_label.Height);
         }
 
         #endregion
@@ -478,6 +498,146 @@ namespace PathfinderApp
         }
         #endregion
 
+        #region OTHER FUNCTIONS
+
+        public void CreateSkillPanel()
+        {
+            MetroFramework.Controls.MetroPanel skill_panel = new MetroFramework.Controls.MetroPanel();
+            MetroFramework.Controls.MetroCheckBox classSkill_checkbox = new MetroFramework.Controls.MetroCheckBox();
+            MetroFramework.Controls.MetroLabel skillName_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel totalBonus_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel equalSign1_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel abilityType_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel AbilityMod_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel PlusSign1_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel PlusSign2_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel ranks_label = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroLabel MiscMod_label = new MetroFramework.Controls.MetroLabel();
+
+            // 
+            // SkillPanelTemplate
+            // 
+            skill_panel.SuspendLayout();
+            skill_panel.Controls.Add(MiscMod_label);
+            skill_panel.Controls.Add(PlusSign2_label);
+            skill_panel.Controls.Add(ranks_label);
+            skill_panel.Controls.Add(PlusSign1_label);
+            skill_panel.Controls.Add(AbilityMod_label);
+            skill_panel.Controls.Add(abilityType_label);
+            skill_panel.Controls.Add(equalSign1_label);
+            skill_panel.Controls.Add(totalBonus_label);
+            skill_panel.Controls.Add(skillName_label);
+            skill_panel.Controls.Add(classSkill_checkbox);
+            skill_panel.HorizontalScrollbarBarColor = true;
+            skill_panel.HorizontalScrollbarHighlightOnWheel = false;
+            skill_panel.HorizontalScrollbarSize = 10;
+            skill_panel.Location = new System.Drawing.Point(3, 62);
+            skill_panel.Name = "SkillPanelTemplate";
+            skill_panel.Size = new System.Drawing.Size(422, 35);
+            skill_panel.TabIndex = 2;
+            skill_panel.VerticalScrollbarBarColor = true;
+            skill_panel.VerticalScrollbarHighlightOnWheel = false;
+            skill_panel.VerticalScrollbarSize = 10;
+            // 
+            // checkBoxTemplate
+            // 
+            classSkill_checkbox.AutoSize = true;
+            classSkill_checkbox.Location = new System.Drawing.Point(3, 7);
+            classSkill_checkbox.Name = "checkBoxTemplate";
+            classSkill_checkbox.Size = new System.Drawing.Size(26, 15);
+            classSkill_checkbox.TabIndex = 2;
+            classSkill_checkbox.Text = " ";
+            classSkill_checkbox.UseSelectable = true;
+            // 
+            // SkillNameTemplate
+            // 
+            skillName_label.AutoSize = true;
+            skillName_label.Location = new System.Drawing.Point(21, 7);
+            skillName_label.Name = "SkillNameTemplate";
+            skillName_label.Size = new System.Drawing.Size(71, 19);
+            skillName_label.TabIndex = 3;
+            skillName_label.Text = "Skill Name";
+            // 
+            // TotalBonusTemplate
+            // 
+            totalBonus_label.AutoSize = true;
+            totalBonus_label.Location = new System.Drawing.Point(133, 7);
+            totalBonus_label.Name = "TotalBonusTemplate";
+            totalBonus_label.Size = new System.Drawing.Size(57, 19);
+            totalBonus_label.TabIndex = 8;
+            totalBonus_label.Text = "________";
+            // 
+            // EqualSignTemplate
+            // 
+            equalSign1_label.AutoSize = true;
+            equalSign1_label.Location = new System.Drawing.Point(190, 7);
+            equalSign1_label.Name = "EqualSignTemplate";
+            equalSign1_label.Size = new System.Drawing.Size(18, 19);
+            equalSign1_label.TabIndex = 8;
+            equalSign1_label.Text = "=";
+            // 
+            // abilityTypeTemplate
+            // 
+            abilityType_label.AutoSize = true;
+            abilityType_label.Location = new System.Drawing.Point(214, 7);
+            abilityType_label.Name = "abilityTypeTemplate";
+            abilityType_label.Size = new System.Drawing.Size(31, 19);
+            abilityType_label.TabIndex = 9;
+            abilityType_label.Text = "Dex";
+            // 
+            // AbilityModTemplate
+            // 
+            AbilityMod_label.AutoSize = true;
+            AbilityMod_label.Location = new System.Drawing.Point(250, 7);
+            AbilityMod_label.Name = "AbilityModTemplate";
+            AbilityMod_label.Size = new System.Drawing.Size(33, 19);
+            AbilityMod_label.TabIndex = 10;
+            AbilityMod_label.Text = "____";
+            // 
+            // PlusSignTemplate1
+            // 
+            PlusSign1_label.AutoSize = true;
+            PlusSign1_label.Location = new System.Drawing.Point(289, 7);
+            PlusSign1_label.Name = "PlusSignTemplate1";
+            PlusSign1_label.Size = new System.Drawing.Size(18, 19);
+            PlusSign1_label.TabIndex = 11;
+            PlusSign1_label.Text = "+";
+            // 
+            // PlusSignTemplate2
+            // 
+            PlusSign2_label.AutoSize = true;
+            PlusSign2_label.Location = new System.Drawing.Point(352, 7);
+            PlusSign2_label.Name = "PlusSignTemplate2";
+            PlusSign2_label.Size = new System.Drawing.Size(18, 19);
+            PlusSign2_label.TabIndex = 13;
+            PlusSign2_label.Text = "+";
+            // 
+            // ranksTemplate
+            // 
+            ranks_label.AutoSize = true;
+            ranks_label.Location = new System.Drawing.Point(313, 7);
+            ranks_label.Name = "ranksTemplate";
+            ranks_label.Size = new System.Drawing.Size(33, 19);
+            ranks_label.TabIndex = 12;
+            ranks_label.Text = "____";
+            // 
+            // MiscModTemplate
+            // 
+            MiscMod_label.AutoSize = true;
+            MiscMod_label.Location = new System.Drawing.Point(376, 7);
+            MiscMod_label.Name = "MiscModTemplate";
+            MiscMod_label.Size = new System.Drawing.Size(33, 19);
+            MiscMod_label.TabIndex = 14;
+            MiscMod_label.Text = "____";
+
+            skill_panel.ResumeLayout(false);
+            skill_panel.PerformLayout();
+            this.Skills_TabPage.Controls.Add(skill_panel);
+        }
+
+
+        #endregion
+
         #region speed Text Change stuff
 
         private void baseSpeed_feet_textbox_TextChanged(object sender, EventArgs e)
@@ -644,6 +804,7 @@ namespace PathfinderApp
 
 
 
+
         #endregion
 
         #endregion
@@ -651,3 +812,4 @@ namespace PathfinderApp
 
     }
 }
+

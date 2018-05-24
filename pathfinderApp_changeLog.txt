@@ -31,6 +31,14 @@
 - change certain text boxes to read only 
 - Changed so you can't use tab key to set focus to certain textboxes 
 
+- replaced menu strip with a Metrolbl that opens up a MetrocontextMenu when clicked 
+- started work on a way to dynamically create a skillPanel 
+	- Have a Skill object that will hold all the data 
+	- Have a function that creates the skillPanel 
+	- Still need a way to keep track of each one created so I can place them on the page correctly
+	- And a way to change information on them after they've been created 
+
+
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
 - ability mods should be labels?
