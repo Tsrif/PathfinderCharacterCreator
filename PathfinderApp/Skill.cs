@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PathfinderApp
 {
-    class Skill
+    public class Skill
     {
         public string skillName;
         public string totalBonus;
@@ -15,7 +15,7 @@ namespace PathfinderApp
         public string ranks;
         public string miscMod;
 
-
+        //Create a skill with all the info 
         public Skill(string sn, string tb, string mt, string am, string r, string mm)
         {
             this.skillName = sn;
@@ -26,7 +26,18 @@ namespace PathfinderApp
             this.miscMod = mm;
         }
 
+        //Creates a blank skill 
+        public Skill()
+        {
+            this.skillName = "Skill Name";
+            this.totalBonus = "0";
+            this.modType = "Dex";
+            this.abilityMod = "0";
+            this.ranks = "0";
+            this.miscMod = "0";
+        }
 
-        
+
+
     }
 }

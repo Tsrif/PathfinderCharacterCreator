@@ -38,6 +38,10 @@
 	- Still need a way to keep track of each one created so I can place them on the page correctly
 	- And a way to change information on them after they've been created 
 
+	
+5/26/18
+- When a skill panel is created, it is placed beneath the last skill panel that was created 
+- Each component in a newly created skill panel inherits their default properties from a skill panel template 
 
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
@@ -46,5 +50,6 @@
 - Fix tabbing issue 
 - UI fine tuning 
 - Fix saving???
+- add in a scrolling feature to the skills page if the amount of skills exceed x amount of skills 
 
 

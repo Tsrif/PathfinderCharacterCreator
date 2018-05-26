@@ -19,6 +19,7 @@ namespace PathfinderApp
     {
         //Create new charactet Object
         Character character = new Character();
+        List<MetroFramework.Controls.MetroPanel> list_skillsPanels = new List<MetroFramework.Controls.MetroPanel>();
         Dictionary<string, string> slow = new Dictionary<string, string>
         {
             { "1", "3,000" },
@@ -107,7 +108,9 @@ namespace PathfinderApp
             gender_ComboBox.SelectedIndex = 0;
 
             CalculateNextLevel();
-            CreateSkillPanel();
+            //Creates a default Blank skill
+            Skill aSkill = new Skill();
+            CreateSkillPanel(aSkill);
         }
 
         //Create a new character
@@ -499,8 +502,11 @@ namespace PathfinderApp
         #endregion
 
         #region OTHER FUNCTIONS
-
-        public void CreateSkillPanel()
+        //Creates a panel, with lots of components inside of it then adds that panel to a list
+        /*NEED to do
+         * Create skill objects to house all the info for the panel 
+         */
+        public void CreateSkillPanel(Skill skill)
         {
             MetroFramework.Controls.MetroPanel skill_panel = new MetroFramework.Controls.MetroPanel();
             MetroFramework.Controls.MetroCheckBox classSkill_checkbox = new MetroFramework.Controls.MetroCheckBox();
@@ -538,101 +544,164 @@ namespace PathfinderApp
             skill_panel.VerticalScrollbarBarColor = true;
             skill_panel.VerticalScrollbarHighlightOnWheel = false;
             skill_panel.VerticalScrollbarSize = 10;
+            skill_panel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            skill_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
             // 
             // checkBoxTemplate
             // 
-            classSkill_checkbox.AutoSize = true;
-            classSkill_checkbox.Location = new System.Drawing.Point(3, 7);
-            classSkill_checkbox.Name = "checkBoxTemplate";
-            classSkill_checkbox.Size = new System.Drawing.Size(26, 15);
-            classSkill_checkbox.TabIndex = 2;
-            classSkill_checkbox.Text = " ";
-            classSkill_checkbox.UseSelectable = true;
+            //classSkill_checkbox.AutoSize = true;
+            classSkill_checkbox.AutoSize = checkBoxTemplate.AutoSize;
+            classSkill_checkbox.Location = checkBoxTemplate.Location;
+            classSkill_checkbox.Name = checkBoxTemplate.Name;
+            classSkill_checkbox.Size = checkBoxTemplate.Size;
+            classSkill_checkbox.TabIndex = checkBoxTemplate.TabIndex;
+            classSkill_checkbox.Text = checkBoxTemplate.Text;
+            classSkill_checkbox.UseSelectable = checkBoxTemplate.UseSelectable;
+            classSkill_checkbox.Theme = MetroFramework.MetroThemeStyle.Dark; 
+
             // 
             // SkillNameTemplate
             // 
-            skillName_label.AutoSize = true;
-            skillName_label.Location = new System.Drawing.Point(21, 7);
-            skillName_label.Name = "SkillNameTemplate";
-            skillName_label.Size = new System.Drawing.Size(71, 19);
-            skillName_label.TabIndex = 3;
-            skillName_label.Text = "Skill Name";
+            //skillName_label.AutoSize = true;
+            skillName_label.BorderStyle = SkillNameTemplate.BorderStyle;
+            skillName_label.Location = SkillNameTemplate.Location;
+            skillName_label.Name = SkillNameTemplate.Name;
+            skillName_label.Size = SkillNameTemplate.Size;
+            skillName_label.TabIndex = SkillNameTemplate.TabIndex;
+            skillName_label.Text = SkillNameTemplate.Text;
+            skillName_label.TextAlign = SkillNameTemplate.TextAlign;
+
+            skillName_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+
+
             // 
             // TotalBonusTemplate
             // 
-            totalBonus_label.AutoSize = true;
-            totalBonus_label.Location = new System.Drawing.Point(133, 7);
-            totalBonus_label.Name = "TotalBonusTemplate";
-            totalBonus_label.Size = new System.Drawing.Size(57, 19);
-            totalBonus_label.TabIndex = 8;
-            totalBonus_label.Text = "________";
+            totalBonus_label.AutoSize = TotalBonusTemplate.AutoSize;
+            totalBonus_label.Location = TotalBonusTemplate.Location;
+            totalBonus_label.Name = TotalBonusTemplate.Name;
+            totalBonus_label.Size = TotalBonusTemplate.Size;
+            totalBonus_label.TabIndex = TotalBonusTemplate.TabIndex;
+            totalBonus_label.Text = TotalBonusTemplate.Text;
+            totalBonus_label.BorderStyle = TotalBonusTemplate.BorderStyle;
+            totalBonus_label.TextAlign = TotalBonusTemplate.TextAlign;
+
+            totalBonus_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+
             // 
             // EqualSignTemplate
             // 
-            equalSign1_label.AutoSize = true;
-            equalSign1_label.Location = new System.Drawing.Point(190, 7);
-            equalSign1_label.Name = "EqualSignTemplate";
-            equalSign1_label.Size = new System.Drawing.Size(18, 19);
-            equalSign1_label.TabIndex = 8;
-            equalSign1_label.Text = "=";
+            //equalSign1_label.AutoSize = true;
+            equalSign1_label.AutoSize = EqualSignTemplate.AutoSize;
+            equalSign1_label.Location = EqualSignTemplate.Location;
+            equalSign1_label.Name = EqualSignTemplate.Name;
+            equalSign1_label.Size = EqualSignTemplate.Size;
+            equalSign1_label.TabIndex = EqualSignTemplate.TabIndex;
+            equalSign1_label.Text = EqualSignTemplate.Text;
+
+            equalSign1_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // abilityTypeTemplate
             // 
-            abilityType_label.AutoSize = true;
-            abilityType_label.Location = new System.Drawing.Point(214, 7);
-            abilityType_label.Name = "abilityTypeTemplate";
-            abilityType_label.Size = new System.Drawing.Size(31, 19);
-            abilityType_label.TabIndex = 9;
-            abilityType_label.Text = "Dex";
+            abilityType_label.AutoSize = abilityTypeTemplate.AutoSize;
+            abilityType_label.Location = abilityTypeTemplate.Location;
+            abilityType_label.Name = abilityTypeTemplate.Name;
+            abilityType_label.Size = abilityTypeTemplate.Size;
+            abilityType_label.TabIndex = abilityTypeTemplate.TabIndex;
+            abilityType_label.Text = abilityTypeTemplate.Text;
+            abilityType_label.TextAlign = abilityTypeTemplate.TextAlign;
+
+            abilityType_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+
             // 
             // AbilityModTemplate
             // 
-            AbilityMod_label.AutoSize = true;
-            AbilityMod_label.Location = new System.Drawing.Point(250, 7);
-            AbilityMod_label.Name = "AbilityModTemplate";
-            AbilityMod_label.Size = new System.Drawing.Size(33, 19);
-            AbilityMod_label.TabIndex = 10;
-            AbilityMod_label.Text = "____";
+            AbilityMod_label.AutoSize = AbilityModTemplate.AutoSize;
+            AbilityMod_label.Location = AbilityModTemplate.Location;
+            AbilityMod_label.Name = AbilityModTemplate.Name;
+            AbilityMod_label.Size = AbilityModTemplate.Size;
+            AbilityMod_label.TabIndex = AbilityModTemplate.TabIndex;
+            AbilityMod_label.Text = AbilityModTemplate.Text;
+            AbilityMod_label.BorderStyle = AbilityModTemplate.BorderStyle;
+            AbilityMod_label.TextAlign = AbilityModTemplate.TextAlign;
+
+            AbilityMod_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+
             // 
             // PlusSignTemplate1
             // 
-            PlusSign1_label.AutoSize = true;
-            PlusSign1_label.Location = new System.Drawing.Point(289, 7);
-            PlusSign1_label.Name = "PlusSignTemplate1";
-            PlusSign1_label.Size = new System.Drawing.Size(18, 19);
-            PlusSign1_label.TabIndex = 11;
-            PlusSign1_label.Text = "+";
+            PlusSign1_label.AutoSize = PlusSignTemplate1.AutoSize;
+            PlusSign1_label.Location = PlusSignTemplate1.Location;
+            PlusSign1_label.Name = PlusSignTemplate1.Name;
+            PlusSign1_label.Size = PlusSignTemplate1.Size;
+            PlusSign1_label.TabIndex = PlusSignTemplate1.TabIndex;
+            PlusSign1_label.Text = PlusSignTemplate1.Text;
+
+            PlusSign1_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // PlusSignTemplate2
             // 
-            PlusSign2_label.AutoSize = true;
-            PlusSign2_label.Location = new System.Drawing.Point(352, 7);
-            PlusSign2_label.Name = "PlusSignTemplate2";
-            PlusSign2_label.Size = new System.Drawing.Size(18, 19);
-            PlusSign2_label.TabIndex = 13;
-            PlusSign2_label.Text = "+";
+            PlusSign2_label.AutoSize = PlusSignTemplate2.AutoSize;
+            PlusSign2_label.Location = PlusSignTemplate2.Location;
+            PlusSign2_label.Name = PlusSignTemplate2.Name;
+            PlusSign2_label.Size = PlusSignTemplate2.Size;
+            PlusSign2_label.TabIndex = PlusSignTemplate2.TabIndex;
+            PlusSign2_label.Text = PlusSignTemplate2.Text;
+
+            PlusSign2_label.Theme = MetroFramework.MetroThemeStyle.Dark; 
             // 
             // ranksTemplate
             // 
-            ranks_label.AutoSize = true;
-            ranks_label.Location = new System.Drawing.Point(313, 7);
-            ranks_label.Name = "ranksTemplate";
-            ranks_label.Size = new System.Drawing.Size(33, 19);
-            ranks_label.TabIndex = 12;
-            ranks_label.Text = "____";
+            ranks_label.AutoSize = ranks_Template.AutoSize;
+            ranks_label.BorderStyle = ranks_Template.BorderStyle;
+            ranks_label.Location = ranks_Template.Location;
+            ranks_label.Name = ranks_Template.Name;
+            ranks_label.Size = ranks_Template.Size;
+            ranks_label.TabIndex = ranks_Template.TabIndex;
+            ranks_label.Text = ranks_Template.Text;
+            ranks_label.TextAlign = ranks_Template.TextAlign;
+            ranks_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // MiscModTemplate
             // 
-            MiscMod_label.AutoSize = true;
-            MiscMod_label.Location = new System.Drawing.Point(376, 7);
-            MiscMod_label.Name = "MiscModTemplate";
-            MiscMod_label.Size = new System.Drawing.Size(33, 19);
-            MiscMod_label.TabIndex = 14;
-            MiscMod_label.Text = "____";
+            MiscMod_label.AutoSize = miscMod_template.AutoSize;
+            MiscMod_label.BorderStyle = miscMod_template.BorderStyle;
+            MiscMod_label.Location = miscMod_template.Location;
+            MiscMod_label.Name = miscMod_template.Name;
+            MiscMod_label.Size = miscMod_template.Size;
+            MiscMod_label.TabIndex = miscMod_template.TabIndex;
+            MiscMod_label.Text = miscMod_template.Text;
+            MiscMod_label.TextAlign = miscMod_template.TextAlign;
+
+            MiscMod_label.Theme = MetroFramework.MetroThemeStyle.Dark;
 
             skill_panel.ResumeLayout(false);
             skill_panel.PerformLayout();
             this.Skills_TabPage.Controls.Add(skill_panel);
+            // 
+            // Set the info
+            // 
+            skillName_label.Text = skill.skillName;
+            totalBonus_label.Text = skill.totalBonus;
+            abilityType_label.Text = skill.modType;
+            AbilityMod_label.Text = skill.abilityMod;
+            ranks_label.Text = skill.ranks;
+            MiscMod_label.Text = skill.miscMod;
+
+
+
+            list_skillsPanels.Add(skill_panel);
+        }
+
+        public void PlacePanels()
+        {
+            //Don't place the first one 
+            if (list_skillsPanels.Count > 1)
+            {
+                Point newLocation = new Point(list_skillsPanels[list_skillsPanels.Count - 2].Location.X, list_skillsPanels[list_skillsPanels.Count - 2].Location.Y + 41);
+                list_skillsPanels[list_skillsPanels.Count - 1].Location = newLocation;
+            }
         }
 
 
@@ -798,18 +867,20 @@ namespace PathfinderApp
             CalculateWillSaves();
         }
 
-
-
-
-
-
-
-
         #endregion
 
         #endregion
 
 
+        private void add_skill_panel_Click(object sender, EventArgs e)
+        {
+            //Temp info to see if it works 
+            Skill aSkill = new Skill();
+            //add panel
+            CreateSkillPanel(aSkill);
+            //rearrange panels
+            PlacePanels();
+        }
     }
 }
 
