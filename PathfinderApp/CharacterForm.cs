@@ -24,8 +24,11 @@ namespace PathfinderApp
     {
         //Create new charactet Object
         Character character = new Character();
+        //Create a list of detailed skills
         List<Skills_Detail> detailedSkills = new List<Skills_Detail>();
+        //create a list of the skill panels
         List<MetroFramework.Controls.MetroPanel> list_skillsPanels = new List<MetroFramework.Controls.MetroPanel>();
+        //Create dictionary of slow EPT
         Dictionary<string, string> slow = new Dictionary<string, string>
         {
             { "1", "3,000" },
@@ -49,6 +52,7 @@ namespace PathfinderApp
             { "19", "5,350,000" },
             { "20", ">5,350,000" }
         };
+        //Create dictionary of medium EPT
         Dictionary<string, string> medium = new Dictionary<string, string>
         {
             { "1", "2,000" },
@@ -72,7 +76,7 @@ namespace PathfinderApp
             { "19", "3,600,000" },
             { "20", ">3,600,000" }
         };
-
+        //Create dictionary of fast EPT
         Dictionary<string, string> fast = new Dictionary<string, string>
         {
             { "1", "1,300" },
@@ -96,6 +100,18 @@ namespace PathfinderApp
             { "19", "2,400,000" },
             { "20", ">2,400,000" }
         };
+        //Create list of everything that will be updated when str mod changes
+        List<MetroFramework.Controls.MetroLabel> strModList = new List<MetroFramework.Controls.MetroLabel>();
+        //Create list of everything that will be updated when dex mod changes
+        List<MetroFramework.Controls.MetroLabel> dexModList = new List<MetroFramework.Controls.MetroLabel>();
+        //Create list of everything that will be updated when con mod changes
+        List<MetroFramework.Controls.MetroLabel> conModList = new List<MetroFramework.Controls.MetroLabel>();
+        //Create list of everything that will be updated when int mod changes
+        List<MetroFramework.Controls.MetroLabel> intModList = new List<MetroFramework.Controls.MetroLabel>();
+        //Create list of everything that will be updated when wis mod changes
+        List<MetroFramework.Controls.MetroLabel> wisModList = new List<MetroFramework.Controls.MetroLabel>();
+        //Create list of everything that will be updated when cha mod changes
+        List<MetroFramework.Controls.MetroLabel> chaModList = new List<MetroFramework.Controls.MetroLabel>();
 
 
 
@@ -113,12 +129,17 @@ namespace PathfinderApp
             XP_point_total_comboBox.SelectedIndex = 0;
             gender_ComboBox.SelectedIndex = 0;
 
+            //Initital calculation of next level value 
             CalculateNextLevel();
-            //Creates a default Blank skill
-            Skill aSkill = new Skill();
-            CreateSkillPanel(aSkill);
-            detailedSkills = GetSkillsData();
-            
+            //Free up any memory the template is taking up 
+            SkillPanelTemplate.Dispose();
+            /*Add stuff to mod lists*/
+            dexModList.Add(ac_dexMod_textbox);
+            dexModList.Add(initiative_dexModifier_textbox);
+            dexModList.Add(reflex_abilityMod_textbox);
+            conModList.Add(fortitude_abilityMod_textbox);
+            wisModList.Add(will_abilityMod_textbox);
+
         }
 
         //Create a new character
@@ -208,7 +229,7 @@ namespace PathfinderApp
 
         #endregion
 
-        #region Ability Tab functions
+        #region Ability And Skills
 
         #region Events
         //Update everything that relates to dex
@@ -219,11 +240,10 @@ namespace PathfinderApp
 
 
             //change the appropriate text around or whatever
-            ac_dexMod_textbox.Text = dex_abilityScore_textbox.Text;
+            //ac_dexMod_textbox.Text = dex_abilitymodifier_textbox.Text;
+            //initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
+            //reflex_abilityMod_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
 
-            initiative_dexModifier_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
-
-            reflex_abilityMod_textbox.Text = dex_abilityScore_textbox.Text.Replace("+", ""); ;
             CalculateCMD();
         }
         private void con_abilityScore_textbox_TextChanged(object sender, EventArgs e)
@@ -231,14 +251,16 @@ namespace PathfinderApp
             //calculate ability mod
             con_abilitymodifier_textbox.Text = CalculateModifier(con_abilityScore_textbox.Text);
 
-            fortitude_abilityMod_textbox.Text = con_abilityScore_textbox.Text.Replace("+", ""); ;
+            //fortitude_abilityMod_textbox.Text = con_abilityScore_textbox.Text.Replace("+", ""); ;
+
         }
 
         private void wis_abilityScore_textbox_TextChanged(object sender, EventArgs e)
         {
             //calculate ability mod
             wis_abilitymodifier_textbox.Text = CalculateModifier(wis_abilityScore_textbox.Text);
-            will_abilityMod_textbox.Text = wis_abilityScore_textbox.Text.Replace("+", ""); ;
+            //will_abilityMod_textbox.Text = wis_abilityScore_textbox.Text.Replace("+", "");
+
         }
         private void str_abilityScore_textbox_TextChanged(object sender, EventArgs e)
         {
@@ -312,11 +334,13 @@ namespace PathfinderApp
             CalculateNextLevel();
         }
 
+        //Highlight menu label on mouse enter 
         private void Menu_Dropdown_label_MouseEnter(object sender, EventArgs e)
         {
             Menu_Dropdown_label.BackColor = Color.LightGray;
         }
 
+        //Change backcolor to normal color on menu label
         private void Menu_Dropdown_label_MouseLeave(object sender, EventArgs e)
         {
             Color newColor = new Color();
@@ -324,10 +348,73 @@ namespace PathfinderApp
             Menu_Dropdown_label.BackColor = newColor;
         }
 
+        //Show context menu when menu label is clicked 
         private void Menu_Dropdown_label_MouseClick(object sender, MouseEventArgs e)
         {
             ctxMenu.Show(Menu_Dropdown_label, 0, Menu_Dropdown_label.Height);
         }
+
+        private void Character_TabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Character_TabControl.SelectedIndex == 2)
+            {
+                AddAllSkills.Visible = true;
+            }
+            else if (Character_TabControl.SelectedIndex != 2)
+            {
+                AddAllSkills.Visible = false;
+            }
+        }
+
+        /*ABILITY MOD VALUES CHANGED*/
+        private void str_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < strModList.Count; i++)
+            {
+                strModList[i].Text = str_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
+        private void dex_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dexModList.Count; i++)
+            {
+                dexModList[i].Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
+        private void con_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < conModList.Count; i++)
+            {
+                conModList[i].Text = con_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
+        private void int_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < intModList.Count; i++)
+            {
+                intModList[i].Text = int_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
+        private void wis_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < wisModList.Count; i++)
+            {
+                wisModList[i].Text = wis_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
+        private void cha_abilitymodifier_textbox_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < chaModList.Count; i++)
+            {
+                chaModList[i].Text = cha_abilitymodifier_textbox.Text.Replace("+", "");
+            }
+        }
+
 
         #endregion
 
@@ -510,10 +597,6 @@ namespace PathfinderApp
         #endregion
 
         #region OTHER FUNCTIONS
-        //Creates a panel, with lots of components inside of it then adds that panel to a list
-        /*NEED to do
-         * Create skill objects to house all the info for the panel 
-         */
         public void CreateSkillPanel(Skill skill)
         {
             MetroFramework.Controls.MetroPanel skill_panel = new MetroFramework.Controls.MetroPanel();
@@ -633,8 +716,8 @@ namespace PathfinderApp
             AbilityMod_label.Text = AbilityModTemplate.Text;
             AbilityMod_label.BorderStyle = AbilityModTemplate.BorderStyle;
             AbilityMod_label.TextAlign = AbilityModTemplate.TextAlign;
-
             AbilityMod_label.Theme = MetroFramework.MetroThemeStyle.Dark;
+
 
             // 
             // PlusSignTemplate1
@@ -696,6 +779,7 @@ namespace PathfinderApp
             AbilityMod_label.Text = skill.abilityMod;
             ranks_label.Text = skill.ranks;
             MiscMod_label.Text = skill.miscMod;
+            SetModType(abilityType_label, AbilityMod_label);
 
 
 
@@ -704,14 +788,16 @@ namespace PathfinderApp
             SkillsPage_Panel.Controls.Add(skill_panel);
         }
 
-
-        public void CreateABunch(List<Skills_Detail> aBunchOSkills) {
-            foreach (Skills_Detail dSkill in aBunchOSkills) {
+        //Create all the skills using the information from the detailed skills list 
+        public void CreateABunch(List<Skills_Detail> aBunchOSkills)
+        {
+            foreach (Skills_Detail dSkill in aBunchOSkills)
+            {
                 Skill aSkill = new Skill(dSkill.name, "0", dSkill.stat, "0", "0", "0");
                 CreateSkillPanel(aSkill);
                 PlacePanels();
             }
-            
+
         }
         public void PlacePanels()
         {
@@ -730,13 +816,18 @@ namespace PathfinderApp
             using (WebClient webClient = new System.Net.WebClient())
             {
                 WebClient n = new WebClient();
+                //Get all skill names 
                 var json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/all");
                 string valueOriginal = Convert.ToString(json);
+                //Create a list of all skill names
                 List<ASkill> myDeserializedObjList = (List<ASkill>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<ASkill>));
-                foreach (ASkill askill in myDeserializedObjList) {
+                foreach (ASkill askill in myDeserializedObjList)
+                {
+                    //from a skill name, get the details for it 
                     json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/detail?name=" + askill.name);
-                    //Console.WriteLine(json);
+                    //Each single skill detail is held as a list, so I have to create a list to match that format
                     List<Skills_Detail> deserialSkill = (List<Skills_Detail>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<Skills_Detail>));
+                    //Get first element in list and add it to the details list 
                     detailedList.Add(deserialSkill[0]);
                 }
             }
@@ -744,6 +835,35 @@ namespace PathfinderApp
             //    Console.WriteLine("Name: " +detailedSkill.name + "Stat: "+ detailedSkill.stat);
             //}
             return detailedList;
+        }
+
+        public void SetModType(MetroFramework.Controls.MetroLabel type, MetroFramework.Controls.MetroLabel mod)
+        {
+            //This is kind of a garbage way to do this, but whatever 
+            if (type.Text.ToLower() == "str")
+            {
+                strModList.Add(mod);
+            }
+            else if (type.Text.ToLower() == "dex")
+            {
+                dexModList.Add(mod);
+            }
+            else if (type.Text.ToLower() == "con")
+            {
+                conModList.Add(mod);
+            }
+            else if (type.Text.ToLower() == "int")
+            {
+                intModList.Add(mod);
+            }
+            else if (type.Text.ToLower() == "wis")
+            {
+                wisModList.Add(mod);
+            }
+            else if (type.Text.ToLower() == "cha")
+            {
+                chaModList.Add(mod);
+            }
         }
 
         #endregion
@@ -797,7 +917,7 @@ namespace PathfinderApp
 
         private void ac_dexMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            ac_dexMod_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
+            //ac_dexMod_textbox.Text = dex_abilitymodifier_textbox.Text.Replace("+", "");
             CalculateAC();
         }
 
@@ -833,7 +953,7 @@ namespace PathfinderApp
 
         private void fortitude_abilityMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            fortitude_abilityMod_textbox.Text = con_abilitymodifier_textbox.Text.Replace("+", ""); ;
+            //fortitude_abilityMod_textbox.Text = con_abilitymodifier_textbox.Text.Replace("+", ""); ;
             CalculateFortSaves();
         }
 
@@ -912,33 +1032,16 @@ namespace PathfinderApp
 
         #endregion
 
+       
 
-        private void add_skill_panel_Click(object sender, EventArgs e)
-        {
-            //Temp info to see if it works 
-            Skill aSkill = new Skill();
-            //add panel
-            CreateSkillPanel(aSkill);
-            //rearrange panels
-            PlacePanels();
-        }
-
-        private void Character_TabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Character_TabControl.SelectedIndex == 2)
-            {
-                AddAllSkills.Visible = true;
-            }
-            else if (Character_TabControl.SelectedIndex != 2)
-            {
-                AddAllSkills.Visible = false;
-            }
-        }
 
         private void AddAllSkills_Click(object sender, EventArgs e)
         {
+            detailedSkills = GetSkillsData();
             CreateABunch(detailedSkills);
         }
+
+
     }
 }
 

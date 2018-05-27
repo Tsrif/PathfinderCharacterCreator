@@ -70,30 +70,6 @@
             this.Deity_lbl = new MetroFramework.Controls.MetroLabel();
             this.Homeland_lbl = new MetroFramework.Controls.MetroLabel();
             this.Abilities_TabPage = new MetroFramework.Controls.MetroTabPage();
-            this.Saves_panel = new MetroFramework.Controls.MetroPanel();
-            this.savingThrow_checkbox = new MetroFramework.Controls.MetroCheckBox();
-            this.saves_lbl = new MetroFramework.Controls.MetroLabel();
-            this.willSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflexSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitudeSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortSave_lbl = new MetroFramework.Controls.MetroLabel();
-            this.reflexSave_lbl = new MetroFramework.Controls.MetroLabel();
-            this.willSave_lbl = new MetroFramework.Controls.MetroLabel();
-            this.acMods_Panel = new MetroFramework.Controls.MetroPanel();
-            this.ac_deflectionMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_NaturalArmor_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_armorBonus_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_sizeMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_dexMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_shieldBonus_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_shieldBonus_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_dexMod_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_armorBonus_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.ac_sizeMod_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_naturalArmor_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_deflectionMod_lbl = new MetroFramework.Controls.MetroLabel();
-            this.ac_miscMod_lbl = new MetroFramework.Controls.MetroLabel();
             this.SidePanel_panel = new MetroFramework.Controls.MetroPanel();
             this.SpellResist_panel = new MetroFramework.Controls.MetroPanel();
             this.spellResist_amount_textbox = new MetroFramework.Controls.MetroTextBox();
@@ -123,39 +99,93 @@
             this.initiative_miscModifier_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.initiative_dexModifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.initiative_dexModifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.hp_panel = new MetroFramework.Controls.MetroPanel();
             this.hp_textbox = new MetroFramework.Controls.MetroTextBox();
             this.hp_lbl = new MetroFramework.Controls.MetroLabel();
             this.Abilities_panel = new MetroFramework.Controls.MetroPanel();
             this.ability_charisma_panel = new MetroFramework.Controls.MetroPanel();
-            this.cha_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.cha_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.cha_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.ability_wisdom_panel = new MetroFramework.Controls.MetroPanel();
-            this.wis_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.wis_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.wis_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.ability_intelligence_panel = new MetroFramework.Controls.MetroPanel();
-            this.int_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.int_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.int_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.ability_constitution_panel = new MetroFramework.Controls.MetroPanel();
-            this.con_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.con_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.con_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.ability_dexertity_panel = new MetroFramework.Controls.MetroPanel();
-            this.dex_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.dex_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.dex_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.ability_strength_panel = new MetroFramework.Controls.MetroPanel();
-            this.str_abilitymodifier_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.str_abilitymodifier_textbox = new MetroFramework.Controls.MetroLabel();
             this.str_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.str_lbl = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.savingThrows_panel = new MetroFramework.Controls.MetroPanel();
+            this.save_tempMod_panel = new MetroFramework.Controls.MetroPanel();
+            this.will_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.reflex_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortitude_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
+            this.save_miscMod_panel = new MetroFramework.Controls.MetroPanel();
+            this.will_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.reflex_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortitude_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
+            this.save_magicMod_paanel = new MetroFramework.Controls.MetroPanel();
+            this.will_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.reflex_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortitude_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.save_abilityMod_panel = new MetroFramework.Controls.MetroPanel();
+            this.will_abilityMod_textbox = new MetroFramework.Controls.MetroLabel();
+            this.reflex_abilityMod_textbox = new MetroFramework.Controls.MetroLabel();
+            this.fortitude_abilityMod_textbox = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
+            this.save_baseSave_panel = new MetroFramework.Controls.MetroPanel();
+            this.will_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.reflex_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortitude_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel32 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel34 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
+            this.Saves_panel = new MetroFramework.Controls.MetroPanel();
+            this.savingThrow_checkbox = new MetroFramework.Controls.MetroCheckBox();
+            this.saves_lbl = new MetroFramework.Controls.MetroLabel();
+            this.willSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.reflexSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortitudeSave_total_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.fortSave_lbl = new MetroFramework.Controls.MetroLabel();
+            this.reflexSave_lbl = new MetroFramework.Controls.MetroLabel();
+            this.willSave_lbl = new MetroFramework.Controls.MetroLabel();
+            this.acMods_Panel = new MetroFramework.Controls.MetroPanel();
+            this.ac_deflectionMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_NaturalArmor_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_armorBonus_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_sizeMod_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_dexMod_textbox = new MetroFramework.Controls.MetroLabel();
+            this.ac_shieldBonus_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_shieldBonus_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_dexMod_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_armorBonus_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.ac_sizeMod_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_naturalArmor_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_deflectionMod_lbl = new MetroFramework.Controls.MetroLabel();
+            this.ac_miscMod_lbl = new MetroFramework.Controls.MetroLabel();
             this.Speed_panel = new MetroFramework.Controls.MetroPanel();
             this.burrowSpeed_panel = new MetroFramework.Controls.MetroPanel();
             this.burrowSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
@@ -182,36 +212,6 @@
             this.baseSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
             this.baseSpeed_lbl = new MetroFramework.Controls.MetroLabel();
             this.Speed_feet_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.savingThrows_panel = new MetroFramework.Controls.MetroPanel();
-            this.save_tempMod_panel = new MetroFramework.Controls.MetroPanel();
-            this.will_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflex_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitude_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
-            this.save_miscMod_panel = new MetroFramework.Controls.MetroPanel();
-            this.will_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflex_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitude_miscMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
-            this.save_magicMod_paanel = new MetroFramework.Controls.MetroPanel();
-            this.will_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflex_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitude_magicMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.save_abilityMod_panel = new MetroFramework.Controls.MetroPanel();
-            this.will_abilityMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflex_abilityMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitude_abilityMod_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
-            this.save_baseSave_panel = new MetroFramework.Controls.MetroPanel();
-            this.will_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.reflex_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.fortitude_baseSave_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel32 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel34 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
             this.Skills_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.SkillsPage_Panel = new MetroFramework.Controls.MetroPanel();
             this.SkillPanelTemplate = new MetroFramework.Controls.MetroPanel();
@@ -243,13 +243,12 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Dropdown_label = new MetroFramework.Controls.MetroLabel();
             this.AddAllSkills = new MetroFramework.Controls.MetroButton();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.Character_TabControl.SuspendLayout();
             this.CharacterInfo_TabPage.SuspendLayout();
             this.CharacterInfo_Panel.SuspendLayout();
             this.XP_Panel.SuspendLayout();
             this.Abilities_TabPage.SuspendLayout();
-            this.Saves_panel.SuspendLayout();
-            this.acMods_Panel.SuspendLayout();
             this.SidePanel_panel.SuspendLayout();
             this.SpellResist_panel.SuspendLayout();
             this.BaseAttackBonus_panel.SuspendLayout();
@@ -265,6 +264,14 @@
             this.ability_constitution_panel.SuspendLayout();
             this.ability_dexertity_panel.SuspendLayout();
             this.ability_strength_panel.SuspendLayout();
+            this.savingThrows_panel.SuspendLayout();
+            this.save_tempMod_panel.SuspendLayout();
+            this.save_miscMod_panel.SuspendLayout();
+            this.save_magicMod_paanel.SuspendLayout();
+            this.save_abilityMod_panel.SuspendLayout();
+            this.save_baseSave_panel.SuspendLayout();
+            this.Saves_panel.SuspendLayout();
+            this.acMods_Panel.SuspendLayout();
             this.Speed_panel.SuspendLayout();
             this.burrowSpeed_panel.SuspendLayout();
             this.climbSpeed_panel.SuspendLayout();
@@ -272,12 +279,6 @@
             this.flySpeed_panel.SuspendLayout();
             this.armorSpeed_panel.SuspendLayout();
             this.baseSpeed_panel.SuspendLayout();
-            this.savingThrows_panel.SuspendLayout();
-            this.save_tempMod_panel.SuspendLayout();
-            this.save_miscMod_panel.SuspendLayout();
-            this.save_magicMod_paanel.SuspendLayout();
-            this.save_abilityMod_panel.SuspendLayout();
-            this.save_baseSave_panel.SuspendLayout();
             this.Skills_TabPage.SuspendLayout();
             this.SkillsPage_Panel.SuspendLayout();
             this.SkillPanelTemplate.SuspendLayout();
@@ -296,7 +297,7 @@
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 0;
+            this.Character_TabControl.SelectedIndex = 2;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1175,8 +1176,6 @@
             // 
             // Abilities_TabPage
             // 
-            this.Abilities_TabPage.Controls.Add(this.Saves_panel);
-            this.Abilities_TabPage.Controls.Add(this.acMods_Panel);
             this.Abilities_TabPage.Controls.Add(this.SidePanel_panel);
             this.Abilities_TabPage.Controls.Add(this.AC_Panel);
             this.Abilities_TabPage.Controls.Add(this.initiative_panel);
@@ -1184,6 +1183,8 @@
             this.Abilities_TabPage.Controls.Add(this.Abilities_panel);
             this.Abilities_TabPage.Controls.Add(this.Speed_panel);
             this.Abilities_TabPage.Controls.Add(this.savingThrows_panel);
+            this.Abilities_TabPage.Controls.Add(this.Saves_panel);
+            this.Abilities_TabPage.Controls.Add(this.acMods_Panel);
             this.Abilities_TabPage.HorizontalScrollbarBarColor = true;
             this.Abilities_TabPage.HorizontalScrollbarHighlightOnWheel = false;
             this.Abilities_TabPage.HorizontalScrollbarSize = 10;
@@ -1196,551 +1197,6 @@
             this.Abilities_TabPage.VerticalScrollbarBarColor = true;
             this.Abilities_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.Abilities_TabPage.VerticalScrollbarSize = 10;
-            // 
-            // Saves_panel
-            // 
-            this.Saves_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Saves_panel.Controls.Add(this.savingThrow_checkbox);
-            this.Saves_panel.Controls.Add(this.saves_lbl);
-            this.Saves_panel.Controls.Add(this.willSave_total_textbox);
-            this.Saves_panel.Controls.Add(this.reflexSave_total_textbox);
-            this.Saves_panel.Controls.Add(this.fortitudeSave_total_textbox);
-            this.Saves_panel.Controls.Add(this.fortSave_lbl);
-            this.Saves_panel.Controls.Add(this.reflexSave_lbl);
-            this.Saves_panel.Controls.Add(this.willSave_lbl);
-            this.Saves_panel.HorizontalScrollbarBarColor = true;
-            this.Saves_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.Saves_panel.HorizontalScrollbarSize = 10;
-            this.Saves_panel.Location = new System.Drawing.Point(3, 520);
-            this.Saves_panel.Name = "Saves_panel";
-            this.Saves_panel.Size = new System.Drawing.Size(165, 176);
-            this.Saves_panel.TabIndex = 32;
-            this.Saves_panel.VerticalScrollbarBarColor = true;
-            this.Saves_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.Saves_panel.VerticalScrollbarSize = 10;
-            // 
-            // savingThrow_checkbox
-            // 
-            this.savingThrow_checkbox.AutoSize = true;
-            this.savingThrow_checkbox.Location = new System.Drawing.Point(7, 149);
-            this.savingThrow_checkbox.Name = "savingThrow_checkbox";
-            this.savingThrow_checkbox.Size = new System.Drawing.Size(131, 15);
-            this.savingThrow_checkbox.TabIndex = 17;
-            this.savingThrow_checkbox.Text = "Show save modifiers";
-            this.savingThrow_checkbox.UseSelectable = true;
-            this.savingThrow_checkbox.CheckedChanged += new System.EventHandler(this.savingThrow_checkbox_CheckedChanged);
-            // 
-            // saves_lbl
-            // 
-            this.saves_lbl.BackColor = System.Drawing.Color.Black;
-            this.saves_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.saves_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.saves_lbl.ForeColor = System.Drawing.Color.White;
-            this.saves_lbl.Location = new System.Drawing.Point(3, 3);
-            this.saves_lbl.Name = "saves_lbl";
-            this.saves_lbl.Size = new System.Drawing.Size(154, 25);
-            this.saves_lbl.TabIndex = 17;
-            this.saves_lbl.Text = "Saves";
-            this.saves_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.saves_lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // willSave_total_textbox
-            // 
-            // 
-            // 
-            // 
-            this.willSave_total_textbox.CustomButton.Image = null;
-            this.willSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
-            this.willSave_total_textbox.CustomButton.Name = "";
-            this.willSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.willSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.willSave_total_textbox.CustomButton.TabIndex = 1;
-            this.willSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.willSave_total_textbox.CustomButton.UseSelectable = true;
-            this.willSave_total_textbox.CustomButton.Visible = false;
-            this.willSave_total_textbox.Lines = new string[] {
-        "0"};
-            this.willSave_total_textbox.Location = new System.Drawing.Point(106, 110);
-            this.willSave_total_textbox.MaxLength = 32767;
-            this.willSave_total_textbox.Name = "willSave_total_textbox";
-            this.willSave_total_textbox.PasswordChar = '\0';
-            this.willSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.willSave_total_textbox.SelectedText = "";
-            this.willSave_total_textbox.SelectionLength = 0;
-            this.willSave_total_textbox.SelectionStart = 0;
-            this.willSave_total_textbox.ShortcutsEnabled = true;
-            this.willSave_total_textbox.Size = new System.Drawing.Size(51, 30);
-            this.willSave_total_textbox.TabIndex = 29;
-            this.willSave_total_textbox.Text = "0";
-            this.willSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.willSave_total_textbox.UseSelectable = true;
-            this.willSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.willSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // reflexSave_total_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflexSave_total_textbox.CustomButton.Image = null;
-            this.reflexSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
-            this.reflexSave_total_textbox.CustomButton.Name = "";
-            this.reflexSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.reflexSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflexSave_total_textbox.CustomButton.TabIndex = 1;
-            this.reflexSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflexSave_total_textbox.CustomButton.UseSelectable = true;
-            this.reflexSave_total_textbox.CustomButton.Visible = false;
-            this.reflexSave_total_textbox.Lines = new string[] {
-        "0"};
-            this.reflexSave_total_textbox.Location = new System.Drawing.Point(106, 74);
-            this.reflexSave_total_textbox.MaxLength = 32767;
-            this.reflexSave_total_textbox.Name = "reflexSave_total_textbox";
-            this.reflexSave_total_textbox.PasswordChar = '\0';
-            this.reflexSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflexSave_total_textbox.SelectedText = "";
-            this.reflexSave_total_textbox.SelectionLength = 0;
-            this.reflexSave_total_textbox.SelectionStart = 0;
-            this.reflexSave_total_textbox.ShortcutsEnabled = true;
-            this.reflexSave_total_textbox.Size = new System.Drawing.Size(51, 30);
-            this.reflexSave_total_textbox.TabIndex = 28;
-            this.reflexSave_total_textbox.Text = "0";
-            this.reflexSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflexSave_total_textbox.UseSelectable = true;
-            this.reflexSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflexSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // fortitudeSave_total_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitudeSave_total_textbox.CustomButton.Image = null;
-            this.fortitudeSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
-            this.fortitudeSave_total_textbox.CustomButton.Name = "";
-            this.fortitudeSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.fortitudeSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitudeSave_total_textbox.CustomButton.TabIndex = 1;
-            this.fortitudeSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitudeSave_total_textbox.CustomButton.UseSelectable = true;
-            this.fortitudeSave_total_textbox.CustomButton.Visible = false;
-            this.fortitudeSave_total_textbox.Lines = new string[] {
-        "0"};
-            this.fortitudeSave_total_textbox.Location = new System.Drawing.Point(106, 38);
-            this.fortitudeSave_total_textbox.MaxLength = 32767;
-            this.fortitudeSave_total_textbox.Name = "fortitudeSave_total_textbox";
-            this.fortitudeSave_total_textbox.PasswordChar = '\0';
-            this.fortitudeSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitudeSave_total_textbox.SelectedText = "";
-            this.fortitudeSave_total_textbox.SelectionLength = 0;
-            this.fortitudeSave_total_textbox.SelectionStart = 0;
-            this.fortitudeSave_total_textbox.ShortcutsEnabled = true;
-            this.fortitudeSave_total_textbox.Size = new System.Drawing.Size(51, 30);
-            this.fortitudeSave_total_textbox.TabIndex = 27;
-            this.fortitudeSave_total_textbox.Text = "0";
-            this.fortitudeSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitudeSave_total_textbox.UseSelectable = true;
-            this.fortitudeSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitudeSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // fortSave_lbl
-            // 
-            this.fortSave_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.fortSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fortSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.fortSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.fortSave_lbl.Location = new System.Drawing.Point(7, 38);
-            this.fortSave_lbl.Name = "fortSave_lbl";
-            this.fortSave_lbl.Size = new System.Drawing.Size(93, 30);
-            this.fortSave_lbl.TabIndex = 20;
-            this.fortSave_lbl.Text = "Foritude\r\n(Constitution)\r\n";
-            this.fortSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.fortSave_lbl.UseCustomBackColor = true;
-            // 
-            // reflexSave_lbl
-            // 
-            this.reflexSave_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.reflexSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.reflexSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.reflexSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.reflexSave_lbl.Location = new System.Drawing.Point(7, 74);
-            this.reflexSave_lbl.Name = "reflexSave_lbl";
-            this.reflexSave_lbl.Size = new System.Drawing.Size(93, 30);
-            this.reflexSave_lbl.TabIndex = 21;
-            this.reflexSave_lbl.Text = "Reflex\r\n(Dexterity)";
-            this.reflexSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reflexSave_lbl.UseCustomBackColor = true;
-            // 
-            // willSave_lbl
-            // 
-            this.willSave_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.willSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.willSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.willSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.willSave_lbl.Location = new System.Drawing.Point(7, 110);
-            this.willSave_lbl.Name = "willSave_lbl";
-            this.willSave_lbl.Size = new System.Drawing.Size(93, 30);
-            this.willSave_lbl.TabIndex = 22;
-            this.willSave_lbl.Text = "Will\r\n(Wisdom)";
-            this.willSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.willSave_lbl.UseCustomBackColor = true;
-            // 
-            // acMods_Panel
-            // 
-            this.acMods_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.acMods_Panel.Controls.Add(this.ac_deflectionMod_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_NaturalArmor_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_miscMod_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_armorBonus_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_sizeMod_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_dexMod_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_shieldBonus_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_shieldBonus_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_dexMod_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_armorBonus_textbox);
-            this.acMods_Panel.Controls.Add(this.ac_sizeMod_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_naturalArmor_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_deflectionMod_lbl);
-            this.acMods_Panel.Controls.Add(this.ac_miscMod_lbl);
-            this.acMods_Panel.HorizontalScrollbarBarColor = true;
-            this.acMods_Panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.acMods_Panel.HorizontalScrollbarSize = 10;
-            this.acMods_Panel.Location = new System.Drawing.Point(3, 520);
-            this.acMods_Panel.Name = "acMods_Panel";
-            this.acMods_Panel.Size = new System.Drawing.Size(165, 176);
-            this.acMods_Panel.TabIndex = 8;
-            this.acMods_Panel.VerticalScrollbarBarColor = true;
-            this.acMods_Panel.VerticalScrollbarHighlightOnWheel = false;
-            this.acMods_Panel.VerticalScrollbarSize = 10;
-            // 
-            // ac_deflectionMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_deflectionMod_textbox.CustomButton.Image = null;
-            this.ac_deflectionMod_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_deflectionMod_textbox.CustomButton.Name = "";
-            this.ac_deflectionMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_deflectionMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_deflectionMod_textbox.CustomButton.TabIndex = 1;
-            this.ac_deflectionMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_deflectionMod_textbox.CustomButton.UseSelectable = true;
-            this.ac_deflectionMod_textbox.CustomButton.Visible = false;
-            this.ac_deflectionMod_textbox.Lines = new string[] {
-        "0"};
-            this.ac_deflectionMod_textbox.Location = new System.Drawing.Point(145, 3);
-            this.ac_deflectionMod_textbox.MaxLength = 32767;
-            this.ac_deflectionMod_textbox.Name = "ac_deflectionMod_textbox";
-            this.ac_deflectionMod_textbox.PasswordChar = '\0';
-            this.ac_deflectionMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_deflectionMod_textbox.SelectedText = "";
-            this.ac_deflectionMod_textbox.SelectionLength = 0;
-            this.ac_deflectionMod_textbox.SelectionStart = 0;
-            this.ac_deflectionMod_textbox.ShortcutsEnabled = true;
-            this.ac_deflectionMod_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_deflectionMod_textbox.TabIndex = 31;
-            this.ac_deflectionMod_textbox.Text = "0";
-            this.ac_deflectionMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_deflectionMod_textbox.UseSelectable = true;
-            this.ac_deflectionMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_deflectionMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_deflectionMod_textbox.TextChanged += new System.EventHandler(this.ac_deflectionMod_textbox_TextChanged);
-            // 
-            // ac_NaturalArmor_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_NaturalArmor_textbox.CustomButton.Image = null;
-            this.ac_NaturalArmor_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_NaturalArmor_textbox.CustomButton.Name = "";
-            this.ac_NaturalArmor_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_NaturalArmor_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_NaturalArmor_textbox.CustomButton.TabIndex = 1;
-            this.ac_NaturalArmor_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_NaturalArmor_textbox.CustomButton.UseSelectable = true;
-            this.ac_NaturalArmor_textbox.CustomButton.Visible = false;
-            this.ac_NaturalArmor_textbox.Lines = new string[] {
-        "0"};
-            this.ac_NaturalArmor_textbox.Location = new System.Drawing.Point(67, 134);
-            this.ac_NaturalArmor_textbox.MaxLength = 32767;
-            this.ac_NaturalArmor_textbox.Name = "ac_NaturalArmor_textbox";
-            this.ac_NaturalArmor_textbox.PasswordChar = '\0';
-            this.ac_NaturalArmor_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_NaturalArmor_textbox.SelectedText = "";
-            this.ac_NaturalArmor_textbox.SelectionLength = 0;
-            this.ac_NaturalArmor_textbox.SelectionStart = 0;
-            this.ac_NaturalArmor_textbox.ShortcutsEnabled = true;
-            this.ac_NaturalArmor_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_NaturalArmor_textbox.TabIndex = 29;
-            this.ac_NaturalArmor_textbox.Text = "0";
-            this.ac_NaturalArmor_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_NaturalArmor_textbox.UseSelectable = true;
-            this.ac_NaturalArmor_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_NaturalArmor_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_NaturalArmor_textbox.TextChanged += new System.EventHandler(this.ac_NaturalArmor_textbox_TextChanged);
-            // 
-            // ac_miscMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_miscMod_textbox.CustomButton.Image = null;
-            this.ac_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_miscMod_textbox.CustomButton.Name = "";
-            this.ac_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_miscMod_textbox.CustomButton.TabIndex = 1;
-            this.ac_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_miscMod_textbox.CustomButton.UseSelectable = true;
-            this.ac_miscMod_textbox.CustomButton.Visible = false;
-            this.ac_miscMod_textbox.Lines = new string[] {
-        "0"};
-            this.ac_miscMod_textbox.Location = new System.Drawing.Point(145, 35);
-            this.ac_miscMod_textbox.MaxLength = 32767;
-            this.ac_miscMod_textbox.Name = "ac_miscMod_textbox";
-            this.ac_miscMod_textbox.PasswordChar = '\0';
-            this.ac_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_miscMod_textbox.SelectedText = "";
-            this.ac_miscMod_textbox.SelectionLength = 0;
-            this.ac_miscMod_textbox.SelectionStart = 0;
-            this.ac_miscMod_textbox.ShortcutsEnabled = true;
-            this.ac_miscMod_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_miscMod_textbox.TabIndex = 30;
-            this.ac_miscMod_textbox.Text = "0";
-            this.ac_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_miscMod_textbox.UseSelectable = true;
-            this.ac_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_miscMod_textbox.TextChanged += new System.EventHandler(this.ac_miscMod_textbox_TextChanged);
-            // 
-            // ac_armorBonus_lbl
-            // 
-            this.ac_armorBonus_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_armorBonus_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_armorBonus_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_armorBonus_lbl.Location = new System.Drawing.Point(7, 2);
-            this.ac_armorBonus_lbl.Name = "ac_armorBonus_lbl";
-            this.ac_armorBonus_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_armorBonus_lbl.TabIndex = 16;
-            this.ac_armorBonus_lbl.Text = "Armor\r\nBonus";
-            this.ac_armorBonus_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_armorBonus_lbl.UseCustomBackColor = true;
-            // 
-            // ac_sizeMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_sizeMod_textbox.CustomButton.Image = null;
-            this.ac_sizeMod_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_sizeMod_textbox.CustomButton.Name = "";
-            this.ac_sizeMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_sizeMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_sizeMod_textbox.CustomButton.TabIndex = 1;
-            this.ac_sizeMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_sizeMod_textbox.CustomButton.UseSelectable = true;
-            this.ac_sizeMod_textbox.CustomButton.Visible = false;
-            this.ac_sizeMod_textbox.Lines = new string[] {
-        "0"};
-            this.ac_sizeMod_textbox.Location = new System.Drawing.Point(67, 101);
-            this.ac_sizeMod_textbox.MaxLength = 32767;
-            this.ac_sizeMod_textbox.Name = "ac_sizeMod_textbox";
-            this.ac_sizeMod_textbox.PasswordChar = '\0';
-            this.ac_sizeMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_sizeMod_textbox.SelectedText = "";
-            this.ac_sizeMod_textbox.SelectionLength = 0;
-            this.ac_sizeMod_textbox.SelectionStart = 0;
-            this.ac_sizeMod_textbox.ShortcutsEnabled = true;
-            this.ac_sizeMod_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_sizeMod_textbox.TabIndex = 28;
-            this.ac_sizeMod_textbox.Text = "0";
-            this.ac_sizeMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_sizeMod_textbox.UseSelectable = true;
-            this.ac_sizeMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_sizeMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_sizeMod_textbox.TextChanged += new System.EventHandler(this.ac_sizeMod_textbox_TextChanged);
-            // 
-            // ac_dexMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_dexMod_textbox.CustomButton.Image = null;
-            this.ac_dexMod_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_dexMod_textbox.CustomButton.Name = "";
-            this.ac_dexMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_dexMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_dexMod_textbox.CustomButton.TabIndex = 1;
-            this.ac_dexMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_dexMod_textbox.CustomButton.UseSelectable = true;
-            this.ac_dexMod_textbox.CustomButton.Visible = false;
-            this.ac_dexMod_textbox.Lines = new string[] {
-        "0"};
-            this.ac_dexMod_textbox.Location = new System.Drawing.Point(67, 68);
-            this.ac_dexMod_textbox.MaxLength = 32767;
-            this.ac_dexMod_textbox.Name = "ac_dexMod_textbox";
-            this.ac_dexMod_textbox.PasswordChar = '\0';
-            this.ac_dexMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_dexMod_textbox.SelectedText = "";
-            this.ac_dexMod_textbox.SelectionLength = 0;
-            this.ac_dexMod_textbox.SelectionStart = 0;
-            this.ac_dexMod_textbox.ShortcutsEnabled = true;
-            this.ac_dexMod_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_dexMod_textbox.TabIndex = 27;
-            this.ac_dexMod_textbox.Text = "0";
-            this.ac_dexMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_dexMod_textbox.UseSelectable = true;
-            this.ac_dexMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_dexMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_dexMod_textbox.TextChanged += new System.EventHandler(this.ac_dexMod_textbox_TextChanged);
-            // 
-            // ac_shieldBonus_lbl
-            // 
-            this.ac_shieldBonus_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_shieldBonus_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_shieldBonus_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_shieldBonus_lbl.Location = new System.Drawing.Point(7, 35);
-            this.ac_shieldBonus_lbl.Name = "ac_shieldBonus_lbl";
-            this.ac_shieldBonus_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_shieldBonus_lbl.TabIndex = 19;
-            this.ac_shieldBonus_lbl.Text = "Shield\r\nBonus";
-            this.ac_shieldBonus_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_shieldBonus_lbl.UseCustomBackColor = true;
-            // 
-            // ac_shieldBonus_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_shieldBonus_textbox.CustomButton.Image = null;
-            this.ac_shieldBonus_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_shieldBonus_textbox.CustomButton.Name = "";
-            this.ac_shieldBonus_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_shieldBonus_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_shieldBonus_textbox.CustomButton.TabIndex = 1;
-            this.ac_shieldBonus_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_shieldBonus_textbox.CustomButton.UseSelectable = true;
-            this.ac_shieldBonus_textbox.CustomButton.Visible = false;
-            this.ac_shieldBonus_textbox.Lines = new string[] {
-        "0"};
-            this.ac_shieldBonus_textbox.Location = new System.Drawing.Point(67, 35);
-            this.ac_shieldBonus_textbox.MaxLength = 32767;
-            this.ac_shieldBonus_textbox.Name = "ac_shieldBonus_textbox";
-            this.ac_shieldBonus_textbox.PasswordChar = '\0';
-            this.ac_shieldBonus_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_shieldBonus_textbox.SelectedText = "";
-            this.ac_shieldBonus_textbox.SelectionLength = 0;
-            this.ac_shieldBonus_textbox.SelectionStart = 0;
-            this.ac_shieldBonus_textbox.ShortcutsEnabled = true;
-            this.ac_shieldBonus_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_shieldBonus_textbox.TabIndex = 26;
-            this.ac_shieldBonus_textbox.Text = "0";
-            this.ac_shieldBonus_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_shieldBonus_textbox.UseSelectable = true;
-            this.ac_shieldBonus_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_shieldBonus_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_shieldBonus_textbox.TextChanged += new System.EventHandler(this.ac_shieldBonus_textbox_TextChanged);
-            // 
-            // ac_dexMod_lbl
-            // 
-            this.ac_dexMod_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_dexMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_dexMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_dexMod_lbl.Location = new System.Drawing.Point(7, 68);
-            this.ac_dexMod_lbl.Name = "ac_dexMod_lbl";
-            this.ac_dexMod_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_dexMod_lbl.TabIndex = 20;
-            this.ac_dexMod_lbl.Text = "Dex\r\nMod";
-            this.ac_dexMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_dexMod_lbl.UseCustomBackColor = true;
-            // 
-            // ac_armorBonus_textbox
-            // 
-            // 
-            // 
-            // 
-            this.ac_armorBonus_textbox.CustomButton.Image = null;
-            this.ac_armorBonus_textbox.CustomButton.Location = new System.Drawing.Point(-13, 2);
-            this.ac_armorBonus_textbox.CustomButton.Name = "";
-            this.ac_armorBonus_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.ac_armorBonus_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ac_armorBonus_textbox.CustomButton.TabIndex = 1;
-            this.ac_armorBonus_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ac_armorBonus_textbox.CustomButton.UseSelectable = true;
-            this.ac_armorBonus_textbox.CustomButton.Visible = false;
-            this.ac_armorBonus_textbox.Lines = new string[] {
-        "0"};
-            this.ac_armorBonus_textbox.Location = new System.Drawing.Point(67, 2);
-            this.ac_armorBonus_textbox.MaxLength = 32767;
-            this.ac_armorBonus_textbox.Name = "ac_armorBonus_textbox";
-            this.ac_armorBonus_textbox.PasswordChar = '\0';
-            this.ac_armorBonus_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ac_armorBonus_textbox.SelectedText = "";
-            this.ac_armorBonus_textbox.SelectionLength = 0;
-            this.ac_armorBonus_textbox.SelectionStart = 0;
-            this.ac_armorBonus_textbox.ShortcutsEnabled = true;
-            this.ac_armorBonus_textbox.Size = new System.Drawing.Size(15, 30);
-            this.ac_armorBonus_textbox.TabIndex = 25;
-            this.ac_armorBonus_textbox.Text = "0";
-            this.ac_armorBonus_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ac_armorBonus_textbox.UseSelectable = true;
-            this.ac_armorBonus_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ac_armorBonus_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.ac_armorBonus_textbox.TextChanged += new System.EventHandler(this.ac_armorBonus_textbox_TextChanged);
-            // 
-            // ac_sizeMod_lbl
-            // 
-            this.ac_sizeMod_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_sizeMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_sizeMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_sizeMod_lbl.Location = new System.Drawing.Point(7, 101);
-            this.ac_sizeMod_lbl.Name = "ac_sizeMod_lbl";
-            this.ac_sizeMod_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_sizeMod_lbl.TabIndex = 21;
-            this.ac_sizeMod_lbl.Text = "Size\r\nMod";
-            this.ac_sizeMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_sizeMod_lbl.UseCustomBackColor = true;
-            // 
-            // ac_naturalArmor_lbl
-            // 
-            this.ac_naturalArmor_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_naturalArmor_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_naturalArmor_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_naturalArmor_lbl.Location = new System.Drawing.Point(6, 134);
-            this.ac_naturalArmor_lbl.Name = "ac_naturalArmor_lbl";
-            this.ac_naturalArmor_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_naturalArmor_lbl.TabIndex = 22;
-            this.ac_naturalArmor_lbl.Text = "Natural\r\nArmor";
-            this.ac_naturalArmor_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_naturalArmor_lbl.UseCustomBackColor = true;
-            // 
-            // ac_deflectionMod_lbl
-            // 
-            this.ac_deflectionMod_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_deflectionMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_deflectionMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_deflectionMod_lbl.Location = new System.Drawing.Point(88, 2);
-            this.ac_deflectionMod_lbl.Name = "ac_deflectionMod_lbl";
-            this.ac_deflectionMod_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_deflectionMod_lbl.TabIndex = 23;
-            this.ac_deflectionMod_lbl.Text = "Deflection\r\nMod";
-            this.ac_deflectionMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_deflectionMod_lbl.UseCustomBackColor = true;
-            // 
-            // ac_miscMod_lbl
-            // 
-            this.ac_miscMod_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.ac_miscMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ac_miscMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.ac_miscMod_lbl.Location = new System.Drawing.Point(88, 35);
-            this.ac_miscMod_lbl.Name = "ac_miscMod_lbl";
-            this.ac_miscMod_lbl.Size = new System.Drawing.Size(54, 30);
-            this.ac_miscMod_lbl.TabIndex = 24;
-            this.ac_miscMod_lbl.Text = "Misc\r\nMod";
-            this.ac_miscMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ac_miscMod_lbl.UseCustomBackColor = true;
             // 
             // SidePanel_panel
             // 
@@ -2232,38 +1688,14 @@
             // 
             // initiative_dexModifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.initiative_dexModifier_textbox.CustomButton.Image = null;
-            this.initiative_dexModifier_textbox.CustomButton.Location = new System.Drawing.Point(2, 1);
-            this.initiative_dexModifier_textbox.CustomButton.Name = "";
-            this.initiative_dexModifier_textbox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.initiative_dexModifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.initiative_dexModifier_textbox.CustomButton.TabIndex = 1;
-            this.initiative_dexModifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.initiative_dexModifier_textbox.CustomButton.UseSelectable = true;
-            this.initiative_dexModifier_textbox.CustomButton.Visible = false;
-            this.initiative_dexModifier_textbox.Lines = new string[] {
-        "0"};
+            this.initiative_dexModifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.initiative_dexModifier_textbox.Location = new System.Drawing.Point(117, 9);
-            this.initiative_dexModifier_textbox.MaxLength = 32767;
             this.initiative_dexModifier_textbox.Name = "initiative_dexModifier_textbox";
-            this.initiative_dexModifier_textbox.PasswordChar = '\0';
-            this.initiative_dexModifier_textbox.ReadOnly = true;
-            this.initiative_dexModifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.initiative_dexModifier_textbox.SelectedText = "";
-            this.initiative_dexModifier_textbox.SelectionLength = 0;
-            this.initiative_dexModifier_textbox.SelectionStart = 0;
-            this.initiative_dexModifier_textbox.ShortcutsEnabled = true;
             this.initiative_dexModifier_textbox.Size = new System.Drawing.Size(26, 25);
             this.initiative_dexModifier_textbox.TabIndex = 9;
-            this.initiative_dexModifier_textbox.TabStop = false;
             this.initiative_dexModifier_textbox.Text = "0";
-            this.initiative_dexModifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.initiative_dexModifier_textbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.initiative_dexModifier_textbox.UseSelectable = true;
-            this.initiative_dexModifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.initiative_dexModifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.initiative_dexModifier_textbox.TextChanged += new System.EventHandler(this.initiative_dexModifier_textbox_TextChanged);
             // 
             // metroLabel10
@@ -2380,38 +1812,15 @@
             // 
             // cha_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.cha_abilitymodifier_textbox.CustomButton.Image = null;
-            this.cha_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.cha_abilitymodifier_textbox.CustomButton.Name = "";
-            this.cha_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.cha_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cha_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.cha_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.cha_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.cha_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.cha_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.cha_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cha_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 3);
-            this.cha_abilitymodifier_textbox.MaxLength = 32767;
             this.cha_abilitymodifier_textbox.Name = "cha_abilitymodifier_textbox";
-            this.cha_abilitymodifier_textbox.PasswordChar = '\0';
-            this.cha_abilitymodifier_textbox.ReadOnly = true;
-            this.cha_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.cha_abilitymodifier_textbox.SelectedText = "";
-            this.cha_abilitymodifier_textbox.SelectionLength = 0;
-            this.cha_abilitymodifier_textbox.SelectionStart = 0;
-            this.cha_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.cha_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.cha_abilitymodifier_textbox.TabIndex = 4;
-            this.cha_abilitymodifier_textbox.TabStop = false;
             this.cha_abilitymodifier_textbox.Text = "0";
-            this.cha_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cha_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cha_abilitymodifier_textbox.UseSelectable = true;
-            this.cha_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cha_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cha_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.cha_abilitymodifier_textbox_TextChanged);
             // 
             // cha_abilityScore_textbox
             // 
@@ -2480,38 +1889,15 @@
             // 
             // wis_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.wis_abilitymodifier_textbox.CustomButton.Image = null;
-            this.wis_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.wis_abilitymodifier_textbox.CustomButton.Name = "";
-            this.wis_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.wis_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.wis_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.wis_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.wis_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.wis_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.wis_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.wis_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wis_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 3);
-            this.wis_abilitymodifier_textbox.MaxLength = 32767;
             this.wis_abilitymodifier_textbox.Name = "wis_abilitymodifier_textbox";
-            this.wis_abilitymodifier_textbox.PasswordChar = '\0';
-            this.wis_abilitymodifier_textbox.ReadOnly = true;
-            this.wis_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.wis_abilitymodifier_textbox.SelectedText = "";
-            this.wis_abilitymodifier_textbox.SelectionLength = 0;
-            this.wis_abilitymodifier_textbox.SelectionStart = 0;
-            this.wis_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.wis_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.wis_abilitymodifier_textbox.TabIndex = 4;
-            this.wis_abilitymodifier_textbox.TabStop = false;
             this.wis_abilitymodifier_textbox.Text = "0";
-            this.wis_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wis_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.wis_abilitymodifier_textbox.UseSelectable = true;
-            this.wis_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.wis_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.wis_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.wis_abilitymodifier_textbox_TextChanged);
             // 
             // wis_abilityScore_textbox
             // 
@@ -2580,38 +1966,15 @@
             // 
             // int_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.int_abilitymodifier_textbox.CustomButton.Image = null;
-            this.int_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.int_abilitymodifier_textbox.CustomButton.Name = "";
-            this.int_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.int_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.int_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.int_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.int_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.int_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.int_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.int_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.int_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 4);
-            this.int_abilitymodifier_textbox.MaxLength = 32767;
             this.int_abilitymodifier_textbox.Name = "int_abilitymodifier_textbox";
-            this.int_abilitymodifier_textbox.PasswordChar = '\0';
-            this.int_abilitymodifier_textbox.ReadOnly = true;
-            this.int_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.int_abilitymodifier_textbox.SelectedText = "";
-            this.int_abilitymodifier_textbox.SelectionLength = 0;
-            this.int_abilitymodifier_textbox.SelectionStart = 0;
-            this.int_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.int_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.int_abilitymodifier_textbox.TabIndex = 4;
-            this.int_abilitymodifier_textbox.TabStop = false;
             this.int_abilitymodifier_textbox.Text = "0";
-            this.int_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.int_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.int_abilitymodifier_textbox.UseSelectable = true;
-            this.int_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.int_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.int_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.int_abilitymodifier_textbox_TextChanged);
             // 
             // int_abilityScore_textbox
             // 
@@ -2680,38 +2043,15 @@
             // 
             // con_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.con_abilitymodifier_textbox.CustomButton.Image = null;
-            this.con_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.con_abilitymodifier_textbox.CustomButton.Name = "";
-            this.con_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.con_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.con_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.con_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.con_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.con_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.con_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.con_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.con_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 4);
-            this.con_abilitymodifier_textbox.MaxLength = 32767;
             this.con_abilitymodifier_textbox.Name = "con_abilitymodifier_textbox";
-            this.con_abilitymodifier_textbox.PasswordChar = '\0';
-            this.con_abilitymodifier_textbox.ReadOnly = true;
-            this.con_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.con_abilitymodifier_textbox.SelectedText = "";
-            this.con_abilitymodifier_textbox.SelectionLength = 0;
-            this.con_abilitymodifier_textbox.SelectionStart = 0;
-            this.con_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.con_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.con_abilitymodifier_textbox.TabIndex = 4;
-            this.con_abilitymodifier_textbox.TabStop = false;
             this.con_abilitymodifier_textbox.Text = "0";
-            this.con_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.con_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.con_abilitymodifier_textbox.UseSelectable = true;
-            this.con_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.con_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.con_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.con_abilitymodifier_textbox_TextChanged);
             // 
             // con_abilityScore_textbox
             // 
@@ -2780,38 +2120,15 @@
             // 
             // dex_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.dex_abilitymodifier_textbox.CustomButton.Image = null;
-            this.dex_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.dex_abilitymodifier_textbox.CustomButton.Name = "";
-            this.dex_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.dex_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.dex_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.dex_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.dex_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.dex_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.dex_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.dex_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dex_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 3);
-            this.dex_abilitymodifier_textbox.MaxLength = 32767;
             this.dex_abilitymodifier_textbox.Name = "dex_abilitymodifier_textbox";
-            this.dex_abilitymodifier_textbox.PasswordChar = '\0';
-            this.dex_abilitymodifier_textbox.ReadOnly = true;
-            this.dex_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dex_abilitymodifier_textbox.SelectedText = "";
-            this.dex_abilitymodifier_textbox.SelectionLength = 0;
-            this.dex_abilitymodifier_textbox.SelectionStart = 0;
-            this.dex_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.dex_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.dex_abilitymodifier_textbox.TabIndex = 4;
-            this.dex_abilitymodifier_textbox.TabStop = false;
             this.dex_abilitymodifier_textbox.Text = "0";
-            this.dex_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dex_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.dex_abilitymodifier_textbox.UseSelectable = true;
-            this.dex_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.dex_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.dex_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.dex_abilitymodifier_textbox_TextChanged);
             // 
             // dex_abilityScore_textbox
             // 
@@ -2900,38 +2217,15 @@
             // 
             // str_abilitymodifier_textbox
             // 
-            // 
-            // 
-            // 
-            this.str_abilitymodifier_textbox.CustomButton.Image = null;
-            this.str_abilitymodifier_textbox.CustomButton.Location = new System.Drawing.Point(25, 1);
-            this.str_abilitymodifier_textbox.CustomButton.Name = "";
-            this.str_abilitymodifier_textbox.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.str_abilitymodifier_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.str_abilitymodifier_textbox.CustomButton.TabIndex = 1;
-            this.str_abilitymodifier_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.str_abilitymodifier_textbox.CustomButton.UseSelectable = true;
-            this.str_abilitymodifier_textbox.CustomButton.Visible = false;
-            this.str_abilitymodifier_textbox.Lines = new string[] {
-        "0"};
+            this.str_abilitymodifier_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.str_abilitymodifier_textbox.Location = new System.Drawing.Point(256, 6);
-            this.str_abilitymodifier_textbox.MaxLength = 32767;
             this.str_abilitymodifier_textbox.Name = "str_abilitymodifier_textbox";
-            this.str_abilitymodifier_textbox.PasswordChar = '\0';
-            this.str_abilitymodifier_textbox.ReadOnly = true;
-            this.str_abilitymodifier_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.str_abilitymodifier_textbox.SelectedText = "";
-            this.str_abilitymodifier_textbox.SelectionLength = 0;
-            this.str_abilitymodifier_textbox.SelectionStart = 0;
-            this.str_abilitymodifier_textbox.ShortcutsEnabled = true;
             this.str_abilitymodifier_textbox.Size = new System.Drawing.Size(63, 39);
             this.str_abilitymodifier_textbox.TabIndex = 4;
-            this.str_abilitymodifier_textbox.TabStop = false;
             this.str_abilitymodifier_textbox.Text = "0";
-            this.str_abilitymodifier_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.str_abilitymodifier_textbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.str_abilitymodifier_textbox.UseSelectable = true;
-            this.str_abilitymodifier_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.str_abilitymodifier_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.str_abilitymodifier_textbox.TextChanged += new System.EventHandler(this.str_abilitymodifier_textbox_TextChanged);
             // 
             // str_abilityScore_textbox
             // 
@@ -2989,6 +2283,1180 @@
             this.metroLabel1.Size = new System.Drawing.Size(103, 19);
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Ability Name";
+            // 
+            // savingThrows_panel
+            // 
+            this.savingThrows_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.savingThrows_panel.Controls.Add(this.save_tempMod_panel);
+            this.savingThrows_panel.Controls.Add(this.save_miscMod_panel);
+            this.savingThrows_panel.Controls.Add(this.save_magicMod_paanel);
+            this.savingThrows_panel.Controls.Add(this.save_abilityMod_panel);
+            this.savingThrows_panel.Controls.Add(this.save_baseSave_panel);
+            this.savingThrows_panel.Controls.Add(this.metroLabel33);
+            this.savingThrows_panel.Controls.Add(this.metroLabel34);
+            this.savingThrows_panel.Controls.Add(this.metroLabel35);
+            this.savingThrows_panel.Controls.Add(this.metroLabel36);
+            this.savingThrows_panel.HorizontalScrollbarBarColor = true;
+            this.savingThrows_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.savingThrows_panel.HorizontalScrollbarSize = 10;
+            this.savingThrows_panel.Location = new System.Drawing.Point(171, 408);
+            this.savingThrows_panel.Name = "savingThrows_panel";
+            this.savingThrows_panel.Size = new System.Drawing.Size(257, 288);
+            this.savingThrows_panel.TabIndex = 12;
+            this.savingThrows_panel.VerticalScrollbarBarColor = true;
+            this.savingThrows_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.savingThrows_panel.VerticalScrollbarSize = 10;
+            // 
+            // save_tempMod_panel
+            // 
+            this.save_tempMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.save_tempMod_panel.Controls.Add(this.will_tempMod_textbox);
+            this.save_tempMod_panel.Controls.Add(this.reflex_tempMod_textbox);
+            this.save_tempMod_panel.Controls.Add(this.fortitude_tempMod_textbox);
+            this.save_tempMod_panel.Controls.Add(this.metroLabel23);
+            this.save_tempMod_panel.HorizontalScrollbarBarColor = true;
+            this.save_tempMod_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.save_tempMod_panel.HorizontalScrollbarSize = 10;
+            this.save_tempMod_panel.Location = new System.Drawing.Point(3, 209);
+            this.save_tempMod_panel.Name = "save_tempMod_panel";
+            this.save_tempMod_panel.Size = new System.Drawing.Size(240, 33);
+            this.save_tempMod_panel.TabIndex = 15;
+            this.save_tempMod_panel.VerticalScrollbarBarColor = true;
+            this.save_tempMod_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.save_tempMod_panel.VerticalScrollbarSize = 10;
+            // 
+            // will_tempMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.will_tempMod_textbox.CustomButton.Image = null;
+            this.will_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.will_tempMod_textbox.CustomButton.Name = "";
+            this.will_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.will_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.will_tempMod_textbox.CustomButton.TabIndex = 1;
+            this.will_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.will_tempMod_textbox.CustomButton.UseSelectable = true;
+            this.will_tempMod_textbox.CustomButton.Visible = false;
+            this.will_tempMod_textbox.Lines = new string[] {
+        "0"};
+            this.will_tempMod_textbox.Location = new System.Drawing.Point(197, 3);
+            this.will_tempMod_textbox.MaxLength = 32767;
+            this.will_tempMod_textbox.Name = "will_tempMod_textbox";
+            this.will_tempMod_textbox.PasswordChar = '\0';
+            this.will_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.will_tempMod_textbox.SelectedText = "";
+            this.will_tempMod_textbox.SelectionLength = 0;
+            this.will_tempMod_textbox.SelectionStart = 0;
+            this.will_tempMod_textbox.ShortcutsEnabled = true;
+            this.will_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.will_tempMod_textbox.TabIndex = 6;
+            this.will_tempMod_textbox.Text = "0";
+            this.will_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.will_tempMod_textbox.UseSelectable = true;
+            this.will_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.will_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.will_tempMod_textbox.TextChanged += new System.EventHandler(this.will_tempMod_textbox_TextChanged);
+            // 
+            // reflex_tempMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.reflex_tempMod_textbox.CustomButton.Image = null;
+            this.reflex_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.reflex_tempMod_textbox.CustomButton.Name = "";
+            this.reflex_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.reflex_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.reflex_tempMod_textbox.CustomButton.TabIndex = 1;
+            this.reflex_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.reflex_tempMod_textbox.CustomButton.UseSelectable = true;
+            this.reflex_tempMod_textbox.CustomButton.Visible = false;
+            this.reflex_tempMod_textbox.Lines = new string[] {
+        "0"};
+            this.reflex_tempMod_textbox.Location = new System.Drawing.Point(145, 4);
+            this.reflex_tempMod_textbox.MaxLength = 32767;
+            this.reflex_tempMod_textbox.Name = "reflex_tempMod_textbox";
+            this.reflex_tempMod_textbox.PasswordChar = '\0';
+            this.reflex_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.reflex_tempMod_textbox.SelectedText = "";
+            this.reflex_tempMod_textbox.SelectionLength = 0;
+            this.reflex_tempMod_textbox.SelectionStart = 0;
+            this.reflex_tempMod_textbox.ShortcutsEnabled = true;
+            this.reflex_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.reflex_tempMod_textbox.TabIndex = 5;
+            this.reflex_tempMod_textbox.Text = "0";
+            this.reflex_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.reflex_tempMod_textbox.UseSelectable = true;
+            this.reflex_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.reflex_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.reflex_tempMod_textbox.TextChanged += new System.EventHandler(this.reflex_tempMod_textbox_TextChanged);
+            // 
+            // fortitude_tempMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.fortitude_tempMod_textbox.CustomButton.Image = null;
+            this.fortitude_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.fortitude_tempMod_textbox.CustomButton.Name = "";
+            this.fortitude_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.fortitude_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.fortitude_tempMod_textbox.CustomButton.TabIndex = 1;
+            this.fortitude_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.fortitude_tempMod_textbox.CustomButton.UseSelectable = true;
+            this.fortitude_tempMod_textbox.CustomButton.Visible = false;
+            this.fortitude_tempMod_textbox.Lines = new string[] {
+        "0"};
+            this.fortitude_tempMod_textbox.Location = new System.Drawing.Point(94, 4);
+            this.fortitude_tempMod_textbox.MaxLength = 32767;
+            this.fortitude_tempMod_textbox.Name = "fortitude_tempMod_textbox";
+            this.fortitude_tempMod_textbox.PasswordChar = '\0';
+            this.fortitude_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.fortitude_tempMod_textbox.SelectedText = "";
+            this.fortitude_tempMod_textbox.SelectionLength = 0;
+            this.fortitude_tempMod_textbox.SelectionStart = 0;
+            this.fortitude_tempMod_textbox.ShortcutsEnabled = true;
+            this.fortitude_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.fortitude_tempMod_textbox.TabIndex = 4;
+            this.fortitude_tempMod_textbox.Text = "0";
+            this.fortitude_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fortitude_tempMod_textbox.UseSelectable = true;
+            this.fortitude_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.fortitude_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.fortitude_tempMod_textbox.TextChanged += new System.EventHandler(this.fortitude_tempMod_textbox_TextChanged);
+            // 
+            // metroLabel23
+            // 
+            this.metroLabel23.AutoSize = true;
+            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel23.Location = new System.Drawing.Point(3, 5);
+            this.metroLabel23.Name = "metroLabel23";
+            this.metroLabel23.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel23.TabIndex = 2;
+            this.metroLabel23.Text = "Temp Mod";
+            this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // save_miscMod_panel
+            // 
+            this.save_miscMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.save_miscMod_panel.Controls.Add(this.will_miscMod_textbox);
+            this.save_miscMod_panel.Controls.Add(this.reflex_miscMod_textbox);
+            this.save_miscMod_panel.Controls.Add(this.fortitude_miscMod_textbox);
+            this.save_miscMod_panel.Controls.Add(this.metroLabel27);
+            this.save_miscMod_panel.HorizontalScrollbarBarColor = true;
+            this.save_miscMod_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.save_miscMod_panel.HorizontalScrollbarSize = 10;
+            this.save_miscMod_panel.Location = new System.Drawing.Point(3, 171);
+            this.save_miscMod_panel.Name = "save_miscMod_panel";
+            this.save_miscMod_panel.Size = new System.Drawing.Size(240, 33);
+            this.save_miscMod_panel.TabIndex = 14;
+            this.save_miscMod_panel.VerticalScrollbarBarColor = true;
+            this.save_miscMod_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.save_miscMod_panel.VerticalScrollbarSize = 10;
+            // 
+            // will_miscMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.will_miscMod_textbox.CustomButton.Image = null;
+            this.will_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.will_miscMod_textbox.CustomButton.Name = "";
+            this.will_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.will_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.will_miscMod_textbox.CustomButton.TabIndex = 1;
+            this.will_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.will_miscMod_textbox.CustomButton.UseSelectable = true;
+            this.will_miscMod_textbox.CustomButton.Visible = false;
+            this.will_miscMod_textbox.Lines = new string[] {
+        "0"};
+            this.will_miscMod_textbox.Location = new System.Drawing.Point(197, 3);
+            this.will_miscMod_textbox.MaxLength = 32767;
+            this.will_miscMod_textbox.Name = "will_miscMod_textbox";
+            this.will_miscMod_textbox.PasswordChar = '\0';
+            this.will_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.will_miscMod_textbox.SelectedText = "";
+            this.will_miscMod_textbox.SelectionLength = 0;
+            this.will_miscMod_textbox.SelectionStart = 0;
+            this.will_miscMod_textbox.ShortcutsEnabled = true;
+            this.will_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.will_miscMod_textbox.TabIndex = 6;
+            this.will_miscMod_textbox.Text = "0";
+            this.will_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.will_miscMod_textbox.UseSelectable = true;
+            this.will_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.will_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.will_miscMod_textbox.TextChanged += new System.EventHandler(this.will_miscMod_textbox_TextChanged);
+            // 
+            // reflex_miscMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.reflex_miscMod_textbox.CustomButton.Image = null;
+            this.reflex_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.reflex_miscMod_textbox.CustomButton.Name = "";
+            this.reflex_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.reflex_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.reflex_miscMod_textbox.CustomButton.TabIndex = 1;
+            this.reflex_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.reflex_miscMod_textbox.CustomButton.UseSelectable = true;
+            this.reflex_miscMod_textbox.CustomButton.Visible = false;
+            this.reflex_miscMod_textbox.Lines = new string[] {
+        "0"};
+            this.reflex_miscMod_textbox.Location = new System.Drawing.Point(144, 4);
+            this.reflex_miscMod_textbox.MaxLength = 32767;
+            this.reflex_miscMod_textbox.Name = "reflex_miscMod_textbox";
+            this.reflex_miscMod_textbox.PasswordChar = '\0';
+            this.reflex_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.reflex_miscMod_textbox.SelectedText = "";
+            this.reflex_miscMod_textbox.SelectionLength = 0;
+            this.reflex_miscMod_textbox.SelectionStart = 0;
+            this.reflex_miscMod_textbox.ShortcutsEnabled = true;
+            this.reflex_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.reflex_miscMod_textbox.TabIndex = 5;
+            this.reflex_miscMod_textbox.Text = "0";
+            this.reflex_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.reflex_miscMod_textbox.UseSelectable = true;
+            this.reflex_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.reflex_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.reflex_miscMod_textbox.TextChanged += new System.EventHandler(this.reflex_miscMod_textbox_TextChanged);
+            // 
+            // fortitude_miscMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.fortitude_miscMod_textbox.CustomButton.Image = null;
+            this.fortitude_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.fortitude_miscMod_textbox.CustomButton.Name = "";
+            this.fortitude_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.fortitude_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.fortitude_miscMod_textbox.CustomButton.TabIndex = 1;
+            this.fortitude_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.fortitude_miscMod_textbox.CustomButton.UseSelectable = true;
+            this.fortitude_miscMod_textbox.CustomButton.Visible = false;
+            this.fortitude_miscMod_textbox.Lines = new string[] {
+        "0"};
+            this.fortitude_miscMod_textbox.Location = new System.Drawing.Point(94, 4);
+            this.fortitude_miscMod_textbox.MaxLength = 32767;
+            this.fortitude_miscMod_textbox.Name = "fortitude_miscMod_textbox";
+            this.fortitude_miscMod_textbox.PasswordChar = '\0';
+            this.fortitude_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.fortitude_miscMod_textbox.SelectedText = "";
+            this.fortitude_miscMod_textbox.SelectionLength = 0;
+            this.fortitude_miscMod_textbox.SelectionStart = 0;
+            this.fortitude_miscMod_textbox.ShortcutsEnabled = true;
+            this.fortitude_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.fortitude_miscMod_textbox.TabIndex = 4;
+            this.fortitude_miscMod_textbox.Text = "0";
+            this.fortitude_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fortitude_miscMod_textbox.UseSelectable = true;
+            this.fortitude_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.fortitude_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.fortitude_miscMod_textbox.TextChanged += new System.EventHandler(this.fortitude_miscMod_textbox_TextChanged);
+            // 
+            // metroLabel27
+            // 
+            this.metroLabel27.AutoSize = true;
+            this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel27.Location = new System.Drawing.Point(3, 5);
+            this.metroLabel27.Name = "metroLabel27";
+            this.metroLabel27.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel27.TabIndex = 2;
+            this.metroLabel27.Text = "Misc Mod";
+            this.metroLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // save_magicMod_paanel
+            // 
+            this.save_magicMod_paanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.save_magicMod_paanel.Controls.Add(this.will_magicMod_textbox);
+            this.save_magicMod_paanel.Controls.Add(this.reflex_magicMod_textbox);
+            this.save_magicMod_paanel.Controls.Add(this.fortitude_magicMod_textbox);
+            this.save_magicMod_paanel.Controls.Add(this.metroLabel29);
+            this.save_magicMod_paanel.HorizontalScrollbarBarColor = true;
+            this.save_magicMod_paanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.save_magicMod_paanel.HorizontalScrollbarSize = 10;
+            this.save_magicMod_paanel.Location = new System.Drawing.Point(3, 133);
+            this.save_magicMod_paanel.Name = "save_magicMod_paanel";
+            this.save_magicMod_paanel.Size = new System.Drawing.Size(240, 33);
+            this.save_magicMod_paanel.TabIndex = 13;
+            this.save_magicMod_paanel.VerticalScrollbarBarColor = true;
+            this.save_magicMod_paanel.VerticalScrollbarHighlightOnWheel = false;
+            this.save_magicMod_paanel.VerticalScrollbarSize = 10;
+            // 
+            // will_magicMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.will_magicMod_textbox.CustomButton.Image = null;
+            this.will_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.will_magicMod_textbox.CustomButton.Name = "";
+            this.will_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.will_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.will_magicMod_textbox.CustomButton.TabIndex = 1;
+            this.will_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.will_magicMod_textbox.CustomButton.UseSelectable = true;
+            this.will_magicMod_textbox.CustomButton.Visible = false;
+            this.will_magicMod_textbox.Lines = new string[] {
+        "0"};
+            this.will_magicMod_textbox.Location = new System.Drawing.Point(197, 6);
+            this.will_magicMod_textbox.MaxLength = 32767;
+            this.will_magicMod_textbox.Name = "will_magicMod_textbox";
+            this.will_magicMod_textbox.PasswordChar = '\0';
+            this.will_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.will_magicMod_textbox.SelectedText = "";
+            this.will_magicMod_textbox.SelectionLength = 0;
+            this.will_magicMod_textbox.SelectionStart = 0;
+            this.will_magicMod_textbox.ShortcutsEnabled = true;
+            this.will_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.will_magicMod_textbox.TabIndex = 6;
+            this.will_magicMod_textbox.Text = "0";
+            this.will_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.will_magicMod_textbox.UseSelectable = true;
+            this.will_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.will_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.will_magicMod_textbox.TextChanged += new System.EventHandler(this.will_magicMod_textbox_TextChanged);
+            // 
+            // reflex_magicMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.reflex_magicMod_textbox.CustomButton.Image = null;
+            this.reflex_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.reflex_magicMod_textbox.CustomButton.Name = "";
+            this.reflex_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.reflex_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.reflex_magicMod_textbox.CustomButton.TabIndex = 1;
+            this.reflex_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.reflex_magicMod_textbox.CustomButton.UseSelectable = true;
+            this.reflex_magicMod_textbox.CustomButton.Visible = false;
+            this.reflex_magicMod_textbox.Lines = new string[] {
+        "0"};
+            this.reflex_magicMod_textbox.Location = new System.Drawing.Point(145, 5);
+            this.reflex_magicMod_textbox.MaxLength = 32767;
+            this.reflex_magicMod_textbox.Name = "reflex_magicMod_textbox";
+            this.reflex_magicMod_textbox.PasswordChar = '\0';
+            this.reflex_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.reflex_magicMod_textbox.SelectedText = "";
+            this.reflex_magicMod_textbox.SelectionLength = 0;
+            this.reflex_magicMod_textbox.SelectionStart = 0;
+            this.reflex_magicMod_textbox.ShortcutsEnabled = true;
+            this.reflex_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.reflex_magicMod_textbox.TabIndex = 5;
+            this.reflex_magicMod_textbox.Text = "0";
+            this.reflex_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.reflex_magicMod_textbox.UseSelectable = true;
+            this.reflex_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.reflex_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.reflex_magicMod_textbox.TextChanged += new System.EventHandler(this.reflex_magicMod_textbox_TextChanged);
+            // 
+            // fortitude_magicMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.fortitude_magicMod_textbox.CustomButton.Image = null;
+            this.fortitude_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.fortitude_magicMod_textbox.CustomButton.Name = "";
+            this.fortitude_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.fortitude_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.fortitude_magicMod_textbox.CustomButton.TabIndex = 1;
+            this.fortitude_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.fortitude_magicMod_textbox.CustomButton.UseSelectable = true;
+            this.fortitude_magicMod_textbox.CustomButton.Visible = false;
+            this.fortitude_magicMod_textbox.Lines = new string[] {
+        "0"};
+            this.fortitude_magicMod_textbox.Location = new System.Drawing.Point(94, 6);
+            this.fortitude_magicMod_textbox.MaxLength = 32767;
+            this.fortitude_magicMod_textbox.Name = "fortitude_magicMod_textbox";
+            this.fortitude_magicMod_textbox.PasswordChar = '\0';
+            this.fortitude_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.fortitude_magicMod_textbox.SelectedText = "";
+            this.fortitude_magicMod_textbox.SelectionLength = 0;
+            this.fortitude_magicMod_textbox.SelectionStart = 0;
+            this.fortitude_magicMod_textbox.ShortcutsEnabled = true;
+            this.fortitude_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.fortitude_magicMod_textbox.TabIndex = 4;
+            this.fortitude_magicMod_textbox.Text = "0";
+            this.fortitude_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fortitude_magicMod_textbox.UseSelectable = true;
+            this.fortitude_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.fortitude_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.fortitude_magicMod_textbox.TextChanged += new System.EventHandler(this.fortitude_magicMod_textbox_TextChanged);
+            // 
+            // metroLabel29
+            // 
+            this.metroLabel29.AutoSize = true;
+            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel29.Location = new System.Drawing.Point(3, 5);
+            this.metroLabel29.Name = "metroLabel29";
+            this.metroLabel29.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel29.TabIndex = 2;
+            this.metroLabel29.Text = "Magic Mod";
+            this.metroLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // save_abilityMod_panel
+            // 
+            this.save_abilityMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.save_abilityMod_panel.Controls.Add(this.will_abilityMod_textbox);
+            this.save_abilityMod_panel.Controls.Add(this.reflex_abilityMod_textbox);
+            this.save_abilityMod_panel.Controls.Add(this.fortitude_abilityMod_textbox);
+            this.save_abilityMod_panel.Controls.Add(this.metroLabel30);
+            this.save_abilityMod_panel.HorizontalScrollbarBarColor = true;
+            this.save_abilityMod_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.save_abilityMod_panel.HorizontalScrollbarSize = 10;
+            this.save_abilityMod_panel.Location = new System.Drawing.Point(4, 95);
+            this.save_abilityMod_panel.Name = "save_abilityMod_panel";
+            this.save_abilityMod_panel.Size = new System.Drawing.Size(240, 33);
+            this.save_abilityMod_panel.TabIndex = 12;
+            this.save_abilityMod_panel.VerticalScrollbarBarColor = true;
+            this.save_abilityMod_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.save_abilityMod_panel.VerticalScrollbarSize = 10;
+            // 
+            // will_abilityMod_textbox
+            // 
+            this.will_abilityMod_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.will_abilityMod_textbox.Location = new System.Drawing.Point(196, 5);
+            this.will_abilityMod_textbox.Name = "will_abilityMod_textbox";
+            this.will_abilityMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.will_abilityMod_textbox.TabIndex = 6;
+            this.will_abilityMod_textbox.Text = "0";
+            this.will_abilityMod_textbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.will_abilityMod_textbox.UseSelectable = true;
+            this.will_abilityMod_textbox.TextChanged += new System.EventHandler(this.will_abilityMod_textbox_TextChanged);
+            // 
+            // reflex_abilityMod_textbox
+            // 
+            this.reflex_abilityMod_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.reflex_abilityMod_textbox.Location = new System.Drawing.Point(144, 5);
+            this.reflex_abilityMod_textbox.Name = "reflex_abilityMod_textbox";
+            this.reflex_abilityMod_textbox.Size = new System.Drawing.Size(26, 23);
+            this.reflex_abilityMod_textbox.TabIndex = 5;
+            this.reflex_abilityMod_textbox.Text = "0";
+            this.reflex_abilityMod_textbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reflex_abilityMod_textbox.UseSelectable = true;
+            this.reflex_abilityMod_textbox.TextChanged += new System.EventHandler(this.reflex_abilityMod_textbox_TextChanged);
+            // 
+            // fortitude_abilityMod_textbox
+            // 
+            this.fortitude_abilityMod_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fortitude_abilityMod_textbox.Location = new System.Drawing.Point(93, 5);
+            this.fortitude_abilityMod_textbox.Name = "fortitude_abilityMod_textbox";
+            this.fortitude_abilityMod_textbox.Size = new System.Drawing.Size(27, 23);
+            this.fortitude_abilityMod_textbox.TabIndex = 4;
+            this.fortitude_abilityMod_textbox.Text = "0";
+            this.fortitude_abilityMod_textbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fortitude_abilityMod_textbox.UseSelectable = true;
+            this.fortitude_abilityMod_textbox.TextChanged += new System.EventHandler(this.fortitude_abilityMod_textbox_TextChanged);
+            // 
+            // metroLabel30
+            // 
+            this.metroLabel30.AutoSize = true;
+            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel30.Location = new System.Drawing.Point(3, 5);
+            this.metroLabel30.Name = "metroLabel30";
+            this.metroLabel30.Size = new System.Drawing.Size(88, 19);
+            this.metroLabel30.TabIndex = 2;
+            this.metroLabel30.Text = "Ability Mod";
+            this.metroLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // save_baseSave_panel
+            // 
+            this.save_baseSave_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.save_baseSave_panel.Controls.Add(this.will_baseSave_textbox);
+            this.save_baseSave_panel.Controls.Add(this.reflex_baseSave_textbox);
+            this.save_baseSave_panel.Controls.Add(this.fortitude_baseSave_textbox);
+            this.save_baseSave_panel.Controls.Add(this.metroLabel32);
+            this.save_baseSave_panel.HorizontalScrollbarBarColor = true;
+            this.save_baseSave_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.save_baseSave_panel.HorizontalScrollbarSize = 10;
+            this.save_baseSave_panel.Location = new System.Drawing.Point(3, 57);
+            this.save_baseSave_panel.Name = "save_baseSave_panel";
+            this.save_baseSave_panel.Size = new System.Drawing.Size(240, 33);
+            this.save_baseSave_panel.TabIndex = 11;
+            this.save_baseSave_panel.VerticalScrollbarBarColor = true;
+            this.save_baseSave_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.save_baseSave_panel.VerticalScrollbarSize = 10;
+            // 
+            // will_baseSave_textbox
+            // 
+            // 
+            // 
+            // 
+            this.will_baseSave_textbox.CustomButton.Image = null;
+            this.will_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.will_baseSave_textbox.CustomButton.Name = "";
+            this.will_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.will_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.will_baseSave_textbox.CustomButton.TabIndex = 1;
+            this.will_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.will_baseSave_textbox.CustomButton.UseSelectable = true;
+            this.will_baseSave_textbox.CustomButton.Visible = false;
+            this.will_baseSave_textbox.Lines = new string[] {
+        "0"};
+            this.will_baseSave_textbox.Location = new System.Drawing.Point(197, 4);
+            this.will_baseSave_textbox.MaxLength = 32767;
+            this.will_baseSave_textbox.Name = "will_baseSave_textbox";
+            this.will_baseSave_textbox.PasswordChar = '\0';
+            this.will_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.will_baseSave_textbox.SelectedText = "";
+            this.will_baseSave_textbox.SelectionLength = 0;
+            this.will_baseSave_textbox.SelectionStart = 0;
+            this.will_baseSave_textbox.ShortcutsEnabled = true;
+            this.will_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
+            this.will_baseSave_textbox.TabIndex = 6;
+            this.will_baseSave_textbox.Text = "0";
+            this.will_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.will_baseSave_textbox.UseSelectable = true;
+            this.will_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.will_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.will_baseSave_textbox.TextChanged += new System.EventHandler(this.will_baseSave_textbox_TextChanged);
+            // 
+            // reflex_baseSave_textbox
+            // 
+            // 
+            // 
+            // 
+            this.reflex_baseSave_textbox.CustomButton.Image = null;
+            this.reflex_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.reflex_baseSave_textbox.CustomButton.Name = "";
+            this.reflex_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.reflex_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.reflex_baseSave_textbox.CustomButton.TabIndex = 1;
+            this.reflex_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.reflex_baseSave_textbox.CustomButton.UseSelectable = true;
+            this.reflex_baseSave_textbox.CustomButton.Visible = false;
+            this.reflex_baseSave_textbox.Lines = new string[] {
+        "0"};
+            this.reflex_baseSave_textbox.Location = new System.Drawing.Point(144, 4);
+            this.reflex_baseSave_textbox.MaxLength = 32767;
+            this.reflex_baseSave_textbox.Name = "reflex_baseSave_textbox";
+            this.reflex_baseSave_textbox.PasswordChar = '\0';
+            this.reflex_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.reflex_baseSave_textbox.SelectedText = "";
+            this.reflex_baseSave_textbox.SelectionLength = 0;
+            this.reflex_baseSave_textbox.SelectionStart = 0;
+            this.reflex_baseSave_textbox.ShortcutsEnabled = true;
+            this.reflex_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
+            this.reflex_baseSave_textbox.TabIndex = 5;
+            this.reflex_baseSave_textbox.Text = "0";
+            this.reflex_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.reflex_baseSave_textbox.UseSelectable = true;
+            this.reflex_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.reflex_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.reflex_baseSave_textbox.TextChanged += new System.EventHandler(this.reflex_baseSave_textbox_TextChanged);
+            // 
+            // fortitude_baseSave_textbox
+            // 
+            // 
+            // 
+            // 
+            this.fortitude_baseSave_textbox.CustomButton.Image = null;
+            this.fortitude_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
+            this.fortitude_baseSave_textbox.CustomButton.Name = "";
+            this.fortitude_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.fortitude_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.fortitude_baseSave_textbox.CustomButton.TabIndex = 1;
+            this.fortitude_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.fortitude_baseSave_textbox.CustomButton.UseSelectable = true;
+            this.fortitude_baseSave_textbox.CustomButton.Visible = false;
+            this.fortitude_baseSave_textbox.Lines = new string[] {
+        "0"};
+            this.fortitude_baseSave_textbox.Location = new System.Drawing.Point(94, 4);
+            this.fortitude_baseSave_textbox.MaxLength = 32767;
+            this.fortitude_baseSave_textbox.Name = "fortitude_baseSave_textbox";
+            this.fortitude_baseSave_textbox.PasswordChar = '\0';
+            this.fortitude_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.fortitude_baseSave_textbox.SelectedText = "";
+            this.fortitude_baseSave_textbox.SelectionLength = 0;
+            this.fortitude_baseSave_textbox.SelectionStart = 0;
+            this.fortitude_baseSave_textbox.ShortcutsEnabled = true;
+            this.fortitude_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
+            this.fortitude_baseSave_textbox.TabIndex = 4;
+            this.fortitude_baseSave_textbox.Text = "0";
+            this.fortitude_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fortitude_baseSave_textbox.UseSelectable = true;
+            this.fortitude_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.fortitude_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.fortitude_baseSave_textbox.TextChanged += new System.EventHandler(this.fortitude_bseSave_textbox_TextChanged);
+            // 
+            // metroLabel32
+            // 
+            this.metroLabel32.AutoSize = true;
+            this.metroLabel32.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel32.Location = new System.Drawing.Point(3, 5);
+            this.metroLabel32.Name = "metroLabel32";
+            this.metroLabel32.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel32.TabIndex = 2;
+            this.metroLabel32.Text = "Base Save";
+            this.metroLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabel33
+            // 
+            this.metroLabel33.AutoSize = true;
+            this.metroLabel33.Location = new System.Drawing.Point(193, 35);
+            this.metroLabel33.Name = "metroLabel33";
+            this.metroLabel33.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel33.TabIndex = 10;
+            this.metroLabel33.Text = "Will";
+            // 
+            // metroLabel34
+            // 
+            this.metroLabel34.AutoSize = true;
+            this.metroLabel34.Location = new System.Drawing.Point(149, 35);
+            this.metroLabel34.Name = "metroLabel34";
+            this.metroLabel34.Size = new System.Drawing.Size(30, 19);
+            this.metroLabel34.TabIndex = 9;
+            this.metroLabel34.Text = "Ref.";
+            // 
+            // metroLabel35
+            // 
+            this.metroLabel35.AutoSize = true;
+            this.metroLabel35.Location = new System.Drawing.Point(96, 35);
+            this.metroLabel35.Name = "metroLabel35";
+            this.metroLabel35.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel35.TabIndex = 8;
+            this.metroLabel35.Text = "Fort.";
+            // 
+            // metroLabel36
+            // 
+            this.metroLabel36.AutoSize = true;
+            this.metroLabel36.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel36.Location = new System.Drawing.Point(71, 6);
+            this.metroLabel36.Name = "metroLabel36";
+            this.metroLabel36.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel36.TabIndex = 2;
+            this.metroLabel36.Text = "Save modiifiers";
+            this.metroLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Saves_panel
+            // 
+            this.Saves_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Saves_panel.Controls.Add(this.savingThrow_checkbox);
+            this.Saves_panel.Controls.Add(this.saves_lbl);
+            this.Saves_panel.Controls.Add(this.willSave_total_textbox);
+            this.Saves_panel.Controls.Add(this.reflexSave_total_textbox);
+            this.Saves_panel.Controls.Add(this.fortitudeSave_total_textbox);
+            this.Saves_panel.Controls.Add(this.fortSave_lbl);
+            this.Saves_panel.Controls.Add(this.reflexSave_lbl);
+            this.Saves_panel.Controls.Add(this.willSave_lbl);
+            this.Saves_panel.HorizontalScrollbarBarColor = true;
+            this.Saves_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.Saves_panel.HorizontalScrollbarSize = 10;
+            this.Saves_panel.Location = new System.Drawing.Point(3, 520);
+            this.Saves_panel.Name = "Saves_panel";
+            this.Saves_panel.Size = new System.Drawing.Size(165, 176);
+            this.Saves_panel.TabIndex = 32;
+            this.Saves_panel.VerticalScrollbarBarColor = true;
+            this.Saves_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.Saves_panel.VerticalScrollbarSize = 10;
+            // 
+            // savingThrow_checkbox
+            // 
+            this.savingThrow_checkbox.AutoSize = true;
+            this.savingThrow_checkbox.Location = new System.Drawing.Point(7, 149);
+            this.savingThrow_checkbox.Name = "savingThrow_checkbox";
+            this.savingThrow_checkbox.Size = new System.Drawing.Size(131, 15);
+            this.savingThrow_checkbox.TabIndex = 17;
+            this.savingThrow_checkbox.Text = "Show save modifiers";
+            this.savingThrow_checkbox.UseSelectable = true;
+            this.savingThrow_checkbox.CheckedChanged += new System.EventHandler(this.savingThrow_checkbox_CheckedChanged);
+            // 
+            // saves_lbl
+            // 
+            this.saves_lbl.BackColor = System.Drawing.Color.Black;
+            this.saves_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.saves_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.saves_lbl.ForeColor = System.Drawing.Color.White;
+            this.saves_lbl.Location = new System.Drawing.Point(3, 3);
+            this.saves_lbl.Name = "saves_lbl";
+            this.saves_lbl.Size = new System.Drawing.Size(154, 25);
+            this.saves_lbl.TabIndex = 17;
+            this.saves_lbl.Text = "Saves";
+            this.saves_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saves_lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // willSave_total_textbox
+            // 
+            // 
+            // 
+            // 
+            this.willSave_total_textbox.CustomButton.Image = null;
+            this.willSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
+            this.willSave_total_textbox.CustomButton.Name = "";
+            this.willSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.willSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.willSave_total_textbox.CustomButton.TabIndex = 1;
+            this.willSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.willSave_total_textbox.CustomButton.UseSelectable = true;
+            this.willSave_total_textbox.CustomButton.Visible = false;
+            this.willSave_total_textbox.Lines = new string[] {
+        "0"};
+            this.willSave_total_textbox.Location = new System.Drawing.Point(106, 110);
+            this.willSave_total_textbox.MaxLength = 32767;
+            this.willSave_total_textbox.Name = "willSave_total_textbox";
+            this.willSave_total_textbox.PasswordChar = '\0';
+            this.willSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.willSave_total_textbox.SelectedText = "";
+            this.willSave_total_textbox.SelectionLength = 0;
+            this.willSave_total_textbox.SelectionStart = 0;
+            this.willSave_total_textbox.ShortcutsEnabled = true;
+            this.willSave_total_textbox.Size = new System.Drawing.Size(51, 30);
+            this.willSave_total_textbox.TabIndex = 29;
+            this.willSave_total_textbox.Text = "0";
+            this.willSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.willSave_total_textbox.UseSelectable = true;
+            this.willSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.willSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // reflexSave_total_textbox
+            // 
+            // 
+            // 
+            // 
+            this.reflexSave_total_textbox.CustomButton.Image = null;
+            this.reflexSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
+            this.reflexSave_total_textbox.CustomButton.Name = "";
+            this.reflexSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.reflexSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.reflexSave_total_textbox.CustomButton.TabIndex = 1;
+            this.reflexSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.reflexSave_total_textbox.CustomButton.UseSelectable = true;
+            this.reflexSave_total_textbox.CustomButton.Visible = false;
+            this.reflexSave_total_textbox.Lines = new string[] {
+        "0"};
+            this.reflexSave_total_textbox.Location = new System.Drawing.Point(106, 74);
+            this.reflexSave_total_textbox.MaxLength = 32767;
+            this.reflexSave_total_textbox.Name = "reflexSave_total_textbox";
+            this.reflexSave_total_textbox.PasswordChar = '\0';
+            this.reflexSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.reflexSave_total_textbox.SelectedText = "";
+            this.reflexSave_total_textbox.SelectionLength = 0;
+            this.reflexSave_total_textbox.SelectionStart = 0;
+            this.reflexSave_total_textbox.ShortcutsEnabled = true;
+            this.reflexSave_total_textbox.Size = new System.Drawing.Size(51, 30);
+            this.reflexSave_total_textbox.TabIndex = 28;
+            this.reflexSave_total_textbox.Text = "0";
+            this.reflexSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.reflexSave_total_textbox.UseSelectable = true;
+            this.reflexSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.reflexSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // fortitudeSave_total_textbox
+            // 
+            // 
+            // 
+            // 
+            this.fortitudeSave_total_textbox.CustomButton.Image = null;
+            this.fortitudeSave_total_textbox.CustomButton.Location = new System.Drawing.Point(23, 2);
+            this.fortitudeSave_total_textbox.CustomButton.Name = "";
+            this.fortitudeSave_total_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.fortitudeSave_total_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.fortitudeSave_total_textbox.CustomButton.TabIndex = 1;
+            this.fortitudeSave_total_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.fortitudeSave_total_textbox.CustomButton.UseSelectable = true;
+            this.fortitudeSave_total_textbox.CustomButton.Visible = false;
+            this.fortitudeSave_total_textbox.Lines = new string[] {
+        "0"};
+            this.fortitudeSave_total_textbox.Location = new System.Drawing.Point(106, 38);
+            this.fortitudeSave_total_textbox.MaxLength = 32767;
+            this.fortitudeSave_total_textbox.Name = "fortitudeSave_total_textbox";
+            this.fortitudeSave_total_textbox.PasswordChar = '\0';
+            this.fortitudeSave_total_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.fortitudeSave_total_textbox.SelectedText = "";
+            this.fortitudeSave_total_textbox.SelectionLength = 0;
+            this.fortitudeSave_total_textbox.SelectionStart = 0;
+            this.fortitudeSave_total_textbox.ShortcutsEnabled = true;
+            this.fortitudeSave_total_textbox.Size = new System.Drawing.Size(51, 30);
+            this.fortitudeSave_total_textbox.TabIndex = 27;
+            this.fortitudeSave_total_textbox.Text = "0";
+            this.fortitudeSave_total_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fortitudeSave_total_textbox.UseSelectable = true;
+            this.fortitudeSave_total_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.fortitudeSave_total_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // fortSave_lbl
+            // 
+            this.fortSave_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.fortSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fortSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.fortSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.fortSave_lbl.Location = new System.Drawing.Point(7, 38);
+            this.fortSave_lbl.Name = "fortSave_lbl";
+            this.fortSave_lbl.Size = new System.Drawing.Size(93, 30);
+            this.fortSave_lbl.TabIndex = 20;
+            this.fortSave_lbl.Text = "Foritude\r\n(Constitution)\r\n";
+            this.fortSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fortSave_lbl.UseCustomBackColor = true;
+            // 
+            // reflexSave_lbl
+            // 
+            this.reflexSave_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.reflexSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.reflexSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.reflexSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.reflexSave_lbl.Location = new System.Drawing.Point(7, 74);
+            this.reflexSave_lbl.Name = "reflexSave_lbl";
+            this.reflexSave_lbl.Size = new System.Drawing.Size(93, 30);
+            this.reflexSave_lbl.TabIndex = 21;
+            this.reflexSave_lbl.Text = "Reflex\r\n(Dexterity)";
+            this.reflexSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.reflexSave_lbl.UseCustomBackColor = true;
+            // 
+            // willSave_lbl
+            // 
+            this.willSave_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.willSave_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.willSave_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.willSave_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.willSave_lbl.Location = new System.Drawing.Point(7, 110);
+            this.willSave_lbl.Name = "willSave_lbl";
+            this.willSave_lbl.Size = new System.Drawing.Size(93, 30);
+            this.willSave_lbl.TabIndex = 22;
+            this.willSave_lbl.Text = "Will\r\n(Wisdom)";
+            this.willSave_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.willSave_lbl.UseCustomBackColor = true;
+            // 
+            // acMods_Panel
+            // 
+            this.acMods_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.acMods_Panel.Controls.Add(this.ac_deflectionMod_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_NaturalArmor_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_miscMod_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_armorBonus_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_sizeMod_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_dexMod_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_shieldBonus_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_shieldBonus_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_dexMod_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_armorBonus_textbox);
+            this.acMods_Panel.Controls.Add(this.ac_sizeMod_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_naturalArmor_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_deflectionMod_lbl);
+            this.acMods_Panel.Controls.Add(this.ac_miscMod_lbl);
+            this.acMods_Panel.HorizontalScrollbarBarColor = true;
+            this.acMods_Panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.acMods_Panel.HorizontalScrollbarSize = 10;
+            this.acMods_Panel.Location = new System.Drawing.Point(3, 520);
+            this.acMods_Panel.Name = "acMods_Panel";
+            this.acMods_Panel.Size = new System.Drawing.Size(165, 176);
+            this.acMods_Panel.TabIndex = 8;
+            this.acMods_Panel.VerticalScrollbarBarColor = true;
+            this.acMods_Panel.VerticalScrollbarHighlightOnWheel = false;
+            this.acMods_Panel.VerticalScrollbarSize = 10;
+            // 
+            // ac_deflectionMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_deflectionMod_textbox.CustomButton.Image = null;
+            this.ac_deflectionMod_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_deflectionMod_textbox.CustomButton.Name = "";
+            this.ac_deflectionMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_deflectionMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_deflectionMod_textbox.CustomButton.TabIndex = 1;
+            this.ac_deflectionMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_deflectionMod_textbox.CustomButton.UseSelectable = true;
+            this.ac_deflectionMod_textbox.CustomButton.Visible = false;
+            this.ac_deflectionMod_textbox.Lines = new string[] {
+        "0"};
+            this.ac_deflectionMod_textbox.Location = new System.Drawing.Point(139, 2);
+            this.ac_deflectionMod_textbox.MaxLength = 32767;
+            this.ac_deflectionMod_textbox.Name = "ac_deflectionMod_textbox";
+            this.ac_deflectionMod_textbox.PasswordChar = '\0';
+            this.ac_deflectionMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_deflectionMod_textbox.SelectedText = "";
+            this.ac_deflectionMod_textbox.SelectionLength = 0;
+            this.ac_deflectionMod_textbox.SelectionStart = 0;
+            this.ac_deflectionMod_textbox.ShortcutsEnabled = true;
+            this.ac_deflectionMod_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_deflectionMod_textbox.TabIndex = 31;
+            this.ac_deflectionMod_textbox.Text = "0";
+            this.ac_deflectionMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_deflectionMod_textbox.UseSelectable = true;
+            this.ac_deflectionMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_deflectionMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_deflectionMod_textbox.TextChanged += new System.EventHandler(this.ac_deflectionMod_textbox_TextChanged);
+            // 
+            // ac_NaturalArmor_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_NaturalArmor_textbox.CustomButton.Image = null;
+            this.ac_NaturalArmor_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_NaturalArmor_textbox.CustomButton.Name = "";
+            this.ac_NaturalArmor_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_NaturalArmor_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_NaturalArmor_textbox.CustomButton.TabIndex = 1;
+            this.ac_NaturalArmor_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_NaturalArmor_textbox.CustomButton.UseSelectable = true;
+            this.ac_NaturalArmor_textbox.CustomButton.Visible = false;
+            this.ac_NaturalArmor_textbox.Lines = new string[] {
+        "0"};
+            this.ac_NaturalArmor_textbox.Location = new System.Drawing.Point(61, 134);
+            this.ac_NaturalArmor_textbox.MaxLength = 32767;
+            this.ac_NaturalArmor_textbox.Name = "ac_NaturalArmor_textbox";
+            this.ac_NaturalArmor_textbox.PasswordChar = '\0';
+            this.ac_NaturalArmor_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_NaturalArmor_textbox.SelectedText = "";
+            this.ac_NaturalArmor_textbox.SelectionLength = 0;
+            this.ac_NaturalArmor_textbox.SelectionStart = 0;
+            this.ac_NaturalArmor_textbox.ShortcutsEnabled = true;
+            this.ac_NaturalArmor_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_NaturalArmor_textbox.TabIndex = 29;
+            this.ac_NaturalArmor_textbox.Text = "0";
+            this.ac_NaturalArmor_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_NaturalArmor_textbox.UseSelectable = true;
+            this.ac_NaturalArmor_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_NaturalArmor_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_NaturalArmor_textbox.TextChanged += new System.EventHandler(this.ac_NaturalArmor_textbox_TextChanged);
+            // 
+            // ac_miscMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_miscMod_textbox.CustomButton.Image = null;
+            this.ac_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_miscMod_textbox.CustomButton.Name = "";
+            this.ac_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_miscMod_textbox.CustomButton.TabIndex = 1;
+            this.ac_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_miscMod_textbox.CustomButton.UseSelectable = true;
+            this.ac_miscMod_textbox.CustomButton.Visible = false;
+            this.ac_miscMod_textbox.Lines = new string[] {
+        "0"};
+            this.ac_miscMod_textbox.Location = new System.Drawing.Point(139, 35);
+            this.ac_miscMod_textbox.MaxLength = 32767;
+            this.ac_miscMod_textbox.Name = "ac_miscMod_textbox";
+            this.ac_miscMod_textbox.PasswordChar = '\0';
+            this.ac_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_miscMod_textbox.SelectedText = "";
+            this.ac_miscMod_textbox.SelectionLength = 0;
+            this.ac_miscMod_textbox.SelectionStart = 0;
+            this.ac_miscMod_textbox.ShortcutsEnabled = true;
+            this.ac_miscMod_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_miscMod_textbox.TabIndex = 30;
+            this.ac_miscMod_textbox.Text = "0";
+            this.ac_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_miscMod_textbox.UseSelectable = true;
+            this.ac_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_miscMod_textbox.TextChanged += new System.EventHandler(this.ac_miscMod_textbox_TextChanged);
+            // 
+            // ac_armorBonus_lbl
+            // 
+            this.ac_armorBonus_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_armorBonus_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_armorBonus_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_armorBonus_lbl.Location = new System.Drawing.Point(4, 2);
+            this.ac_armorBonus_lbl.Name = "ac_armorBonus_lbl";
+            this.ac_armorBonus_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_armorBonus_lbl.TabIndex = 16;
+            this.ac_armorBonus_lbl.Text = "Armor\r\nBonus";
+            this.ac_armorBonus_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_armorBonus_lbl.UseCustomBackColor = true;
+            // 
+            // ac_sizeMod_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_sizeMod_textbox.CustomButton.Image = null;
+            this.ac_sizeMod_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_sizeMod_textbox.CustomButton.Name = "";
+            this.ac_sizeMod_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_sizeMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_sizeMod_textbox.CustomButton.TabIndex = 1;
+            this.ac_sizeMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_sizeMod_textbox.CustomButton.UseSelectable = true;
+            this.ac_sizeMod_textbox.CustomButton.Visible = false;
+            this.ac_sizeMod_textbox.Lines = new string[] {
+        "0"};
+            this.ac_sizeMod_textbox.Location = new System.Drawing.Point(61, 101);
+            this.ac_sizeMod_textbox.MaxLength = 32767;
+            this.ac_sizeMod_textbox.Name = "ac_sizeMod_textbox";
+            this.ac_sizeMod_textbox.PasswordChar = '\0';
+            this.ac_sizeMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_sizeMod_textbox.SelectedText = "";
+            this.ac_sizeMod_textbox.SelectionLength = 0;
+            this.ac_sizeMod_textbox.SelectionStart = 0;
+            this.ac_sizeMod_textbox.ShortcutsEnabled = true;
+            this.ac_sizeMod_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_sizeMod_textbox.TabIndex = 28;
+            this.ac_sizeMod_textbox.Text = "0";
+            this.ac_sizeMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_sizeMod_textbox.UseSelectable = true;
+            this.ac_sizeMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_sizeMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_sizeMod_textbox.TextChanged += new System.EventHandler(this.ac_sizeMod_textbox_TextChanged);
+            // 
+            // ac_dexMod_textbox
+            // 
+            this.ac_dexMod_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_dexMod_textbox.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_dexMod_textbox.Location = new System.Drawing.Point(61, 68);
+            this.ac_dexMod_textbox.Name = "ac_dexMod_textbox";
+            this.ac_dexMod_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_dexMod_textbox.TabIndex = 27;
+            this.ac_dexMod_textbox.Text = "0";
+            this.ac_dexMod_textbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ac_dexMod_textbox.UseSelectable = true;
+            this.ac_dexMod_textbox.TextChanged += new System.EventHandler(this.ac_dexMod_textbox_TextChanged);
+            // 
+            // ac_shieldBonus_lbl
+            // 
+            this.ac_shieldBonus_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_shieldBonus_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_shieldBonus_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_shieldBonus_lbl.Location = new System.Drawing.Point(4, 35);
+            this.ac_shieldBonus_lbl.Name = "ac_shieldBonus_lbl";
+            this.ac_shieldBonus_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_shieldBonus_lbl.TabIndex = 19;
+            this.ac_shieldBonus_lbl.Text = "Shield\r\nBonus";
+            this.ac_shieldBonus_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_shieldBonus_lbl.UseCustomBackColor = true;
+            // 
+            // ac_shieldBonus_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_shieldBonus_textbox.CustomButton.Image = null;
+            this.ac_shieldBonus_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_shieldBonus_textbox.CustomButton.Name = "";
+            this.ac_shieldBonus_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_shieldBonus_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_shieldBonus_textbox.CustomButton.TabIndex = 1;
+            this.ac_shieldBonus_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_shieldBonus_textbox.CustomButton.UseSelectable = true;
+            this.ac_shieldBonus_textbox.CustomButton.Visible = false;
+            this.ac_shieldBonus_textbox.Lines = new string[] {
+        "0"};
+            this.ac_shieldBonus_textbox.Location = new System.Drawing.Point(61, 36);
+            this.ac_shieldBonus_textbox.MaxLength = 32767;
+            this.ac_shieldBonus_textbox.Name = "ac_shieldBonus_textbox";
+            this.ac_shieldBonus_textbox.PasswordChar = '\0';
+            this.ac_shieldBonus_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_shieldBonus_textbox.SelectedText = "";
+            this.ac_shieldBonus_textbox.SelectionLength = 0;
+            this.ac_shieldBonus_textbox.SelectionStart = 0;
+            this.ac_shieldBonus_textbox.ShortcutsEnabled = true;
+            this.ac_shieldBonus_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_shieldBonus_textbox.TabIndex = 26;
+            this.ac_shieldBonus_textbox.Text = "0";
+            this.ac_shieldBonus_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_shieldBonus_textbox.UseSelectable = true;
+            this.ac_shieldBonus_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_shieldBonus_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_shieldBonus_textbox.TextChanged += new System.EventHandler(this.ac_shieldBonus_textbox_TextChanged);
+            // 
+            // ac_dexMod_lbl
+            // 
+            this.ac_dexMod_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_dexMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_dexMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_dexMod_lbl.Location = new System.Drawing.Point(4, 68);
+            this.ac_dexMod_lbl.Name = "ac_dexMod_lbl";
+            this.ac_dexMod_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_dexMod_lbl.TabIndex = 20;
+            this.ac_dexMod_lbl.Text = "Dex\r\nMod";
+            this.ac_dexMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_dexMod_lbl.UseCustomBackColor = true;
+            // 
+            // ac_armorBonus_textbox
+            // 
+            // 
+            // 
+            // 
+            this.ac_armorBonus_textbox.CustomButton.Image = null;
+            this.ac_armorBonus_textbox.CustomButton.Location = new System.Drawing.Point(-7, 2);
+            this.ac_armorBonus_textbox.CustomButton.Name = "";
+            this.ac_armorBonus_textbox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.ac_armorBonus_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ac_armorBonus_textbox.CustomButton.TabIndex = 1;
+            this.ac_armorBonus_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ac_armorBonus_textbox.CustomButton.UseSelectable = true;
+            this.ac_armorBonus_textbox.CustomButton.Visible = false;
+            this.ac_armorBonus_textbox.Lines = new string[] {
+        "0"};
+            this.ac_armorBonus_textbox.Location = new System.Drawing.Point(61, 2);
+            this.ac_armorBonus_textbox.MaxLength = 32767;
+            this.ac_armorBonus_textbox.Name = "ac_armorBonus_textbox";
+            this.ac_armorBonus_textbox.PasswordChar = '\0';
+            this.ac_armorBonus_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ac_armorBonus_textbox.SelectedText = "";
+            this.ac_armorBonus_textbox.SelectionLength = 0;
+            this.ac_armorBonus_textbox.SelectionStart = 0;
+            this.ac_armorBonus_textbox.ShortcutsEnabled = true;
+            this.ac_armorBonus_textbox.Size = new System.Drawing.Size(21, 30);
+            this.ac_armorBonus_textbox.TabIndex = 25;
+            this.ac_armorBonus_textbox.Text = "0";
+            this.ac_armorBonus_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ac_armorBonus_textbox.UseSelectable = true;
+            this.ac_armorBonus_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ac_armorBonus_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ac_armorBonus_textbox.TextChanged += new System.EventHandler(this.ac_armorBonus_textbox_TextChanged);
+            // 
+            // ac_sizeMod_lbl
+            // 
+            this.ac_sizeMod_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_sizeMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_sizeMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_sizeMod_lbl.Location = new System.Drawing.Point(4, 101);
+            this.ac_sizeMod_lbl.Name = "ac_sizeMod_lbl";
+            this.ac_sizeMod_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_sizeMod_lbl.TabIndex = 21;
+            this.ac_sizeMod_lbl.Text = "Size\r\nMod";
+            this.ac_sizeMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_sizeMod_lbl.UseCustomBackColor = true;
+            // 
+            // ac_naturalArmor_lbl
+            // 
+            this.ac_naturalArmor_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_naturalArmor_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_naturalArmor_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_naturalArmor_lbl.Location = new System.Drawing.Point(3, 134);
+            this.ac_naturalArmor_lbl.Name = "ac_naturalArmor_lbl";
+            this.ac_naturalArmor_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_naturalArmor_lbl.TabIndex = 22;
+            this.ac_naturalArmor_lbl.Text = "Natural\r\nArmor";
+            this.ac_naturalArmor_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_naturalArmor_lbl.UseCustomBackColor = true;
+            // 
+            // ac_deflectionMod_lbl
+            // 
+            this.ac_deflectionMod_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_deflectionMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_deflectionMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_deflectionMod_lbl.Location = new System.Drawing.Point(84, 2);
+            this.ac_deflectionMod_lbl.Name = "ac_deflectionMod_lbl";
+            this.ac_deflectionMod_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_deflectionMod_lbl.TabIndex = 23;
+            this.ac_deflectionMod_lbl.Text = "Deflection\r\nMod";
+            this.ac_deflectionMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_deflectionMod_lbl.UseCustomBackColor = true;
+            // 
+            // ac_miscMod_lbl
+            // 
+            this.ac_miscMod_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ac_miscMod_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ac_miscMod_lbl.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.ac_miscMod_lbl.Location = new System.Drawing.Point(83, 35);
+            this.ac_miscMod_lbl.Name = "ac_miscMod_lbl";
+            this.ac_miscMod_lbl.Size = new System.Drawing.Size(54, 30);
+            this.ac_miscMod_lbl.TabIndex = 24;
+            this.ac_miscMod_lbl.Text = "Misc\r\nMod";
+            this.ac_miscMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ac_miscMod_lbl.UseCustomBackColor = true;
             // 
             // Speed_panel
             // 
@@ -3455,722 +3923,6 @@
             this.Speed_feet_squares_lbl.Text = "Speed (Feet / Squares)";
             this.Speed_feet_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // savingThrows_panel
-            // 
-            this.savingThrows_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.savingThrows_panel.Controls.Add(this.save_tempMod_panel);
-            this.savingThrows_panel.Controls.Add(this.save_miscMod_panel);
-            this.savingThrows_panel.Controls.Add(this.save_magicMod_paanel);
-            this.savingThrows_panel.Controls.Add(this.save_abilityMod_panel);
-            this.savingThrows_panel.Controls.Add(this.save_baseSave_panel);
-            this.savingThrows_panel.Controls.Add(this.metroLabel33);
-            this.savingThrows_panel.Controls.Add(this.metroLabel34);
-            this.savingThrows_panel.Controls.Add(this.metroLabel35);
-            this.savingThrows_panel.Controls.Add(this.metroLabel36);
-            this.savingThrows_panel.HorizontalScrollbarBarColor = true;
-            this.savingThrows_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.savingThrows_panel.HorizontalScrollbarSize = 10;
-            this.savingThrows_panel.Location = new System.Drawing.Point(171, 408);
-            this.savingThrows_panel.Name = "savingThrows_panel";
-            this.savingThrows_panel.Size = new System.Drawing.Size(257, 288);
-            this.savingThrows_panel.TabIndex = 12;
-            this.savingThrows_panel.VerticalScrollbarBarColor = true;
-            this.savingThrows_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.savingThrows_panel.VerticalScrollbarSize = 10;
-            // 
-            // save_tempMod_panel
-            // 
-            this.save_tempMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.save_tempMod_panel.Controls.Add(this.will_tempMod_textbox);
-            this.save_tempMod_panel.Controls.Add(this.reflex_tempMod_textbox);
-            this.save_tempMod_panel.Controls.Add(this.fortitude_tempMod_textbox);
-            this.save_tempMod_panel.Controls.Add(this.metroLabel23);
-            this.save_tempMod_panel.HorizontalScrollbarBarColor = true;
-            this.save_tempMod_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.save_tempMod_panel.HorizontalScrollbarSize = 10;
-            this.save_tempMod_panel.Location = new System.Drawing.Point(3, 209);
-            this.save_tempMod_panel.Name = "save_tempMod_panel";
-            this.save_tempMod_panel.Size = new System.Drawing.Size(240, 33);
-            this.save_tempMod_panel.TabIndex = 15;
-            this.save_tempMod_panel.VerticalScrollbarBarColor = true;
-            this.save_tempMod_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.save_tempMod_panel.VerticalScrollbarSize = 10;
-            // 
-            // will_tempMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.will_tempMod_textbox.CustomButton.Image = null;
-            this.will_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.will_tempMod_textbox.CustomButton.Name = "";
-            this.will_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.will_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.will_tempMod_textbox.CustomButton.TabIndex = 1;
-            this.will_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.will_tempMod_textbox.CustomButton.UseSelectable = true;
-            this.will_tempMod_textbox.CustomButton.Visible = false;
-            this.will_tempMod_textbox.Lines = new string[] {
-        "0"};
-            this.will_tempMod_textbox.Location = new System.Drawing.Point(197, 3);
-            this.will_tempMod_textbox.MaxLength = 32767;
-            this.will_tempMod_textbox.Name = "will_tempMod_textbox";
-            this.will_tempMod_textbox.PasswordChar = '\0';
-            this.will_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.will_tempMod_textbox.SelectedText = "";
-            this.will_tempMod_textbox.SelectionLength = 0;
-            this.will_tempMod_textbox.SelectionStart = 0;
-            this.will_tempMod_textbox.ShortcutsEnabled = true;
-            this.will_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.will_tempMod_textbox.TabIndex = 6;
-            this.will_tempMod_textbox.Text = "0";
-            this.will_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.will_tempMod_textbox.UseSelectable = true;
-            this.will_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.will_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.will_tempMod_textbox.TextChanged += new System.EventHandler(this.will_tempMod_textbox_TextChanged);
-            // 
-            // reflex_tempMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflex_tempMod_textbox.CustomButton.Image = null;
-            this.reflex_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.reflex_tempMod_textbox.CustomButton.Name = "";
-            this.reflex_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.reflex_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflex_tempMod_textbox.CustomButton.TabIndex = 1;
-            this.reflex_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflex_tempMod_textbox.CustomButton.UseSelectable = true;
-            this.reflex_tempMod_textbox.CustomButton.Visible = false;
-            this.reflex_tempMod_textbox.Lines = new string[] {
-        "0"};
-            this.reflex_tempMod_textbox.Location = new System.Drawing.Point(145, 4);
-            this.reflex_tempMod_textbox.MaxLength = 32767;
-            this.reflex_tempMod_textbox.Name = "reflex_tempMod_textbox";
-            this.reflex_tempMod_textbox.PasswordChar = '\0';
-            this.reflex_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflex_tempMod_textbox.SelectedText = "";
-            this.reflex_tempMod_textbox.SelectionLength = 0;
-            this.reflex_tempMod_textbox.SelectionStart = 0;
-            this.reflex_tempMod_textbox.ShortcutsEnabled = true;
-            this.reflex_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.reflex_tempMod_textbox.TabIndex = 5;
-            this.reflex_tempMod_textbox.Text = "0";
-            this.reflex_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflex_tempMod_textbox.UseSelectable = true;
-            this.reflex_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflex_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.reflex_tempMod_textbox.TextChanged += new System.EventHandler(this.reflex_tempMod_textbox_TextChanged);
-            // 
-            // fortitude_tempMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitude_tempMod_textbox.CustomButton.Image = null;
-            this.fortitude_tempMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.fortitude_tempMod_textbox.CustomButton.Name = "";
-            this.fortitude_tempMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.fortitude_tempMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitude_tempMod_textbox.CustomButton.TabIndex = 1;
-            this.fortitude_tempMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitude_tempMod_textbox.CustomButton.UseSelectable = true;
-            this.fortitude_tempMod_textbox.CustomButton.Visible = false;
-            this.fortitude_tempMod_textbox.Lines = new string[] {
-        "0"};
-            this.fortitude_tempMod_textbox.Location = new System.Drawing.Point(94, 4);
-            this.fortitude_tempMod_textbox.MaxLength = 32767;
-            this.fortitude_tempMod_textbox.Name = "fortitude_tempMod_textbox";
-            this.fortitude_tempMod_textbox.PasswordChar = '\0';
-            this.fortitude_tempMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitude_tempMod_textbox.SelectedText = "";
-            this.fortitude_tempMod_textbox.SelectionLength = 0;
-            this.fortitude_tempMod_textbox.SelectionStart = 0;
-            this.fortitude_tempMod_textbox.ShortcutsEnabled = true;
-            this.fortitude_tempMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.fortitude_tempMod_textbox.TabIndex = 4;
-            this.fortitude_tempMod_textbox.Text = "0";
-            this.fortitude_tempMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitude_tempMod_textbox.UseSelectable = true;
-            this.fortitude_tempMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitude_tempMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.fortitude_tempMod_textbox.TextChanged += new System.EventHandler(this.fortitude_tempMod_textbox_TextChanged);
-            // 
-            // metroLabel23
-            // 
-            this.metroLabel23.AutoSize = true;
-            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel23.Location = new System.Drawing.Point(3, 5);
-            this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel23.TabIndex = 2;
-            this.metroLabel23.Text = "Temp Mod";
-            this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // save_miscMod_panel
-            // 
-            this.save_miscMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.save_miscMod_panel.Controls.Add(this.will_miscMod_textbox);
-            this.save_miscMod_panel.Controls.Add(this.reflex_miscMod_textbox);
-            this.save_miscMod_panel.Controls.Add(this.fortitude_miscMod_textbox);
-            this.save_miscMod_panel.Controls.Add(this.metroLabel27);
-            this.save_miscMod_panel.HorizontalScrollbarBarColor = true;
-            this.save_miscMod_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.save_miscMod_panel.HorizontalScrollbarSize = 10;
-            this.save_miscMod_panel.Location = new System.Drawing.Point(3, 171);
-            this.save_miscMod_panel.Name = "save_miscMod_panel";
-            this.save_miscMod_panel.Size = new System.Drawing.Size(240, 33);
-            this.save_miscMod_panel.TabIndex = 14;
-            this.save_miscMod_panel.VerticalScrollbarBarColor = true;
-            this.save_miscMod_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.save_miscMod_panel.VerticalScrollbarSize = 10;
-            // 
-            // will_miscMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.will_miscMod_textbox.CustomButton.Image = null;
-            this.will_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.will_miscMod_textbox.CustomButton.Name = "";
-            this.will_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.will_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.will_miscMod_textbox.CustomButton.TabIndex = 1;
-            this.will_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.will_miscMod_textbox.CustomButton.UseSelectable = true;
-            this.will_miscMod_textbox.CustomButton.Visible = false;
-            this.will_miscMod_textbox.Lines = new string[] {
-        "0"};
-            this.will_miscMod_textbox.Location = new System.Drawing.Point(197, 3);
-            this.will_miscMod_textbox.MaxLength = 32767;
-            this.will_miscMod_textbox.Name = "will_miscMod_textbox";
-            this.will_miscMod_textbox.PasswordChar = '\0';
-            this.will_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.will_miscMod_textbox.SelectedText = "";
-            this.will_miscMod_textbox.SelectionLength = 0;
-            this.will_miscMod_textbox.SelectionStart = 0;
-            this.will_miscMod_textbox.ShortcutsEnabled = true;
-            this.will_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.will_miscMod_textbox.TabIndex = 6;
-            this.will_miscMod_textbox.Text = "0";
-            this.will_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.will_miscMod_textbox.UseSelectable = true;
-            this.will_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.will_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.will_miscMod_textbox.TextChanged += new System.EventHandler(this.will_miscMod_textbox_TextChanged);
-            // 
-            // reflex_miscMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflex_miscMod_textbox.CustomButton.Image = null;
-            this.reflex_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.reflex_miscMod_textbox.CustomButton.Name = "";
-            this.reflex_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.reflex_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflex_miscMod_textbox.CustomButton.TabIndex = 1;
-            this.reflex_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflex_miscMod_textbox.CustomButton.UseSelectable = true;
-            this.reflex_miscMod_textbox.CustomButton.Visible = false;
-            this.reflex_miscMod_textbox.Lines = new string[] {
-        "0"};
-            this.reflex_miscMod_textbox.Location = new System.Drawing.Point(144, 4);
-            this.reflex_miscMod_textbox.MaxLength = 32767;
-            this.reflex_miscMod_textbox.Name = "reflex_miscMod_textbox";
-            this.reflex_miscMod_textbox.PasswordChar = '\0';
-            this.reflex_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflex_miscMod_textbox.SelectedText = "";
-            this.reflex_miscMod_textbox.SelectionLength = 0;
-            this.reflex_miscMod_textbox.SelectionStart = 0;
-            this.reflex_miscMod_textbox.ShortcutsEnabled = true;
-            this.reflex_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.reflex_miscMod_textbox.TabIndex = 5;
-            this.reflex_miscMod_textbox.Text = "0";
-            this.reflex_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflex_miscMod_textbox.UseSelectable = true;
-            this.reflex_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflex_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.reflex_miscMod_textbox.TextChanged += new System.EventHandler(this.reflex_miscMod_textbox_TextChanged);
-            // 
-            // fortitude_miscMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitude_miscMod_textbox.CustomButton.Image = null;
-            this.fortitude_miscMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.fortitude_miscMod_textbox.CustomButton.Name = "";
-            this.fortitude_miscMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.fortitude_miscMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitude_miscMod_textbox.CustomButton.TabIndex = 1;
-            this.fortitude_miscMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitude_miscMod_textbox.CustomButton.UseSelectable = true;
-            this.fortitude_miscMod_textbox.CustomButton.Visible = false;
-            this.fortitude_miscMod_textbox.Lines = new string[] {
-        "0"};
-            this.fortitude_miscMod_textbox.Location = new System.Drawing.Point(94, 4);
-            this.fortitude_miscMod_textbox.MaxLength = 32767;
-            this.fortitude_miscMod_textbox.Name = "fortitude_miscMod_textbox";
-            this.fortitude_miscMod_textbox.PasswordChar = '\0';
-            this.fortitude_miscMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitude_miscMod_textbox.SelectedText = "";
-            this.fortitude_miscMod_textbox.SelectionLength = 0;
-            this.fortitude_miscMod_textbox.SelectionStart = 0;
-            this.fortitude_miscMod_textbox.ShortcutsEnabled = true;
-            this.fortitude_miscMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.fortitude_miscMod_textbox.TabIndex = 4;
-            this.fortitude_miscMod_textbox.Text = "0";
-            this.fortitude_miscMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitude_miscMod_textbox.UseSelectable = true;
-            this.fortitude_miscMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitude_miscMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.fortitude_miscMod_textbox.TextChanged += new System.EventHandler(this.fortitude_miscMod_textbox_TextChanged);
-            // 
-            // metroLabel27
-            // 
-            this.metroLabel27.AutoSize = true;
-            this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel27.Location = new System.Drawing.Point(3, 5);
-            this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(74, 19);
-            this.metroLabel27.TabIndex = 2;
-            this.metroLabel27.Text = "Misc Mod";
-            this.metroLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // save_magicMod_paanel
-            // 
-            this.save_magicMod_paanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.save_magicMod_paanel.Controls.Add(this.will_magicMod_textbox);
-            this.save_magicMod_paanel.Controls.Add(this.reflex_magicMod_textbox);
-            this.save_magicMod_paanel.Controls.Add(this.fortitude_magicMod_textbox);
-            this.save_magicMod_paanel.Controls.Add(this.metroLabel29);
-            this.save_magicMod_paanel.HorizontalScrollbarBarColor = true;
-            this.save_magicMod_paanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.save_magicMod_paanel.HorizontalScrollbarSize = 10;
-            this.save_magicMod_paanel.Location = new System.Drawing.Point(3, 133);
-            this.save_magicMod_paanel.Name = "save_magicMod_paanel";
-            this.save_magicMod_paanel.Size = new System.Drawing.Size(240, 33);
-            this.save_magicMod_paanel.TabIndex = 13;
-            this.save_magicMod_paanel.VerticalScrollbarBarColor = true;
-            this.save_magicMod_paanel.VerticalScrollbarHighlightOnWheel = false;
-            this.save_magicMod_paanel.VerticalScrollbarSize = 10;
-            // 
-            // will_magicMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.will_magicMod_textbox.CustomButton.Image = null;
-            this.will_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.will_magicMod_textbox.CustomButton.Name = "";
-            this.will_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.will_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.will_magicMod_textbox.CustomButton.TabIndex = 1;
-            this.will_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.will_magicMod_textbox.CustomButton.UseSelectable = true;
-            this.will_magicMod_textbox.CustomButton.Visible = false;
-            this.will_magicMod_textbox.Lines = new string[] {
-        "0"};
-            this.will_magicMod_textbox.Location = new System.Drawing.Point(197, 6);
-            this.will_magicMod_textbox.MaxLength = 32767;
-            this.will_magicMod_textbox.Name = "will_magicMod_textbox";
-            this.will_magicMod_textbox.PasswordChar = '\0';
-            this.will_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.will_magicMod_textbox.SelectedText = "";
-            this.will_magicMod_textbox.SelectionLength = 0;
-            this.will_magicMod_textbox.SelectionStart = 0;
-            this.will_magicMod_textbox.ShortcutsEnabled = true;
-            this.will_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.will_magicMod_textbox.TabIndex = 6;
-            this.will_magicMod_textbox.Text = "0";
-            this.will_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.will_magicMod_textbox.UseSelectable = true;
-            this.will_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.will_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.will_magicMod_textbox.TextChanged += new System.EventHandler(this.will_magicMod_textbox_TextChanged);
-            // 
-            // reflex_magicMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflex_magicMod_textbox.CustomButton.Image = null;
-            this.reflex_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.reflex_magicMod_textbox.CustomButton.Name = "";
-            this.reflex_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.reflex_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflex_magicMod_textbox.CustomButton.TabIndex = 1;
-            this.reflex_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflex_magicMod_textbox.CustomButton.UseSelectable = true;
-            this.reflex_magicMod_textbox.CustomButton.Visible = false;
-            this.reflex_magicMod_textbox.Lines = new string[] {
-        "0"};
-            this.reflex_magicMod_textbox.Location = new System.Drawing.Point(145, 5);
-            this.reflex_magicMod_textbox.MaxLength = 32767;
-            this.reflex_magicMod_textbox.Name = "reflex_magicMod_textbox";
-            this.reflex_magicMod_textbox.PasswordChar = '\0';
-            this.reflex_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflex_magicMod_textbox.SelectedText = "";
-            this.reflex_magicMod_textbox.SelectionLength = 0;
-            this.reflex_magicMod_textbox.SelectionStart = 0;
-            this.reflex_magicMod_textbox.ShortcutsEnabled = true;
-            this.reflex_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.reflex_magicMod_textbox.TabIndex = 5;
-            this.reflex_magicMod_textbox.Text = "0";
-            this.reflex_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflex_magicMod_textbox.UseSelectable = true;
-            this.reflex_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflex_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.reflex_magicMod_textbox.TextChanged += new System.EventHandler(this.reflex_magicMod_textbox_TextChanged);
-            // 
-            // fortitude_magicMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitude_magicMod_textbox.CustomButton.Image = null;
-            this.fortitude_magicMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.fortitude_magicMod_textbox.CustomButton.Name = "";
-            this.fortitude_magicMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.fortitude_magicMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitude_magicMod_textbox.CustomButton.TabIndex = 1;
-            this.fortitude_magicMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitude_magicMod_textbox.CustomButton.UseSelectable = true;
-            this.fortitude_magicMod_textbox.CustomButton.Visible = false;
-            this.fortitude_magicMod_textbox.Lines = new string[] {
-        "0"};
-            this.fortitude_magicMod_textbox.Location = new System.Drawing.Point(94, 6);
-            this.fortitude_magicMod_textbox.MaxLength = 32767;
-            this.fortitude_magicMod_textbox.Name = "fortitude_magicMod_textbox";
-            this.fortitude_magicMod_textbox.PasswordChar = '\0';
-            this.fortitude_magicMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitude_magicMod_textbox.SelectedText = "";
-            this.fortitude_magicMod_textbox.SelectionLength = 0;
-            this.fortitude_magicMod_textbox.SelectionStart = 0;
-            this.fortitude_magicMod_textbox.ShortcutsEnabled = true;
-            this.fortitude_magicMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.fortitude_magicMod_textbox.TabIndex = 4;
-            this.fortitude_magicMod_textbox.Text = "0";
-            this.fortitude_magicMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitude_magicMod_textbox.UseSelectable = true;
-            this.fortitude_magicMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitude_magicMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.fortitude_magicMod_textbox.TextChanged += new System.EventHandler(this.fortitude_magicMod_textbox_TextChanged);
-            // 
-            // metroLabel29
-            // 
-            this.metroLabel29.AutoSize = true;
-            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel29.Location = new System.Drawing.Point(3, 5);
-            this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(85, 19);
-            this.metroLabel29.TabIndex = 2;
-            this.metroLabel29.Text = "Magic Mod";
-            this.metroLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // save_abilityMod_panel
-            // 
-            this.save_abilityMod_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.save_abilityMod_panel.Controls.Add(this.will_abilityMod_textbox);
-            this.save_abilityMod_panel.Controls.Add(this.reflex_abilityMod_textbox);
-            this.save_abilityMod_panel.Controls.Add(this.fortitude_abilityMod_textbox);
-            this.save_abilityMod_panel.Controls.Add(this.metroLabel30);
-            this.save_abilityMod_panel.HorizontalScrollbarBarColor = true;
-            this.save_abilityMod_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.save_abilityMod_panel.HorizontalScrollbarSize = 10;
-            this.save_abilityMod_panel.Location = new System.Drawing.Point(4, 95);
-            this.save_abilityMod_panel.Name = "save_abilityMod_panel";
-            this.save_abilityMod_panel.Size = new System.Drawing.Size(240, 33);
-            this.save_abilityMod_panel.TabIndex = 12;
-            this.save_abilityMod_panel.VerticalScrollbarBarColor = true;
-            this.save_abilityMod_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.save_abilityMod_panel.VerticalScrollbarSize = 10;
-            // 
-            // will_abilityMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.will_abilityMod_textbox.CustomButton.Image = null;
-            this.will_abilityMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.will_abilityMod_textbox.CustomButton.Name = "";
-            this.will_abilityMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.will_abilityMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.will_abilityMod_textbox.CustomButton.TabIndex = 1;
-            this.will_abilityMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.will_abilityMod_textbox.CustomButton.UseSelectable = true;
-            this.will_abilityMod_textbox.CustomButton.Visible = false;
-            this.will_abilityMod_textbox.Lines = new string[] {
-        "0"};
-            this.will_abilityMod_textbox.Location = new System.Drawing.Point(196, 5);
-            this.will_abilityMod_textbox.MaxLength = 32767;
-            this.will_abilityMod_textbox.Name = "will_abilityMod_textbox";
-            this.will_abilityMod_textbox.PasswordChar = '\0';
-            this.will_abilityMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.will_abilityMod_textbox.SelectedText = "";
-            this.will_abilityMod_textbox.SelectionLength = 0;
-            this.will_abilityMod_textbox.SelectionStart = 0;
-            this.will_abilityMod_textbox.ShortcutsEnabled = true;
-            this.will_abilityMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.will_abilityMod_textbox.TabIndex = 6;
-            this.will_abilityMod_textbox.Text = "0";
-            this.will_abilityMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.will_abilityMod_textbox.UseSelectable = true;
-            this.will_abilityMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.will_abilityMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.will_abilityMod_textbox.TextChanged += new System.EventHandler(this.will_abilityMod_textbox_TextChanged);
-            // 
-            // reflex_abilityMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflex_abilityMod_textbox.CustomButton.Image = null;
-            this.reflex_abilityMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.reflex_abilityMod_textbox.CustomButton.Name = "";
-            this.reflex_abilityMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.reflex_abilityMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflex_abilityMod_textbox.CustomButton.TabIndex = 1;
-            this.reflex_abilityMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflex_abilityMod_textbox.CustomButton.UseSelectable = true;
-            this.reflex_abilityMod_textbox.CustomButton.Visible = false;
-            this.reflex_abilityMod_textbox.Lines = new string[] {
-        "0"};
-            this.reflex_abilityMod_textbox.Location = new System.Drawing.Point(144, 5);
-            this.reflex_abilityMod_textbox.MaxLength = 32767;
-            this.reflex_abilityMod_textbox.Name = "reflex_abilityMod_textbox";
-            this.reflex_abilityMod_textbox.PasswordChar = '\0';
-            this.reflex_abilityMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflex_abilityMod_textbox.SelectedText = "";
-            this.reflex_abilityMod_textbox.SelectionLength = 0;
-            this.reflex_abilityMod_textbox.SelectionStart = 0;
-            this.reflex_abilityMod_textbox.ShortcutsEnabled = true;
-            this.reflex_abilityMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.reflex_abilityMod_textbox.TabIndex = 5;
-            this.reflex_abilityMod_textbox.Text = "0";
-            this.reflex_abilityMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflex_abilityMod_textbox.UseSelectable = true;
-            this.reflex_abilityMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflex_abilityMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.reflex_abilityMod_textbox.TextChanged += new System.EventHandler(this.reflex_abilityMod_textbox_TextChanged);
-            // 
-            // fortitude_abilityMod_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitude_abilityMod_textbox.CustomButton.Image = null;
-            this.fortitude_abilityMod_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.fortitude_abilityMod_textbox.CustomButton.Name = "";
-            this.fortitude_abilityMod_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.fortitude_abilityMod_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitude_abilityMod_textbox.CustomButton.TabIndex = 1;
-            this.fortitude_abilityMod_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitude_abilityMod_textbox.CustomButton.UseSelectable = true;
-            this.fortitude_abilityMod_textbox.CustomButton.Visible = false;
-            this.fortitude_abilityMod_textbox.Lines = new string[] {
-        "0"};
-            this.fortitude_abilityMod_textbox.Location = new System.Drawing.Point(93, 5);
-            this.fortitude_abilityMod_textbox.MaxLength = 32767;
-            this.fortitude_abilityMod_textbox.Name = "fortitude_abilityMod_textbox";
-            this.fortitude_abilityMod_textbox.PasswordChar = '\0';
-            this.fortitude_abilityMod_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitude_abilityMod_textbox.SelectedText = "";
-            this.fortitude_abilityMod_textbox.SelectionLength = 0;
-            this.fortitude_abilityMod_textbox.SelectionStart = 0;
-            this.fortitude_abilityMod_textbox.ShortcutsEnabled = true;
-            this.fortitude_abilityMod_textbox.Size = new System.Drawing.Size(27, 23);
-            this.fortitude_abilityMod_textbox.TabIndex = 4;
-            this.fortitude_abilityMod_textbox.Text = "0";
-            this.fortitude_abilityMod_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitude_abilityMod_textbox.UseSelectable = true;
-            this.fortitude_abilityMod_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitude_abilityMod_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.fortitude_abilityMod_textbox.TextChanged += new System.EventHandler(this.fortitude_abilityMod_textbox_TextChanged);
-            // 
-            // metroLabel30
-            // 
-            this.metroLabel30.AutoSize = true;
-            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel30.Location = new System.Drawing.Point(3, 5);
-            this.metroLabel30.Name = "metroLabel30";
-            this.metroLabel30.Size = new System.Drawing.Size(88, 19);
-            this.metroLabel30.TabIndex = 2;
-            this.metroLabel30.Text = "Ability Mod";
-            this.metroLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // save_baseSave_panel
-            // 
-            this.save_baseSave_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.save_baseSave_panel.Controls.Add(this.will_baseSave_textbox);
-            this.save_baseSave_panel.Controls.Add(this.reflex_baseSave_textbox);
-            this.save_baseSave_panel.Controls.Add(this.fortitude_baseSave_textbox);
-            this.save_baseSave_panel.Controls.Add(this.metroLabel32);
-            this.save_baseSave_panel.HorizontalScrollbarBarColor = true;
-            this.save_baseSave_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.save_baseSave_panel.HorizontalScrollbarSize = 10;
-            this.save_baseSave_panel.Location = new System.Drawing.Point(3, 57);
-            this.save_baseSave_panel.Name = "save_baseSave_panel";
-            this.save_baseSave_panel.Size = new System.Drawing.Size(240, 33);
-            this.save_baseSave_panel.TabIndex = 11;
-            this.save_baseSave_panel.VerticalScrollbarBarColor = true;
-            this.save_baseSave_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.save_baseSave_panel.VerticalScrollbarSize = 10;
-            // 
-            // will_baseSave_textbox
-            // 
-            // 
-            // 
-            // 
-            this.will_baseSave_textbox.CustomButton.Image = null;
-            this.will_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.will_baseSave_textbox.CustomButton.Name = "";
-            this.will_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.will_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.will_baseSave_textbox.CustomButton.TabIndex = 1;
-            this.will_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.will_baseSave_textbox.CustomButton.UseSelectable = true;
-            this.will_baseSave_textbox.CustomButton.Visible = false;
-            this.will_baseSave_textbox.Lines = new string[] {
-        "0"};
-            this.will_baseSave_textbox.Location = new System.Drawing.Point(197, 4);
-            this.will_baseSave_textbox.MaxLength = 32767;
-            this.will_baseSave_textbox.Name = "will_baseSave_textbox";
-            this.will_baseSave_textbox.PasswordChar = '\0';
-            this.will_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.will_baseSave_textbox.SelectedText = "";
-            this.will_baseSave_textbox.SelectionLength = 0;
-            this.will_baseSave_textbox.SelectionStart = 0;
-            this.will_baseSave_textbox.ShortcutsEnabled = true;
-            this.will_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
-            this.will_baseSave_textbox.TabIndex = 6;
-            this.will_baseSave_textbox.Text = "0";
-            this.will_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.will_baseSave_textbox.UseSelectable = true;
-            this.will_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.will_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.will_baseSave_textbox.TextChanged += new System.EventHandler(this.will_baseSave_textbox_TextChanged);
-            // 
-            // reflex_baseSave_textbox
-            // 
-            // 
-            // 
-            // 
-            this.reflex_baseSave_textbox.CustomButton.Image = null;
-            this.reflex_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.reflex_baseSave_textbox.CustomButton.Name = "";
-            this.reflex_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.reflex_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.reflex_baseSave_textbox.CustomButton.TabIndex = 1;
-            this.reflex_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.reflex_baseSave_textbox.CustomButton.UseSelectable = true;
-            this.reflex_baseSave_textbox.CustomButton.Visible = false;
-            this.reflex_baseSave_textbox.Lines = new string[] {
-        "0"};
-            this.reflex_baseSave_textbox.Location = new System.Drawing.Point(144, 4);
-            this.reflex_baseSave_textbox.MaxLength = 32767;
-            this.reflex_baseSave_textbox.Name = "reflex_baseSave_textbox";
-            this.reflex_baseSave_textbox.PasswordChar = '\0';
-            this.reflex_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.reflex_baseSave_textbox.SelectedText = "";
-            this.reflex_baseSave_textbox.SelectionLength = 0;
-            this.reflex_baseSave_textbox.SelectionStart = 0;
-            this.reflex_baseSave_textbox.ShortcutsEnabled = true;
-            this.reflex_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
-            this.reflex_baseSave_textbox.TabIndex = 5;
-            this.reflex_baseSave_textbox.Text = "0";
-            this.reflex_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.reflex_baseSave_textbox.UseSelectable = true;
-            this.reflex_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.reflex_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.reflex_baseSave_textbox.TextChanged += new System.EventHandler(this.reflex_baseSave_textbox_TextChanged);
-            // 
-            // fortitude_baseSave_textbox
-            // 
-            // 
-            // 
-            // 
-            this.fortitude_baseSave_textbox.CustomButton.Image = null;
-            this.fortitude_baseSave_textbox.CustomButton.Location = new System.Drawing.Point(5, 1);
-            this.fortitude_baseSave_textbox.CustomButton.Name = "";
-            this.fortitude_baseSave_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.fortitude_baseSave_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.fortitude_baseSave_textbox.CustomButton.TabIndex = 1;
-            this.fortitude_baseSave_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.fortitude_baseSave_textbox.CustomButton.UseSelectable = true;
-            this.fortitude_baseSave_textbox.CustomButton.Visible = false;
-            this.fortitude_baseSave_textbox.Lines = new string[] {
-        "0"};
-            this.fortitude_baseSave_textbox.Location = new System.Drawing.Point(94, 4);
-            this.fortitude_baseSave_textbox.MaxLength = 32767;
-            this.fortitude_baseSave_textbox.Name = "fortitude_baseSave_textbox";
-            this.fortitude_baseSave_textbox.PasswordChar = '\0';
-            this.fortitude_baseSave_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.fortitude_baseSave_textbox.SelectedText = "";
-            this.fortitude_baseSave_textbox.SelectionLength = 0;
-            this.fortitude_baseSave_textbox.SelectionStart = 0;
-            this.fortitude_baseSave_textbox.ShortcutsEnabled = true;
-            this.fortitude_baseSave_textbox.Size = new System.Drawing.Size(27, 23);
-            this.fortitude_baseSave_textbox.TabIndex = 4;
-            this.fortitude_baseSave_textbox.Text = "0";
-            this.fortitude_baseSave_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fortitude_baseSave_textbox.UseSelectable = true;
-            this.fortitude_baseSave_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.fortitude_baseSave_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.fortitude_baseSave_textbox.TextChanged += new System.EventHandler(this.fortitude_bseSave_textbox_TextChanged);
-            // 
-            // metroLabel32
-            // 
-            this.metroLabel32.AutoSize = true;
-            this.metroLabel32.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel32.Location = new System.Drawing.Point(3, 5);
-            this.metroLabel32.Name = "metroLabel32";
-            this.metroLabel32.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel32.TabIndex = 2;
-            this.metroLabel32.Text = "Base Save";
-            this.metroLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroLabel33
-            // 
-            this.metroLabel33.AutoSize = true;
-            this.metroLabel33.Location = new System.Drawing.Point(193, 35);
-            this.metroLabel33.Name = "metroLabel33";
-            this.metroLabel33.Size = new System.Drawing.Size(31, 19);
-            this.metroLabel33.TabIndex = 10;
-            this.metroLabel33.Text = "Will";
-            // 
-            // metroLabel34
-            // 
-            this.metroLabel34.AutoSize = true;
-            this.metroLabel34.Location = new System.Drawing.Point(149, 35);
-            this.metroLabel34.Name = "metroLabel34";
-            this.metroLabel34.Size = new System.Drawing.Size(30, 19);
-            this.metroLabel34.TabIndex = 9;
-            this.metroLabel34.Text = "Ref.";
-            // 
-            // metroLabel35
-            // 
-            this.metroLabel35.AutoSize = true;
-            this.metroLabel35.Location = new System.Drawing.Point(96, 35);
-            this.metroLabel35.Name = "metroLabel35";
-            this.metroLabel35.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel35.TabIndex = 8;
-            this.metroLabel35.Text = "Fort.";
-            // 
-            // metroLabel36
-            // 
-            this.metroLabel36.AutoSize = true;
-            this.metroLabel36.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel36.Location = new System.Drawing.Point(71, 6);
-            this.metroLabel36.Name = "metroLabel36";
-            this.metroLabel36.Size = new System.Drawing.Size(113, 19);
-            this.metroLabel36.TabIndex = 2;
-            this.metroLabel36.Text = "Save modiifiers";
-            this.metroLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Skills_TabPage
             // 
             this.Skills_TabPage.Controls.Add(this.SkillsPage_Panel);
@@ -4191,6 +3943,7 @@
             // SkillsPage_Panel
             // 
             this.SkillsPage_Panel.AutoScroll = true;
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel21);
             this.SkillsPage_Panel.Controls.Add(this.SkillPanelTemplate);
             this.SkillsPage_Panel.Controls.Add(this.metroLabel15);
             this.SkillsPage_Panel.Controls.Add(this.metroLabel16);
@@ -4240,91 +3993,99 @@
             // 
             // miscMod_template
             // 
-            this.miscMod_template.AutoSize = true;
             this.miscMod_template.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.miscMod_template.Location = new System.Drawing.Point(376, 7);
             this.miscMod_template.Name = "miscMod_template";
-            this.miscMod_template.Size = new System.Drawing.Size(33, 19);
+            this.miscMod_template.Size = new System.Drawing.Size(31, 19);
             this.miscMod_template.TabIndex = 14;
-            this.miscMod_template.Text = "____";
+            this.miscMod_template.Text = "00";
             this.miscMod_template.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.miscMod_template.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // PlusSignTemplate2
             // 
             this.PlusSignTemplate2.AutoSize = true;
-            this.PlusSignTemplate2.Location = new System.Drawing.Point(352, 7);
+            this.PlusSignTemplate2.Location = new System.Drawing.Point(350, 7);
             this.PlusSignTemplate2.Name = "PlusSignTemplate2";
             this.PlusSignTemplate2.Size = new System.Drawing.Size(18, 19);
             this.PlusSignTemplate2.TabIndex = 13;
             this.PlusSignTemplate2.Text = "+";
+            this.PlusSignTemplate2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // ranks_Template
             // 
-            this.ranks_Template.AutoSize = true;
             this.ranks_Template.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ranks_Template.Location = new System.Drawing.Point(323, 7);
+            this.ranks_Template.Location = new System.Drawing.Point(311, 7);
             this.ranks_Template.Name = "ranks_Template";
-            this.ranks_Template.Size = new System.Drawing.Size(16, 19);
+            this.ranks_Template.Size = new System.Drawing.Size(31, 19);
             this.ranks_Template.TabIndex = 12;
-            this.ranks_Template.Text = "0";
+            this.ranks_Template.Text = "00";
             this.ranks_Template.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ranks_Template.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // PlusSignTemplate1
             // 
             this.PlusSignTemplate1.AutoSize = true;
-            this.PlusSignTemplate1.Location = new System.Drawing.Point(289, 7);
+            this.PlusSignTemplate1.Location = new System.Drawing.Point(285, 7);
             this.PlusSignTemplate1.Name = "PlusSignTemplate1";
             this.PlusSignTemplate1.Size = new System.Drawing.Size(18, 19);
             this.PlusSignTemplate1.TabIndex = 11;
             this.PlusSignTemplate1.Text = "+";
+            this.PlusSignTemplate1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // AbilityModTemplate
             // 
             this.AbilityModTemplate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AbilityModTemplate.Location = new System.Drawing.Point(250, 7);
+            this.AbilityModTemplate.Location = new System.Drawing.Point(246, 7);
             this.AbilityModTemplate.Name = "AbilityModTemplate";
-            this.AbilityModTemplate.Size = new System.Drawing.Size(33, 19);
+            this.AbilityModTemplate.Size = new System.Drawing.Size(31, 19);
             this.AbilityModTemplate.TabIndex = 10;
-            this.AbilityModTemplate.Text = "____";
+            this.AbilityModTemplate.Text = "00";
             this.AbilityModTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AbilityModTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // abilityTypeTemplate
             // 
             this.abilityTypeTemplate.AutoSize = true;
-            this.abilityTypeTemplate.Location = new System.Drawing.Point(190, 7);
+            this.abilityTypeTemplate.Location = new System.Drawing.Point(201, 7);
             this.abilityTypeTemplate.Name = "abilityTypeTemplate";
             this.abilityTypeTemplate.Size = new System.Drawing.Size(31, 19);
             this.abilityTypeTemplate.TabIndex = 9;
             this.abilityTypeTemplate.Text = "Dex";
+            this.abilityTypeTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.abilityTypeTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // EqualSignTemplate
             // 
             this.EqualSignTemplate.AutoSize = true;
-            this.EqualSignTemplate.Location = new System.Drawing.Point(166, 7);
+            this.EqualSignTemplate.Location = new System.Drawing.Point(181, 7);
             this.EqualSignTemplate.Name = "EqualSignTemplate";
             this.EqualSignTemplate.Size = new System.Drawing.Size(18, 19);
             this.EqualSignTemplate.TabIndex = 8;
             this.EqualSignTemplate.Text = "=";
+            this.EqualSignTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // TotalBonusTemplate
             // 
             this.TotalBonusTemplate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TotalBonusTemplate.Location = new System.Drawing.Point(108, 7);
+            this.TotalBonusTemplate.Location = new System.Drawing.Point(145, 7);
             this.TotalBonusTemplate.Name = "TotalBonusTemplate";
-            this.TotalBonusTemplate.Size = new System.Drawing.Size(41, 19);
+            this.TotalBonusTemplate.Size = new System.Drawing.Size(28, 19);
             this.TotalBonusTemplate.TabIndex = 8;
-            this.TotalBonusTemplate.Text = "___";
+            this.TotalBonusTemplate.Text = "0";
             this.TotalBonusTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TotalBonusTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // SkillNameTemplate
             // 
             this.SkillNameTemplate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SkillNameTemplate.Location = new System.Drawing.Point(20, 7);
             this.SkillNameTemplate.Name = "SkillNameTemplate";
-            this.SkillNameTemplate.Size = new System.Drawing.Size(76, 19);
+            this.SkillNameTemplate.Size = new System.Drawing.Size(119, 19);
             this.SkillNameTemplate.TabIndex = 3;
             this.SkillNameTemplate.Text = "Skill Name";
             this.SkillNameTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SkillNameTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // checkBoxTemplate
             // 
@@ -4333,12 +4094,13 @@
             this.checkBoxTemplate.Size = new System.Drawing.Size(20, 19);
             this.checkBoxTemplate.TabIndex = 2;
             this.checkBoxTemplate.Text = " ";
+            this.checkBoxTemplate.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.checkBoxTemplate.UseSelectable = true;
             // 
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(197, 3);
+            this.metroLabel15.Location = new System.Drawing.Point(203, 3);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(45, 38);
             this.metroLabel15.TabIndex = 8;
@@ -4347,7 +4109,7 @@
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(28, 3);
+            this.metroLabel16.Location = new System.Drawing.Point(66, 3);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(50, 38);
             this.metroLabel16.TabIndex = 3;
@@ -4356,7 +4118,7 @@
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(383, 3);
+            this.metroLabel20.Location = new System.Drawing.Point(384, 3);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(37, 38);
             this.metroLabel20.TabIndex = 7;
@@ -4365,7 +4127,7 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(115, 3);
+            this.metroLabel17.Location = new System.Drawing.Point(153, 3);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(44, 38);
             this.metroLabel17.TabIndex = 4;
@@ -4374,7 +4136,7 @@
             // metroLabel19
             // 
             this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Location = new System.Drawing.Point(320, 12);
+            this.metroLabel19.Location = new System.Drawing.Point(314, 12);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(42, 19);
             this.metroLabel19.TabIndex = 6;
@@ -4383,7 +4145,7 @@
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(257, 3);
+            this.metroLabel18.Location = new System.Drawing.Point(254, 3);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(45, 38);
             this.metroLabel18.TabIndex = 5;
@@ -4510,6 +4272,15 @@
             this.AddAllSkills.Visible = false;
             this.AddAllSkills.Click += new System.EventHandler(this.AddAllSkills_Click);
             // 
+            // metroLabel21
+            // 
+            this.metroLabel21.AutoSize = true;
+            this.metroLabel21.Location = new System.Drawing.Point(11, 3);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(38, 38);
+            this.metroLabel21.TabIndex = 9;
+            this.metroLabel21.Text = "Class\r\nSkill";
+            // 
             // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4530,9 +4301,6 @@
             this.XP_Panel.PerformLayout();
             this.Abilities_TabPage.ResumeLayout(false);
             this.Abilities_TabPage.PerformLayout();
-            this.Saves_panel.ResumeLayout(false);
-            this.Saves_panel.PerformLayout();
-            this.acMods_Panel.ResumeLayout(false);
             this.SidePanel_panel.ResumeLayout(false);
             this.SidePanel_panel.PerformLayout();
             this.SpellResist_panel.ResumeLayout(false);
@@ -4554,6 +4322,21 @@
             this.ability_constitution_panel.ResumeLayout(false);
             this.ability_dexertity_panel.ResumeLayout(false);
             this.ability_strength_panel.ResumeLayout(false);
+            this.savingThrows_panel.ResumeLayout(false);
+            this.savingThrows_panel.PerformLayout();
+            this.save_tempMod_panel.ResumeLayout(false);
+            this.save_tempMod_panel.PerformLayout();
+            this.save_miscMod_panel.ResumeLayout(false);
+            this.save_miscMod_panel.PerformLayout();
+            this.save_magicMod_paanel.ResumeLayout(false);
+            this.save_magicMod_paanel.PerformLayout();
+            this.save_abilityMod_panel.ResumeLayout(false);
+            this.save_abilityMod_panel.PerformLayout();
+            this.save_baseSave_panel.ResumeLayout(false);
+            this.save_baseSave_panel.PerformLayout();
+            this.Saves_panel.ResumeLayout(false);
+            this.Saves_panel.PerformLayout();
+            this.acMods_Panel.ResumeLayout(false);
             this.Speed_panel.ResumeLayout(false);
             this.Speed_panel.PerformLayout();
             this.burrowSpeed_panel.ResumeLayout(false);
@@ -4568,18 +4351,6 @@
             this.armorSpeed_panel.PerformLayout();
             this.baseSpeed_panel.ResumeLayout(false);
             this.baseSpeed_panel.PerformLayout();
-            this.savingThrows_panel.ResumeLayout(false);
-            this.savingThrows_panel.PerformLayout();
-            this.save_tempMod_panel.ResumeLayout(false);
-            this.save_tempMod_panel.PerformLayout();
-            this.save_miscMod_panel.ResumeLayout(false);
-            this.save_miscMod_panel.PerformLayout();
-            this.save_magicMod_paanel.ResumeLayout(false);
-            this.save_magicMod_paanel.PerformLayout();
-            this.save_abilityMod_panel.ResumeLayout(false);
-            this.save_abilityMod_panel.PerformLayout();
-            this.save_baseSave_panel.ResumeLayout(false);
-            this.save_baseSave_panel.PerformLayout();
             this.Skills_TabPage.ResumeLayout(false);
             this.SkillsPage_Panel.ResumeLayout(false);
             this.SkillsPage_Panel.PerformLayout();
@@ -4638,33 +4409,33 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox str_abilityScore_textbox;
-        private MetroFramework.Controls.MetroTextBox str_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel str_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroLabel str_lbl;
         private MetroFramework.Controls.MetroPanel ability_dexertity_panel;
-        private MetroFramework.Controls.MetroTextBox dex_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel dex_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroTextBox dex_abilityScore_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroPanel ability_charisma_panel;
-        private MetroFramework.Controls.MetroTextBox cha_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel cha_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroTextBox cha_abilityScore_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroPanel ability_wisdom_panel;
-        private MetroFramework.Controls.MetroTextBox wis_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel wis_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroTextBox wis_abilityScore_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroPanel ability_intelligence_panel;
-        private MetroFramework.Controls.MetroTextBox int_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel int_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroTextBox int_abilityScore_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroPanel ability_constitution_panel;
-        private MetroFramework.Controls.MetroTextBox con_abilitymodifier_textbox;
+        private MetroFramework.Controls.MetroLabel con_abilitymodifier_textbox;
         private MetroFramework.Controls.MetroTextBox con_abilityScore_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroPanel hp_panel;
         private MetroFramework.Controls.MetroTextBox hp_textbox;
         private MetroFramework.Controls.MetroLabel hp_lbl;
         private MetroFramework.Controls.MetroTextBox initiative_miscModifier_textbox;
-        private MetroFramework.Controls.MetroTextBox initiative_dexModifier_textbox;
+        private MetroFramework.Controls.MetroLabel initiative_dexModifier_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
@@ -4723,7 +4494,7 @@
         private MetroFramework.Controls.MetroPanel acMods_Panel;
         private MetroFramework.Controls.MetroTextBox ac_NaturalArmor_textbox;
         private MetroFramework.Controls.MetroTextBox ac_sizeMod_textbox;
-        private MetroFramework.Controls.MetroTextBox ac_dexMod_textbox;
+        private MetroFramework.Controls.MetroLabel ac_dexMod_textbox;
         private MetroFramework.Controls.MetroLabel ac_dexMod_lbl;
         private MetroFramework.Controls.MetroLabel ac_sizeMod_lbl;
         private MetroFramework.Controls.MetroLabel ac_naturalArmor_lbl;
@@ -4762,9 +4533,9 @@
         private MetroFramework.Controls.MetroTextBox fortitude_magicMod_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroPanel save_abilityMod_panel;
-        private MetroFramework.Controls.MetroTextBox will_abilityMod_textbox;
-        private MetroFramework.Controls.MetroTextBox reflex_abilityMod_textbox;
-        private MetroFramework.Controls.MetroTextBox fortitude_abilityMod_textbox;
+        private MetroFramework.Controls.MetroLabel will_abilityMod_textbox;
+        private MetroFramework.Controls.MetroLabel reflex_abilityMod_textbox;
+        private MetroFramework.Controls.MetroLabel fortitude_abilityMod_textbox;
         private MetroFramework.Controls.MetroLabel metroLabel30;
         private MetroFramework.Controls.MetroPanel save_baseSave_panel;
         private MetroFramework.Controls.MetroTextBox will_baseSave_textbox;
@@ -4806,6 +4577,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroPanel SkillsPage_Panel;
         private MetroFramework.Controls.MetroButton AddAllSkills;
+        private MetroFramework.Controls.MetroLabel metroLabel21;
     }
 }
 

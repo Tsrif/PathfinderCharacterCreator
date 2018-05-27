@@ -50,6 +50,15 @@
 - For now* Request are made at start of program(Which really slows it down), and all panels are created from the "Add all" button on skills page (Which also lags the program for a second)
 - removed some print statements 
 
+5/27/18
+- Repositioned some components for skill panels
+- Free up any memory the template is taking up at the start of the program 
+- Created lists containing everything that needs to be changed when a certain value is updated E.g if dex ability mod changes everything that uses the dex mod value also needs to change 
+- All Skill panels ability mod values updates when player's ability mod value changes
+- changed abilitymodifier textboxes to labels
+- changed a bunch of other non editable textboxes to labels 
+- Small UI improvements
+
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
 - ability mods should be labels?
@@ -57,6 +66,7 @@
 - Fix tabbing issue 
 - UI fine tuning 
 - Fix saving???
-- add in a scrolling feature to the skills page if the amount of skills exceed x amount of skills 
+- Save detailed skills list to a file to try to increase performance
+- Shorten skill names if they are too long 
 
 
