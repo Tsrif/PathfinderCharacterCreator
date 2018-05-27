@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace PathfinderApp
 {
@@ -36,8 +37,23 @@ namespace PathfinderApp
             this.ranks = "0";
             this.miscMod = "0";
         }
-
-
-
     }
+
+
+ 
+    public class ASkill
+    {
+        public string name { get; set; }
+    }
+
+    public class Skills_Detail
+    {
+        public string name { get; set; }
+        public string stat { get; set; }
+        public string useuntrained { get; set; }
+    }
+
+   
+
+  
 }

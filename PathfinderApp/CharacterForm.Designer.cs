@@ -213,11 +213,7 @@
             this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
             this.Skills_TabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.SkillsPage_Panel = new MetroFramework.Controls.MetroPanel();
             this.SkillPanelTemplate = new MetroFramework.Controls.MetroPanel();
             this.miscMod_template = new MetroFramework.Controls.MetroLabel();
             this.PlusSignTemplate2 = new MetroFramework.Controls.MetroLabel();
@@ -229,8 +225,14 @@
             this.TotalBonusTemplate = new MetroFramework.Controls.MetroLabel();
             this.SkillNameTemplate = new MetroFramework.Controls.MetroLabel();
             this.checkBoxTemplate = new MetroFramework.Controls.MetroCheckBox();
-            this.Equipment_TabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.Feats_TabPage = new MetroFramework.Controls.MetroTabPage();
+            this.Equipment_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.Spells_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.SpecialAbilities_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
@@ -240,8 +242,7 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Dropdown_label = new MetroFramework.Controls.MetroLabel();
-            this.add_skill_panel = new MetroFramework.Controls.MetroButton();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.AddAllSkills = new MetroFramework.Controls.MetroButton();
             this.Character_TabControl.SuspendLayout();
             this.CharacterInfo_TabPage.SuspendLayout();
             this.CharacterInfo_Panel.SuspendLayout();
@@ -278,6 +279,7 @@
             this.save_abilityMod_panel.SuspendLayout();
             this.save_baseSave_panel.SuspendLayout();
             this.Skills_TabPage.SuspendLayout();
+            this.SkillsPage_Panel.SuspendLayout();
             this.SkillPanelTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.ctxMenu.SuspendLayout();
@@ -288,17 +290,18 @@
             this.Character_TabControl.Controls.Add(this.CharacterInfo_TabPage);
             this.Character_TabControl.Controls.Add(this.Abilities_TabPage);
             this.Character_TabControl.Controls.Add(this.Skills_TabPage);
-            this.Character_TabControl.Controls.Add(this.Equipment_TabPage);
             this.Character_TabControl.Controls.Add(this.Feats_TabPage);
+            this.Character_TabControl.Controls.Add(this.Equipment_TabPage);
             this.Character_TabControl.Controls.Add(this.Spells_TabPage);
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 2;
+            this.Character_TabControl.SelectedIndex = 0;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Character_TabControl.UseSelectable = true;
+            this.Character_TabControl.SelectedIndexChanged += new System.EventHandler(this.Character_TabControl_SelectedIndexChanged);
             // 
             // CharacterInfo_TabPage
             // 
@@ -4170,13 +4173,7 @@
             // 
             // Skills_TabPage
             // 
-            this.Skills_TabPage.Controls.Add(this.metroLabel15);
-            this.Skills_TabPage.Controls.Add(this.metroLabel20);
-            this.Skills_TabPage.Controls.Add(this.metroLabel19);
-            this.Skills_TabPage.Controls.Add(this.metroLabel18);
-            this.Skills_TabPage.Controls.Add(this.metroLabel17);
-            this.Skills_TabPage.Controls.Add(this.metroLabel16);
-            this.Skills_TabPage.Controls.Add(this.SkillPanelTemplate);
+            this.Skills_TabPage.Controls.Add(this.SkillsPage_Panel);
             this.Skills_TabPage.HorizontalScrollbarBarColor = true;
             this.Skills_TabPage.HorizontalScrollbarHighlightOnWheel = false;
             this.Skills_TabPage.HorizontalScrollbarSize = 10;
@@ -4186,54 +4183,33 @@
             this.Skills_TabPage.TabIndex = 2;
             this.Skills_TabPage.Text = "Skills";
             this.Skills_TabPage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Skills_TabPage.VerticalScrollbar = true;
             this.Skills_TabPage.VerticalScrollbarBarColor = true;
             this.Skills_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.Skills_TabPage.VerticalScrollbarSize = 10;
             // 
-            // metroLabel20
+            // SkillsPage_Panel
             // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(379, 13);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(37, 38);
-            this.metroLabel20.TabIndex = 7;
-            this.metroLabel20.Text = "Misc\r\nMod";
-            // 
-            // metroLabel19
-            // 
-            this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Location = new System.Drawing.Point(316, 22);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(42, 19);
-            this.metroLabel19.TabIndex = 6;
-            this.metroLabel19.Text = "Ranks";
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(253, 13);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(45, 38);
-            this.metroLabel18.TabIndex = 5;
-            this.metroLabel18.Text = "Ability\r\nMod";
-            // 
-            // metroLabel17
-            // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(111, 13);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(44, 38);
-            this.metroLabel17.TabIndex = 4;
-            this.metroLabel17.Text = "Total \r\nBonus";
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(24, 13);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(50, 38);
-            this.metroLabel16.TabIndex = 3;
-            this.metroLabel16.Text = "Skill \r\nNames";
+            this.SkillsPage_Panel.AutoScroll = true;
+            this.SkillsPage_Panel.Controls.Add(this.SkillPanelTemplate);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel15);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel16);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel20);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel17);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel19);
+            this.SkillsPage_Panel.Controls.Add(this.metroLabel18);
+            this.SkillsPage_Panel.HorizontalScrollbar = true;
+            this.SkillsPage_Panel.HorizontalScrollbarBarColor = true;
+            this.SkillsPage_Panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.SkillsPage_Panel.HorizontalScrollbarSize = 10;
+            this.SkillsPage_Panel.Location = new System.Drawing.Point(-4, 3);
+            this.SkillsPage_Panel.Name = "SkillsPage_Panel";
+            this.SkillsPage_Panel.Size = new System.Drawing.Size(436, 693);
+            this.SkillsPage_Panel.TabIndex = 9;
+            this.SkillsPage_Panel.VerticalScrollbar = true;
+            this.SkillsPage_Panel.VerticalScrollbarBarColor = true;
+            this.SkillsPage_Panel.VerticalScrollbarHighlightOnWheel = false;
+            this.SkillsPage_Panel.VerticalScrollbarSize = 10;
             // 
             // SkillPanelTemplate
             // 
@@ -4252,7 +4228,7 @@
             this.SkillPanelTemplate.HorizontalScrollbarBarColor = true;
             this.SkillPanelTemplate.HorizontalScrollbarHighlightOnWheel = false;
             this.SkillPanelTemplate.HorizontalScrollbarSize = 10;
-            this.SkillPanelTemplate.Location = new System.Drawing.Point(3, 54);
+            this.SkillPanelTemplate.Location = new System.Drawing.Point(7, 44);
             this.SkillPanelTemplate.Name = "SkillPanelTemplate";
             this.SkillPanelTemplate.Size = new System.Drawing.Size(422, 35);
             this.SkillPanelTemplate.TabIndex = 2;
@@ -4343,7 +4319,7 @@
             // SkillNameTemplate
             // 
             this.SkillNameTemplate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SkillNameTemplate.Location = new System.Drawing.Point(21, 7);
+            this.SkillNameTemplate.Location = new System.Drawing.Point(20, 7);
             this.SkillNameTemplate.Name = "SkillNameTemplate";
             this.SkillNameTemplate.Size = new System.Drawing.Size(76, 19);
             this.SkillNameTemplate.TabIndex = 3;
@@ -4352,27 +4328,66 @@
             // 
             // checkBoxTemplate
             // 
-            this.checkBoxTemplate.AutoSize = true;
             this.checkBoxTemplate.Location = new System.Drawing.Point(3, 7);
             this.checkBoxTemplate.Name = "checkBoxTemplate";
-            this.checkBoxTemplate.Size = new System.Drawing.Size(26, 15);
+            this.checkBoxTemplate.Size = new System.Drawing.Size(20, 19);
             this.checkBoxTemplate.TabIndex = 2;
             this.checkBoxTemplate.Text = " ";
             this.checkBoxTemplate.UseSelectable = true;
             // 
-            // Equipment_TabPage
+            // metroLabel15
             // 
-            this.Equipment_TabPage.HorizontalScrollbarBarColor = true;
-            this.Equipment_TabPage.HorizontalScrollbarHighlightOnWheel = false;
-            this.Equipment_TabPage.HorizontalScrollbarSize = 10;
-            this.Equipment_TabPage.Location = new System.Drawing.Point(4, 38);
-            this.Equipment_TabPage.Name = "Equipment_TabPage";
-            this.Equipment_TabPage.Size = new System.Drawing.Size(428, 699);
-            this.Equipment_TabPage.TabIndex = 3;
-            this.Equipment_TabPage.Text = "Equipment";
-            this.Equipment_TabPage.VerticalScrollbarBarColor = true;
-            this.Equipment_TabPage.VerticalScrollbarHighlightOnWheel = false;
-            this.Equipment_TabPage.VerticalScrollbarSize = 10;
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(197, 3);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(45, 38);
+            this.metroLabel15.TabIndex = 8;
+            this.metroLabel15.Text = "Ability\r\nType";
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(28, 3);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(50, 38);
+            this.metroLabel16.TabIndex = 3;
+            this.metroLabel16.Text = "Skill \r\nNames";
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.Location = new System.Drawing.Point(383, 3);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(37, 38);
+            this.metroLabel20.TabIndex = 7;
+            this.metroLabel20.Text = "Misc\r\nMod";
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.Location = new System.Drawing.Point(115, 3);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(44, 38);
+            this.metroLabel17.TabIndex = 4;
+            this.metroLabel17.Text = "Total \r\nBonus";
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Location = new System.Drawing.Point(320, 12);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel19.TabIndex = 6;
+            this.metroLabel19.Text = "Ranks";
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Location = new System.Drawing.Point(257, 3);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(45, 38);
+            this.metroLabel18.TabIndex = 5;
+            this.metroLabel18.Text = "Ability\r\nMod";
             // 
             // Feats_TabPage
             // 
@@ -4387,6 +4402,20 @@
             this.Feats_TabPage.VerticalScrollbarBarColor = true;
             this.Feats_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.Feats_TabPage.VerticalScrollbarSize = 10;
+            // 
+            // Equipment_TabPage
+            // 
+            this.Equipment_TabPage.HorizontalScrollbarBarColor = true;
+            this.Equipment_TabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.Equipment_TabPage.HorizontalScrollbarSize = 10;
+            this.Equipment_TabPage.Location = new System.Drawing.Point(4, 38);
+            this.Equipment_TabPage.Name = "Equipment_TabPage";
+            this.Equipment_TabPage.Size = new System.Drawing.Size(428, 699);
+            this.Equipment_TabPage.TabIndex = 3;
+            this.Equipment_TabPage.Text = "Equipment";
+            this.Equipment_TabPage.VerticalScrollbarBarColor = true;
+            this.Equipment_TabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.Equipment_TabPage.VerticalScrollbarSize = 10;
             // 
             // Spells_TabPage
             // 
@@ -4470,31 +4499,23 @@
             this.Menu_Dropdown_label.MouseEnter += new System.EventHandler(this.Menu_Dropdown_label_MouseEnter);
             this.Menu_Dropdown_label.MouseLeave += new System.EventHandler(this.Menu_Dropdown_label_MouseLeave);
             // 
-            // add_skill_panel
+            // AddAllSkills
             // 
-            this.add_skill_panel.Location = new System.Drawing.Point(341, 65);
-            this.add_skill_panel.Name = "add_skill_panel";
-            this.add_skill_panel.Size = new System.Drawing.Size(93, 26);
-            this.add_skill_panel.TabIndex = 66;
-            this.add_skill_panel.Text = "Add Skill";
-            this.add_skill_panel.UseSelectable = true;
-            this.add_skill_panel.Click += new System.EventHandler(this.add_skill_panel_Click);
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(193, 13);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(45, 38);
-            this.metroLabel15.TabIndex = 8;
-            this.metroLabel15.Text = "Ability\r\nType";
+            this.AddAllSkills.Location = new System.Drawing.Point(357, 63);
+            this.AddAllSkills.Name = "AddAllSkills";
+            this.AddAllSkills.Size = new System.Drawing.Size(93, 26);
+            this.AddAllSkills.TabIndex = 67;
+            this.AddAllSkills.Text = "Add All";
+            this.AddAllSkills.UseSelectable = true;
+            this.AddAllSkills.Visible = false;
+            this.AddAllSkills.Click += new System.EventHandler(this.AddAllSkills_Click);
             // 
             // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 843);
-            this.Controls.Add(this.add_skill_panel);
+            this.Controls.Add(this.AddAllSkills);
             this.Controls.Add(this.Menu_Dropdown_label);
             this.Controls.Add(this.Character_TabControl);
             this.ForeColor = System.Drawing.Color.LightGray;
@@ -4560,7 +4581,8 @@
             this.save_baseSave_panel.ResumeLayout(false);
             this.save_baseSave_panel.PerformLayout();
             this.Skills_TabPage.ResumeLayout(false);
-            this.Skills_TabPage.PerformLayout();
+            this.SkillsPage_Panel.ResumeLayout(false);
+            this.SkillsPage_Panel.PerformLayout();
             this.SkillPanelTemplate.ResumeLayout(false);
             this.SkillPanelTemplate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
@@ -4781,8 +4803,9 @@
         private MetroFramework.Controls.MetroLabel abilityTypeTemplate;
         private MetroFramework.Controls.MetroLabel EqualSignTemplate;
         private MetroFramework.Controls.MetroLabel TotalBonusTemplate;
-        private MetroFramework.Controls.MetroButton add_skill_panel;
         private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroPanel SkillsPage_Panel;
+        private MetroFramework.Controls.MetroButton AddAllSkills;
     }
 }
 

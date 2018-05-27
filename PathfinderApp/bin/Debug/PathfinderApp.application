@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PathfinderApp.exe.manifest" size="7300">
+    <dependentAssembly dependencyType="install" codebase="PathfinderApp.exe.manifest" size="7984">
       <assemblyIdentity name="PathfinderApp.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6fWFcM3+f/pBOIkXpf7XlWt2OX4YkwlWKivJpdh2Grg=</dsig:DigestValue>
+        <dsig:DigestValue>k1fSNy9FVh5Zwj4LoX9Q+2AcWJ1zRiyPCwmMLGmcGpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

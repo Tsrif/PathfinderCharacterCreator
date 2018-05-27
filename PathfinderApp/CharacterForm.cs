@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
+
 
 /*This Script handles basically everything for the Character Form
  * There's code in here that could definitely use improvement. 
@@ -15,10 +19,12 @@ using System.Windows.Forms;
 
 namespace PathfinderApp
 {
+
     public partial class CharacterForm : MetroFramework.Forms.MetroForm
     {
         //Create new charactet Object
         Character character = new Character();
+        List<Skills_Detail> detailedSkills = new List<Skills_Detail>();
         List<MetroFramework.Controls.MetroPanel> list_skillsPanels = new List<MetroFramework.Controls.MetroPanel>();
         Dictionary<string, string> slow = new Dictionary<string, string>
         {
@@ -111,6 +117,8 @@ namespace PathfinderApp
             //Creates a default Blank skill
             Skill aSkill = new Skill();
             CreateSkillPanel(aSkill);
+            detailedSkills = GetSkillsData();
+            
         }
 
         //Create a new character
@@ -156,8 +164,8 @@ namespace PathfinderApp
             int nextLevel_int = 0;
             Int32.TryParse(CurXp_textbox.Text.Replace(",", ""), out curXp_int);
             Int32.TryParse(nextLevel_textbox.Text.Replace(",", ""), out nextLevel_int);
-            Console.WriteLine("curxp = " + curXp_int);
-            Console.WriteLine("next level = " + nextLevel_int);
+            //Console.WriteLine("curxp = " + curXp_int);
+            //Console.WriteLine("next level = " + nextLevel_int);
             if (curXp_int == nextLevel_int)
             {
                 //Eventually you can put in a number so large that it'll just reset back to 0
@@ -181,7 +189,7 @@ namespace PathfinderApp
                 while (curXp_int > nextLevel_int)
                 {
                     Int32.TryParse(characterLevel_comboBox.Text, out characterLevel);
-                    Console.WriteLine("Character LeVEL " + characterLevel);
+                    //Console.WriteLine("Character LeVEL " + characterLevel);
                     //Stop the loop if we are greater than or equal to level 20
                     if (characterLevel >= 20)
                     {
@@ -537,9 +545,9 @@ namespace PathfinderApp
             skill_panel.HorizontalScrollbarBarColor = true;
             skill_panel.HorizontalScrollbarHighlightOnWheel = false;
             skill_panel.HorizontalScrollbarSize = 10;
-            skill_panel.Location = new System.Drawing.Point(3, 62);
+            skill_panel.Location = SkillPanelTemplate.Location;
             skill_panel.Name = "SkillPanelTemplate";
-            skill_panel.Size = new System.Drawing.Size(422, 35);
+            skill_panel.Size = SkillPanelTemplate.Size;
             skill_panel.TabIndex = 2;
             skill_panel.VerticalScrollbarBarColor = true;
             skill_panel.VerticalScrollbarHighlightOnWheel = false;
@@ -558,7 +566,7 @@ namespace PathfinderApp
             classSkill_checkbox.TabIndex = checkBoxTemplate.TabIndex;
             classSkill_checkbox.Text = checkBoxTemplate.Text;
             classSkill_checkbox.UseSelectable = checkBoxTemplate.UseSelectable;
-            classSkill_checkbox.Theme = MetroFramework.MetroThemeStyle.Dark; 
+            classSkill_checkbox.Theme = MetroFramework.MetroThemeStyle.Dark;
 
             // 
             // SkillNameTemplate
@@ -649,7 +657,7 @@ namespace PathfinderApp
             PlusSign2_label.TabIndex = PlusSignTemplate2.TabIndex;
             PlusSign2_label.Text = PlusSignTemplate2.Text;
 
-            PlusSign2_label.Theme = MetroFramework.MetroThemeStyle.Dark; 
+            PlusSign2_label.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // ranksTemplate
             // 
@@ -692,8 +700,19 @@ namespace PathfinderApp
 
 
             list_skillsPanels.Add(skill_panel);
+
+            SkillsPage_Panel.Controls.Add(skill_panel);
         }
 
+
+        public void CreateABunch(List<Skills_Detail> aBunchOSkills) {
+            foreach (Skills_Detail dSkill in aBunchOSkills) {
+                Skill aSkill = new Skill(dSkill.name, "0", dSkill.stat, "0", "0", "0");
+                CreateSkillPanel(aSkill);
+                PlacePanels();
+            }
+            
+        }
         public void PlacePanels()
         {
             //Don't place the first one 
@@ -704,6 +723,28 @@ namespace PathfinderApp
             }
         }
 
+        public List<Skills_Detail> GetSkillsData()
+        {
+            List<Skills_Detail> detailedList = new List<Skills_Detail>();
+            //Create a list of ASkill objects from the string from the skills site
+            using (WebClient webClient = new System.Net.WebClient())
+            {
+                WebClient n = new WebClient();
+                var json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/all");
+                string valueOriginal = Convert.ToString(json);
+                List<ASkill> myDeserializedObjList = (List<ASkill>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<ASkill>));
+                foreach (ASkill askill in myDeserializedObjList) {
+                    json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/detail?name=" + askill.name);
+                    //Console.WriteLine(json);
+                    List<Skills_Detail> deserialSkill = (List<Skills_Detail>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<Skills_Detail>));
+                    detailedList.Add(deserialSkill[0]);
+                }
+            }
+            //foreach (Skills_Detail detailedSkill in detailedList) {
+            //    Console.WriteLine("Name: " +detailedSkill.name + "Stat: "+ detailedSkill.stat);
+            //}
+            return detailedList;
+        }
 
         #endregion
 
@@ -880,6 +921,23 @@ namespace PathfinderApp
             CreateSkillPanel(aSkill);
             //rearrange panels
             PlacePanels();
+        }
+
+        private void Character_TabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Character_TabControl.SelectedIndex == 2)
+            {
+                AddAllSkills.Visible = true;
+            }
+            else if (Character_TabControl.SelectedIndex != 2)
+            {
+                AddAllSkills.Visible = false;
+            }
+        }
+
+        private void AddAllSkills_Click(object sender, EventArgs e)
+        {
+            CreateABunch(detailedSkills);
         }
     }
 }

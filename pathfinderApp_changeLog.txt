@@ -40,8 +40,15 @@
 
 	
 5/26/18
+- Added a temporary button for creating skills 
 - When a skill panel is created, it is placed beneath the last skill panel that was created 
 - Each component in a newly created skill panel inherits their default properties from a skill panel template 
+
+- added auto scroll to skills tab
+- Program can now make requests to backend to get detailed information on all of the skills
+- Program can take detailed skills information and create appropriate skill panels 
+- For now* Request are made at start of program(Which really slows it down), and all panels are created from the "Add all" button on skills page (Which also lags the program for a second)
+- removed some print statements 
 
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???

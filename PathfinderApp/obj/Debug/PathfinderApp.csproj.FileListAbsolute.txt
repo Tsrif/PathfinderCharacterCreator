@@ -1,7 +1,6 @@
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\PathfinderApp.exe.config
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\PathfinderApp.exe
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\PathfinderApp.pdb
-C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.CharacterForm.resources
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.Properties.Resources.resources
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.StartForm.resources
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.csproj.GenerateResource.cache
@@ -15,8 +14,11 @@ C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.cspro
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\ControlzEx.dll
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\ControlzEx.pdb
-C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.csprojResolveAssemblyReference.cache
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\PathfinderApp.exe.manifest
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\PathfinderApp.application
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.exe.manifest
 C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.application
+C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.csprojResolveAssemblyReference.cache
+C:\Users\Ricky\Desktop\PathfinderApp\PathfinderApp\obj\Debug\PathfinderApp.CharacterForm.resources
