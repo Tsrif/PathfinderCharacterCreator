@@ -132,6 +132,32 @@
             this.str_abilityScore_textbox = new MetroFramework.Controls.MetroTextBox();
             this.str_lbl = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Speed_panel = new MetroFramework.Controls.MetroPanel();
+            this.burrowSpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.burrowSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.burrowSpeed_squares_label = new MetroFramework.Controls.MetroLabel();
+            this.burrow_lbl = new MetroFramework.Controls.MetroLabel();
+            this.climbSpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.climbSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.climbSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
+            this.climb_lbl = new MetroFramework.Controls.MetroLabel();
+            this.swimSpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.swimSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.swimSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
+            this.swim_lbl = new MetroFramework.Controls.MetroLabel();
+            this.flySpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.flySpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.flySpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
+            this.fly_lbl = new MetroFramework.Controls.MetroLabel();
+            this.armorSpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.armorSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.armorSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
+            this.armor_lbl = new MetroFramework.Controls.MetroLabel();
+            this.baseSpeed_panel = new MetroFramework.Controls.MetroPanel();
+            this.baseSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
+            this.baseSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
+            this.baseSpeed_lbl = new MetroFramework.Controls.MetroLabel();
+            this.Speed_feet_squares_lbl = new MetroFramework.Controls.MetroLabel();
             this.savingThrows_panel = new MetroFramework.Controls.MetroPanel();
             this.save_tempMod_panel = new MetroFramework.Controls.MetroPanel();
             this.will_tempMod_textbox = new MetroFramework.Controls.MetroTextBox();
@@ -186,34 +212,9 @@
             this.ac_naturalArmor_lbl = new MetroFramework.Controls.MetroLabel();
             this.ac_deflectionMod_lbl = new MetroFramework.Controls.MetroLabel();
             this.ac_miscMod_lbl = new MetroFramework.Controls.MetroLabel();
-            this.Speed_panel = new MetroFramework.Controls.MetroPanel();
-            this.burrowSpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.burrowSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.burrowSpeed_squares_label = new MetroFramework.Controls.MetroLabel();
-            this.burrow_lbl = new MetroFramework.Controls.MetroLabel();
-            this.climbSpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.climbSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.climbSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.climb_lbl = new MetroFramework.Controls.MetroLabel();
-            this.swimSpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.swimSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.swimSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.swim_lbl = new MetroFramework.Controls.MetroLabel();
-            this.flySpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.flySpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.flySpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.fly_lbl = new MetroFramework.Controls.MetroLabel();
-            this.armorSpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.armorSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.armorSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.armor_lbl = new MetroFramework.Controls.MetroLabel();
-            this.baseSpeed_panel = new MetroFramework.Controls.MetroPanel();
-            this.baseSpeed_feet_textbox = new MetroFramework.Controls.MetroTextBox();
-            this.baseSpeed_squares_lbl = new MetroFramework.Controls.MetroLabel();
-            this.baseSpeed_lbl = new MetroFramework.Controls.MetroLabel();
-            this.Speed_feet_squares_lbl = new MetroFramework.Controls.MetroLabel();
             this.Skills_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.SkillsPage_Panel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.SkillPanelTemplate = new MetroFramework.Controls.MetroPanel();
             this.miscMod_template = new MetroFramework.Controls.MetroLabel();
             this.PlusSignTemplate2 = new MetroFramework.Controls.MetroLabel();
@@ -243,7 +244,6 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Dropdown_label = new MetroFramework.Controls.MetroLabel();
             this.AddAllSkills = new MetroFramework.Controls.MetroButton();
-            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.Character_TabControl.SuspendLayout();
             this.CharacterInfo_TabPage.SuspendLayout();
             this.CharacterInfo_Panel.SuspendLayout();
@@ -264,6 +264,13 @@
             this.ability_constitution_panel.SuspendLayout();
             this.ability_dexertity_panel.SuspendLayout();
             this.ability_strength_panel.SuspendLayout();
+            this.Speed_panel.SuspendLayout();
+            this.burrowSpeed_panel.SuspendLayout();
+            this.climbSpeed_panel.SuspendLayout();
+            this.swimSpeed_panel.SuspendLayout();
+            this.flySpeed_panel.SuspendLayout();
+            this.armorSpeed_panel.SuspendLayout();
+            this.baseSpeed_panel.SuspendLayout();
             this.savingThrows_panel.SuspendLayout();
             this.save_tempMod_panel.SuspendLayout();
             this.save_miscMod_panel.SuspendLayout();
@@ -272,13 +279,6 @@
             this.save_baseSave_panel.SuspendLayout();
             this.Saves_panel.SuspendLayout();
             this.acMods_Panel.SuspendLayout();
-            this.Speed_panel.SuspendLayout();
-            this.burrowSpeed_panel.SuspendLayout();
-            this.climbSpeed_panel.SuspendLayout();
-            this.swimSpeed_panel.SuspendLayout();
-            this.flySpeed_panel.SuspendLayout();
-            this.armorSpeed_panel.SuspendLayout();
-            this.baseSpeed_panel.SuspendLayout();
             this.Skills_TabPage.SuspendLayout();
             this.SkillsPage_Panel.SuspendLayout();
             this.SkillPanelTemplate.SuspendLayout();
@@ -297,7 +297,7 @@
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 2;
+            this.Character_TabControl.SelectedIndex = 0;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -324,6 +324,7 @@
             // 
             // CharacterInfo_Panel
             // 
+            this.CharacterInfo_Panel.AutoScroll = true;
             this.CharacterInfo_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CharacterInfo_Panel.BackColor = System.Drawing.Color.Black;
             this.CharacterInfo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -359,6 +360,7 @@
             this.CharacterInfo_Panel.Controls.Add(this.Deity_lbl);
             this.CharacterInfo_Panel.Controls.Add(this.Homeland_lbl);
             this.CharacterInfo_Panel.ForeColor = System.Drawing.Color.White;
+            this.CharacterInfo_Panel.HorizontalScrollbar = true;
             this.CharacterInfo_Panel.HorizontalScrollbarBarColor = false;
             this.CharacterInfo_Panel.HorizontalScrollbarHighlightOnWheel = false;
             this.CharacterInfo_Panel.HorizontalScrollbarSize = 10;
@@ -367,6 +369,7 @@
             this.CharacterInfo_Panel.Size = new System.Drawing.Size(428, 703);
             this.CharacterInfo_Panel.TabIndex = 2;
             this.CharacterInfo_Panel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CharacterInfo_Panel.VerticalScrollbar = true;
             this.CharacterInfo_Panel.VerticalScrollbarBarColor = true;
             this.CharacterInfo_Panel.VerticalScrollbarHighlightOnWheel = false;
             this.CharacterInfo_Panel.VerticalScrollbarSize = 10;
@@ -2284,6 +2287,471 @@
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Ability Name";
             // 
+            // Speed_panel
+            // 
+            this.Speed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Speed_panel.Controls.Add(this.burrowSpeed_panel);
+            this.Speed_panel.Controls.Add(this.climbSpeed_panel);
+            this.Speed_panel.Controls.Add(this.swimSpeed_panel);
+            this.Speed_panel.Controls.Add(this.flySpeed_panel);
+            this.Speed_panel.Controls.Add(this.armorSpeed_panel);
+            this.Speed_panel.Controls.Add(this.baseSpeed_panel);
+            this.Speed_panel.Controls.Add(this.Speed_feet_squares_lbl);
+            this.Speed_panel.HorizontalScrollbarBarColor = true;
+            this.Speed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.Speed_panel.HorizontalScrollbarSize = 10;
+            this.Speed_panel.Location = new System.Drawing.Point(170, 408);
+            this.Speed_panel.Name = "Speed_panel";
+            this.Speed_panel.Size = new System.Drawing.Size(257, 288);
+            this.Speed_panel.TabIndex = 9;
+            this.Speed_panel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Speed_panel.VerticalScrollbarBarColor = true;
+            this.Speed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.Speed_panel.VerticalScrollbarSize = 10;
+            // 
+            // burrowSpeed_panel
+            // 
+            this.burrowSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.burrowSpeed_panel.Controls.Add(this.burrowSpeed_feet_textbox);
+            this.burrowSpeed_panel.Controls.Add(this.burrowSpeed_squares_label);
+            this.burrowSpeed_panel.Controls.Add(this.burrow_lbl);
+            this.burrowSpeed_panel.HorizontalScrollbarBarColor = true;
+            this.burrowSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.burrowSpeed_panel.HorizontalScrollbarSize = 10;
+            this.burrowSpeed_panel.Location = new System.Drawing.Point(5, 216);
+            this.burrowSpeed_panel.Name = "burrowSpeed_panel";
+            this.burrowSpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.burrowSpeed_panel.TabIndex = 9;
+            this.burrowSpeed_panel.VerticalScrollbarBarColor = true;
+            this.burrowSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.burrowSpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // burrowSpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.burrowSpeed_feet_textbox.CustomButton.Image = null;
+            this.burrowSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.burrowSpeed_feet_textbox.CustomButton.Name = "";
+            this.burrowSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.burrowSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.burrowSpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.burrowSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.burrowSpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.burrowSpeed_feet_textbox.CustomButton.Visible = false;
+            this.burrowSpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.burrowSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.burrowSpeed_feet_textbox.MaxLength = 32767;
+            this.burrowSpeed_feet_textbox.Name = "burrowSpeed_feet_textbox";
+            this.burrowSpeed_feet_textbox.PasswordChar = '\0';
+            this.burrowSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.burrowSpeed_feet_textbox.SelectedText = "";
+            this.burrowSpeed_feet_textbox.SelectionLength = 0;
+            this.burrowSpeed_feet_textbox.SelectionStart = 0;
+            this.burrowSpeed_feet_textbox.ShortcutsEnabled = true;
+            this.burrowSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.burrowSpeed_feet_textbox.TabIndex = 4;
+            this.burrowSpeed_feet_textbox.Text = "0";
+            this.burrowSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.burrowSpeed_feet_textbox.UseSelectable = true;
+            this.burrowSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.burrowSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.burrowSpeed_feet_textbox.TextChanged += new System.EventHandler(this.burrowSpeed_feet_textbox_TextChanged);
+            // 
+            // burrowSpeed_squares_label
+            // 
+            this.burrowSpeed_squares_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.burrowSpeed_squares_label.Location = new System.Drawing.Point(150, 5);
+            this.burrowSpeed_squares_label.Name = "burrowSpeed_squares_label";
+            this.burrowSpeed_squares_label.Size = new System.Drawing.Size(75, 23);
+            this.burrowSpeed_squares_label.TabIndex = 3;
+            this.burrowSpeed_squares_label.Text = "0";
+            this.burrowSpeed_squares_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // burrow_lbl
+            // 
+            this.burrow_lbl.AutoSize = true;
+            this.burrow_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.burrow_lbl.Location = new System.Drawing.Point(3, 5);
+            this.burrow_lbl.Name = "burrow_lbl";
+            this.burrow_lbl.Size = new System.Drawing.Size(58, 19);
+            this.burrow_lbl.TabIndex = 2;
+            this.burrow_lbl.Text = "Burrow";
+            this.burrow_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // climbSpeed_panel
+            // 
+            this.climbSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.climbSpeed_panel.Controls.Add(this.climbSpeed_feet_textbox);
+            this.climbSpeed_panel.Controls.Add(this.climbSpeed_squares_lbl);
+            this.climbSpeed_panel.Controls.Add(this.climb_lbl);
+            this.climbSpeed_panel.HorizontalScrollbarBarColor = true;
+            this.climbSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.climbSpeed_panel.HorizontalScrollbarSize = 10;
+            this.climbSpeed_panel.Location = new System.Drawing.Point(5, 179);
+            this.climbSpeed_panel.Name = "climbSpeed_panel";
+            this.climbSpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.climbSpeed_panel.TabIndex = 8;
+            this.climbSpeed_panel.VerticalScrollbarBarColor = true;
+            this.climbSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.climbSpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // climbSpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.climbSpeed_feet_textbox.CustomButton.Image = null;
+            this.climbSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.climbSpeed_feet_textbox.CustomButton.Name = "";
+            this.climbSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.climbSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.climbSpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.climbSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.climbSpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.climbSpeed_feet_textbox.CustomButton.Visible = false;
+            this.climbSpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.climbSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.climbSpeed_feet_textbox.MaxLength = 32767;
+            this.climbSpeed_feet_textbox.Name = "climbSpeed_feet_textbox";
+            this.climbSpeed_feet_textbox.PasswordChar = '\0';
+            this.climbSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.climbSpeed_feet_textbox.SelectedText = "";
+            this.climbSpeed_feet_textbox.SelectionLength = 0;
+            this.climbSpeed_feet_textbox.SelectionStart = 0;
+            this.climbSpeed_feet_textbox.ShortcutsEnabled = true;
+            this.climbSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.climbSpeed_feet_textbox.TabIndex = 4;
+            this.climbSpeed_feet_textbox.Text = "0";
+            this.climbSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.climbSpeed_feet_textbox.UseSelectable = true;
+            this.climbSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.climbSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.climbSpeed_feet_textbox.TextChanged += new System.EventHandler(this.climbSpeed_feet_textbox_TextChanged);
+            // 
+            // climbSpeed_squares_lbl
+            // 
+            this.climbSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.climbSpeed_squares_lbl.Location = new System.Drawing.Point(150, 4);
+            this.climbSpeed_squares_lbl.Name = "climbSpeed_squares_lbl";
+            this.climbSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
+            this.climbSpeed_squares_lbl.TabIndex = 3;
+            this.climbSpeed_squares_lbl.Text = "0";
+            this.climbSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // climb_lbl
+            // 
+            this.climb_lbl.AutoSize = true;
+            this.climb_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.climb_lbl.Location = new System.Drawing.Point(3, 5);
+            this.climb_lbl.Name = "climb_lbl";
+            this.climb_lbl.Size = new System.Drawing.Size(48, 19);
+            this.climb_lbl.TabIndex = 2;
+            this.climb_lbl.Text = "Climb";
+            this.climb_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // swimSpeed_panel
+            // 
+            this.swimSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.swimSpeed_panel.Controls.Add(this.swimSpeed_feet_textbox);
+            this.swimSpeed_panel.Controls.Add(this.swimSpeed_squares_lbl);
+            this.swimSpeed_panel.Controls.Add(this.swim_lbl);
+            this.swimSpeed_panel.HorizontalScrollbarBarColor = true;
+            this.swimSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.swimSpeed_panel.HorizontalScrollbarSize = 10;
+            this.swimSpeed_panel.Location = new System.Drawing.Point(5, 142);
+            this.swimSpeed_panel.Name = "swimSpeed_panel";
+            this.swimSpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.swimSpeed_panel.TabIndex = 7;
+            this.swimSpeed_panel.VerticalScrollbarBarColor = true;
+            this.swimSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.swimSpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // swimSpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.swimSpeed_feet_textbox.CustomButton.Image = null;
+            this.swimSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.swimSpeed_feet_textbox.CustomButton.Name = "";
+            this.swimSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.swimSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.swimSpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.swimSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.swimSpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.swimSpeed_feet_textbox.CustomButton.Visible = false;
+            this.swimSpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.swimSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.swimSpeed_feet_textbox.MaxLength = 32767;
+            this.swimSpeed_feet_textbox.Name = "swimSpeed_feet_textbox";
+            this.swimSpeed_feet_textbox.PasswordChar = '\0';
+            this.swimSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.swimSpeed_feet_textbox.SelectedText = "";
+            this.swimSpeed_feet_textbox.SelectionLength = 0;
+            this.swimSpeed_feet_textbox.SelectionStart = 0;
+            this.swimSpeed_feet_textbox.ShortcutsEnabled = true;
+            this.swimSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.swimSpeed_feet_textbox.TabIndex = 4;
+            this.swimSpeed_feet_textbox.Text = "0";
+            this.swimSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.swimSpeed_feet_textbox.UseSelectable = true;
+            this.swimSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.swimSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.swimSpeed_feet_textbox.TextChanged += new System.EventHandler(this.swimSpeed_feet_textbox_TextChanged);
+            // 
+            // swimSpeed_squares_lbl
+            // 
+            this.swimSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.swimSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
+            this.swimSpeed_squares_lbl.Name = "swimSpeed_squares_lbl";
+            this.swimSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
+            this.swimSpeed_squares_lbl.TabIndex = 3;
+            this.swimSpeed_squares_lbl.Text = "0";
+            this.swimSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // swim_lbl
+            // 
+            this.swim_lbl.AutoSize = true;
+            this.swim_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.swim_lbl.Location = new System.Drawing.Point(3, 5);
+            this.swim_lbl.Name = "swim_lbl";
+            this.swim_lbl.Size = new System.Drawing.Size(45, 19);
+            this.swim_lbl.TabIndex = 2;
+            this.swim_lbl.Text = "Swim";
+            this.swim_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flySpeed_panel
+            // 
+            this.flySpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flySpeed_panel.Controls.Add(this.flySpeed_feet_textbox);
+            this.flySpeed_panel.Controls.Add(this.flySpeed_squares_lbl);
+            this.flySpeed_panel.Controls.Add(this.fly_lbl);
+            this.flySpeed_panel.HorizontalScrollbarBarColor = true;
+            this.flySpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.flySpeed_panel.HorizontalScrollbarSize = 10;
+            this.flySpeed_panel.Location = new System.Drawing.Point(5, 105);
+            this.flySpeed_panel.Name = "flySpeed_panel";
+            this.flySpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.flySpeed_panel.TabIndex = 6;
+            this.flySpeed_panel.VerticalScrollbarBarColor = true;
+            this.flySpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.flySpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // flySpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.flySpeed_feet_textbox.CustomButton.Image = null;
+            this.flySpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.flySpeed_feet_textbox.CustomButton.Name = "";
+            this.flySpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.flySpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.flySpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.flySpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.flySpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.flySpeed_feet_textbox.CustomButton.Visible = false;
+            this.flySpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.flySpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.flySpeed_feet_textbox.MaxLength = 32767;
+            this.flySpeed_feet_textbox.Name = "flySpeed_feet_textbox";
+            this.flySpeed_feet_textbox.PasswordChar = '\0';
+            this.flySpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.flySpeed_feet_textbox.SelectedText = "";
+            this.flySpeed_feet_textbox.SelectionLength = 0;
+            this.flySpeed_feet_textbox.SelectionStart = 0;
+            this.flySpeed_feet_textbox.ShortcutsEnabled = true;
+            this.flySpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.flySpeed_feet_textbox.TabIndex = 4;
+            this.flySpeed_feet_textbox.Text = "0";
+            this.flySpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.flySpeed_feet_textbox.UseSelectable = true;
+            this.flySpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.flySpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.flySpeed_feet_textbox.TextChanged += new System.EventHandler(this.flySpeed_feet_textbox_TextChanged);
+            // 
+            // flySpeed_squares_lbl
+            // 
+            this.flySpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flySpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
+            this.flySpeed_squares_lbl.Name = "flySpeed_squares_lbl";
+            this.flySpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
+            this.flySpeed_squares_lbl.TabIndex = 3;
+            this.flySpeed_squares_lbl.Text = "0";
+            this.flySpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fly_lbl
+            // 
+            this.fly_lbl.AutoSize = true;
+            this.fly_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.fly_lbl.Location = new System.Drawing.Point(3, 5);
+            this.fly_lbl.Name = "fly_lbl";
+            this.fly_lbl.Size = new System.Drawing.Size(28, 19);
+            this.fly_lbl.TabIndex = 2;
+            this.fly_lbl.Text = "Fly";
+            this.fly_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // armorSpeed_panel
+            // 
+            this.armorSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.armorSpeed_panel.Controls.Add(this.armorSpeed_feet_textbox);
+            this.armorSpeed_panel.Controls.Add(this.armorSpeed_squares_lbl);
+            this.armorSpeed_panel.Controls.Add(this.armor_lbl);
+            this.armorSpeed_panel.HorizontalScrollbarBarColor = true;
+            this.armorSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.armorSpeed_panel.HorizontalScrollbarSize = 10;
+            this.armorSpeed_panel.Location = new System.Drawing.Point(5, 68);
+            this.armorSpeed_panel.Name = "armorSpeed_panel";
+            this.armorSpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.armorSpeed_panel.TabIndex = 5;
+            this.armorSpeed_panel.VerticalScrollbarBarColor = true;
+            this.armorSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.armorSpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // armorSpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.armorSpeed_feet_textbox.CustomButton.Image = null;
+            this.armorSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.armorSpeed_feet_textbox.CustomButton.Name = "";
+            this.armorSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.armorSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.armorSpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.armorSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.armorSpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.armorSpeed_feet_textbox.CustomButton.Visible = false;
+            this.armorSpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.armorSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.armorSpeed_feet_textbox.MaxLength = 32767;
+            this.armorSpeed_feet_textbox.Name = "armorSpeed_feet_textbox";
+            this.armorSpeed_feet_textbox.PasswordChar = '\0';
+            this.armorSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.armorSpeed_feet_textbox.SelectedText = "";
+            this.armorSpeed_feet_textbox.SelectionLength = 0;
+            this.armorSpeed_feet_textbox.SelectionStart = 0;
+            this.armorSpeed_feet_textbox.ShortcutsEnabled = true;
+            this.armorSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.armorSpeed_feet_textbox.TabIndex = 4;
+            this.armorSpeed_feet_textbox.Text = "0";
+            this.armorSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.armorSpeed_feet_textbox.UseSelectable = true;
+            this.armorSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.armorSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.armorSpeed_feet_textbox.TextChanged += new System.EventHandler(this.armorSpeed_feet_textbox_TextChanged);
+            // 
+            // armorSpeed_squares_lbl
+            // 
+            this.armorSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.armorSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
+            this.armorSpeed_squares_lbl.Name = "armorSpeed_squares_lbl";
+            this.armorSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
+            this.armorSpeed_squares_lbl.TabIndex = 3;
+            this.armorSpeed_squares_lbl.Text = "0";
+            this.armorSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // armor_lbl
+            // 
+            this.armor_lbl.AutoSize = true;
+            this.armor_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.armor_lbl.Location = new System.Drawing.Point(3, 5);
+            this.armor_lbl.Name = "armor_lbl";
+            this.armor_lbl.Size = new System.Drawing.Size(53, 19);
+            this.armor_lbl.TabIndex = 2;
+            this.armor_lbl.Text = "Armor";
+            this.armor_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // baseSpeed_panel
+            // 
+            this.baseSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.baseSpeed_panel.Controls.Add(this.baseSpeed_feet_textbox);
+            this.baseSpeed_panel.Controls.Add(this.baseSpeed_squares_lbl);
+            this.baseSpeed_panel.Controls.Add(this.baseSpeed_lbl);
+            this.baseSpeed_panel.HorizontalScrollbarBarColor = true;
+            this.baseSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.baseSpeed_panel.HorizontalScrollbarSize = 10;
+            this.baseSpeed_panel.Location = new System.Drawing.Point(5, 31);
+            this.baseSpeed_panel.Name = "baseSpeed_panel";
+            this.baseSpeed_panel.Size = new System.Drawing.Size(240, 33);
+            this.baseSpeed_panel.TabIndex = 3;
+            this.baseSpeed_panel.VerticalScrollbarBarColor = true;
+            this.baseSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.baseSpeed_panel.VerticalScrollbarSize = 10;
+            // 
+            // baseSpeed_feet_textbox
+            // 
+            // 
+            // 
+            // 
+            this.baseSpeed_feet_textbox.CustomButton.Image = null;
+            this.baseSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.baseSpeed_feet_textbox.CustomButton.Name = "";
+            this.baseSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.baseSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.baseSpeed_feet_textbox.CustomButton.TabIndex = 1;
+            this.baseSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.baseSpeed_feet_textbox.CustomButton.UseSelectable = true;
+            this.baseSpeed_feet_textbox.CustomButton.Visible = false;
+            this.baseSpeed_feet_textbox.Lines = new string[] {
+        "0"};
+            this.baseSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
+            this.baseSpeed_feet_textbox.MaxLength = 32767;
+            this.baseSpeed_feet_textbox.Name = "baseSpeed_feet_textbox";
+            this.baseSpeed_feet_textbox.PasswordChar = '\0';
+            this.baseSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.baseSpeed_feet_textbox.SelectedText = "";
+            this.baseSpeed_feet_textbox.SelectionLength = 0;
+            this.baseSpeed_feet_textbox.SelectionStart = 0;
+            this.baseSpeed_feet_textbox.ShortcutsEnabled = true;
+            this.baseSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
+            this.baseSpeed_feet_textbox.TabIndex = 4;
+            this.baseSpeed_feet_textbox.Text = "0";
+            this.baseSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.baseSpeed_feet_textbox.UseSelectable = true;
+            this.baseSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.baseSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.baseSpeed_feet_textbox.TextChanged += new System.EventHandler(this.baseSpeed_feet_textbox_TextChanged);
+            // 
+            // baseSpeed_squares_lbl
+            // 
+            this.baseSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.baseSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
+            this.baseSpeed_squares_lbl.Name = "baseSpeed_squares_lbl";
+            this.baseSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
+            this.baseSpeed_squares_lbl.TabIndex = 3;
+            this.baseSpeed_squares_lbl.Text = "0";
+            this.baseSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // baseSpeed_lbl
+            // 
+            this.baseSpeed_lbl.AutoSize = true;
+            this.baseSpeed_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.baseSpeed_lbl.Location = new System.Drawing.Point(3, 5);
+            this.baseSpeed_lbl.Name = "baseSpeed_lbl";
+            this.baseSpeed_lbl.Size = new System.Drawing.Size(40, 19);
+            this.baseSpeed_lbl.TabIndex = 2;
+            this.baseSpeed_lbl.Text = "Base";
+            this.baseSpeed_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Speed_feet_squares_lbl
+            // 
+            this.Speed_feet_squares_lbl.AutoSize = true;
+            this.Speed_feet_squares_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Speed_feet_squares_lbl.Location = new System.Drawing.Point(62, 6);
+            this.Speed_feet_squares_lbl.Name = "Speed_feet_squares_lbl";
+            this.Speed_feet_squares_lbl.Size = new System.Drawing.Size(160, 19);
+            this.Speed_feet_squares_lbl.TabIndex = 2;
+            this.Speed_feet_squares_lbl.Text = "Speed (Feet / Squares)";
+            this.Speed_feet_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // savingThrows_panel
             // 
             this.savingThrows_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3458,471 +3926,6 @@
             this.ac_miscMod_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ac_miscMod_lbl.UseCustomBackColor = true;
             // 
-            // Speed_panel
-            // 
-            this.Speed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Speed_panel.Controls.Add(this.burrowSpeed_panel);
-            this.Speed_panel.Controls.Add(this.climbSpeed_panel);
-            this.Speed_panel.Controls.Add(this.swimSpeed_panel);
-            this.Speed_panel.Controls.Add(this.flySpeed_panel);
-            this.Speed_panel.Controls.Add(this.armorSpeed_panel);
-            this.Speed_panel.Controls.Add(this.baseSpeed_panel);
-            this.Speed_panel.Controls.Add(this.Speed_feet_squares_lbl);
-            this.Speed_panel.HorizontalScrollbarBarColor = true;
-            this.Speed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.Speed_panel.HorizontalScrollbarSize = 10;
-            this.Speed_panel.Location = new System.Drawing.Point(170, 408);
-            this.Speed_panel.Name = "Speed_panel";
-            this.Speed_panel.Size = new System.Drawing.Size(257, 288);
-            this.Speed_panel.TabIndex = 9;
-            this.Speed_panel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Speed_panel.VerticalScrollbarBarColor = true;
-            this.Speed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.Speed_panel.VerticalScrollbarSize = 10;
-            // 
-            // burrowSpeed_panel
-            // 
-            this.burrowSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.burrowSpeed_panel.Controls.Add(this.burrowSpeed_feet_textbox);
-            this.burrowSpeed_panel.Controls.Add(this.burrowSpeed_squares_label);
-            this.burrowSpeed_panel.Controls.Add(this.burrow_lbl);
-            this.burrowSpeed_panel.HorizontalScrollbarBarColor = true;
-            this.burrowSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.burrowSpeed_panel.HorizontalScrollbarSize = 10;
-            this.burrowSpeed_panel.Location = new System.Drawing.Point(5, 216);
-            this.burrowSpeed_panel.Name = "burrowSpeed_panel";
-            this.burrowSpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.burrowSpeed_panel.TabIndex = 9;
-            this.burrowSpeed_panel.VerticalScrollbarBarColor = true;
-            this.burrowSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.burrowSpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // burrowSpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.burrowSpeed_feet_textbox.CustomButton.Image = null;
-            this.burrowSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.burrowSpeed_feet_textbox.CustomButton.Name = "";
-            this.burrowSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.burrowSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.burrowSpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.burrowSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.burrowSpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.burrowSpeed_feet_textbox.CustomButton.Visible = false;
-            this.burrowSpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.burrowSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.burrowSpeed_feet_textbox.MaxLength = 32767;
-            this.burrowSpeed_feet_textbox.Name = "burrowSpeed_feet_textbox";
-            this.burrowSpeed_feet_textbox.PasswordChar = '\0';
-            this.burrowSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.burrowSpeed_feet_textbox.SelectedText = "";
-            this.burrowSpeed_feet_textbox.SelectionLength = 0;
-            this.burrowSpeed_feet_textbox.SelectionStart = 0;
-            this.burrowSpeed_feet_textbox.ShortcutsEnabled = true;
-            this.burrowSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.burrowSpeed_feet_textbox.TabIndex = 4;
-            this.burrowSpeed_feet_textbox.Text = "0";
-            this.burrowSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.burrowSpeed_feet_textbox.UseSelectable = true;
-            this.burrowSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.burrowSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.burrowSpeed_feet_textbox.TextChanged += new System.EventHandler(this.burrowSpeed_feet_textbox_TextChanged);
-            // 
-            // burrowSpeed_squares_label
-            // 
-            this.burrowSpeed_squares_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.burrowSpeed_squares_label.Location = new System.Drawing.Point(150, 5);
-            this.burrowSpeed_squares_label.Name = "burrowSpeed_squares_label";
-            this.burrowSpeed_squares_label.Size = new System.Drawing.Size(75, 23);
-            this.burrowSpeed_squares_label.TabIndex = 3;
-            this.burrowSpeed_squares_label.Text = "0";
-            this.burrowSpeed_squares_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // burrow_lbl
-            // 
-            this.burrow_lbl.AutoSize = true;
-            this.burrow_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.burrow_lbl.Location = new System.Drawing.Point(3, 5);
-            this.burrow_lbl.Name = "burrow_lbl";
-            this.burrow_lbl.Size = new System.Drawing.Size(58, 19);
-            this.burrow_lbl.TabIndex = 2;
-            this.burrow_lbl.Text = "Burrow";
-            this.burrow_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // climbSpeed_panel
-            // 
-            this.climbSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.climbSpeed_panel.Controls.Add(this.climbSpeed_feet_textbox);
-            this.climbSpeed_panel.Controls.Add(this.climbSpeed_squares_lbl);
-            this.climbSpeed_panel.Controls.Add(this.climb_lbl);
-            this.climbSpeed_panel.HorizontalScrollbarBarColor = true;
-            this.climbSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.climbSpeed_panel.HorizontalScrollbarSize = 10;
-            this.climbSpeed_panel.Location = new System.Drawing.Point(5, 179);
-            this.climbSpeed_panel.Name = "climbSpeed_panel";
-            this.climbSpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.climbSpeed_panel.TabIndex = 8;
-            this.climbSpeed_panel.VerticalScrollbarBarColor = true;
-            this.climbSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.climbSpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // climbSpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.climbSpeed_feet_textbox.CustomButton.Image = null;
-            this.climbSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.climbSpeed_feet_textbox.CustomButton.Name = "";
-            this.climbSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.climbSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.climbSpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.climbSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.climbSpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.climbSpeed_feet_textbox.CustomButton.Visible = false;
-            this.climbSpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.climbSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.climbSpeed_feet_textbox.MaxLength = 32767;
-            this.climbSpeed_feet_textbox.Name = "climbSpeed_feet_textbox";
-            this.climbSpeed_feet_textbox.PasswordChar = '\0';
-            this.climbSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.climbSpeed_feet_textbox.SelectedText = "";
-            this.climbSpeed_feet_textbox.SelectionLength = 0;
-            this.climbSpeed_feet_textbox.SelectionStart = 0;
-            this.climbSpeed_feet_textbox.ShortcutsEnabled = true;
-            this.climbSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.climbSpeed_feet_textbox.TabIndex = 4;
-            this.climbSpeed_feet_textbox.Text = "0";
-            this.climbSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.climbSpeed_feet_textbox.UseSelectable = true;
-            this.climbSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.climbSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.climbSpeed_feet_textbox.TextChanged += new System.EventHandler(this.climbSpeed_feet_textbox_TextChanged);
-            // 
-            // climbSpeed_squares_lbl
-            // 
-            this.climbSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.climbSpeed_squares_lbl.Location = new System.Drawing.Point(150, 4);
-            this.climbSpeed_squares_lbl.Name = "climbSpeed_squares_lbl";
-            this.climbSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
-            this.climbSpeed_squares_lbl.TabIndex = 3;
-            this.climbSpeed_squares_lbl.Text = "0";
-            this.climbSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // climb_lbl
-            // 
-            this.climb_lbl.AutoSize = true;
-            this.climb_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.climb_lbl.Location = new System.Drawing.Point(3, 5);
-            this.climb_lbl.Name = "climb_lbl";
-            this.climb_lbl.Size = new System.Drawing.Size(48, 19);
-            this.climb_lbl.TabIndex = 2;
-            this.climb_lbl.Text = "Climb";
-            this.climb_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // swimSpeed_panel
-            // 
-            this.swimSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.swimSpeed_panel.Controls.Add(this.swimSpeed_feet_textbox);
-            this.swimSpeed_panel.Controls.Add(this.swimSpeed_squares_lbl);
-            this.swimSpeed_panel.Controls.Add(this.swim_lbl);
-            this.swimSpeed_panel.HorizontalScrollbarBarColor = true;
-            this.swimSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.swimSpeed_panel.HorizontalScrollbarSize = 10;
-            this.swimSpeed_panel.Location = new System.Drawing.Point(5, 142);
-            this.swimSpeed_panel.Name = "swimSpeed_panel";
-            this.swimSpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.swimSpeed_panel.TabIndex = 7;
-            this.swimSpeed_panel.VerticalScrollbarBarColor = true;
-            this.swimSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.swimSpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // swimSpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.swimSpeed_feet_textbox.CustomButton.Image = null;
-            this.swimSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.swimSpeed_feet_textbox.CustomButton.Name = "";
-            this.swimSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.swimSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.swimSpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.swimSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.swimSpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.swimSpeed_feet_textbox.CustomButton.Visible = false;
-            this.swimSpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.swimSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.swimSpeed_feet_textbox.MaxLength = 32767;
-            this.swimSpeed_feet_textbox.Name = "swimSpeed_feet_textbox";
-            this.swimSpeed_feet_textbox.PasswordChar = '\0';
-            this.swimSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.swimSpeed_feet_textbox.SelectedText = "";
-            this.swimSpeed_feet_textbox.SelectionLength = 0;
-            this.swimSpeed_feet_textbox.SelectionStart = 0;
-            this.swimSpeed_feet_textbox.ShortcutsEnabled = true;
-            this.swimSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.swimSpeed_feet_textbox.TabIndex = 4;
-            this.swimSpeed_feet_textbox.Text = "0";
-            this.swimSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.swimSpeed_feet_textbox.UseSelectable = true;
-            this.swimSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.swimSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.swimSpeed_feet_textbox.TextChanged += new System.EventHandler(this.swimSpeed_feet_textbox_TextChanged);
-            // 
-            // swimSpeed_squares_lbl
-            // 
-            this.swimSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.swimSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
-            this.swimSpeed_squares_lbl.Name = "swimSpeed_squares_lbl";
-            this.swimSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
-            this.swimSpeed_squares_lbl.TabIndex = 3;
-            this.swimSpeed_squares_lbl.Text = "0";
-            this.swimSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // swim_lbl
-            // 
-            this.swim_lbl.AutoSize = true;
-            this.swim_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.swim_lbl.Location = new System.Drawing.Point(3, 5);
-            this.swim_lbl.Name = "swim_lbl";
-            this.swim_lbl.Size = new System.Drawing.Size(45, 19);
-            this.swim_lbl.TabIndex = 2;
-            this.swim_lbl.Text = "Swim";
-            this.swim_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flySpeed_panel
-            // 
-            this.flySpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flySpeed_panel.Controls.Add(this.flySpeed_feet_textbox);
-            this.flySpeed_panel.Controls.Add(this.flySpeed_squares_lbl);
-            this.flySpeed_panel.Controls.Add(this.fly_lbl);
-            this.flySpeed_panel.HorizontalScrollbarBarColor = true;
-            this.flySpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.flySpeed_panel.HorizontalScrollbarSize = 10;
-            this.flySpeed_panel.Location = new System.Drawing.Point(5, 105);
-            this.flySpeed_panel.Name = "flySpeed_panel";
-            this.flySpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.flySpeed_panel.TabIndex = 6;
-            this.flySpeed_panel.VerticalScrollbarBarColor = true;
-            this.flySpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.flySpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // flySpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.flySpeed_feet_textbox.CustomButton.Image = null;
-            this.flySpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.flySpeed_feet_textbox.CustomButton.Name = "";
-            this.flySpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.flySpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.flySpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.flySpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.flySpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.flySpeed_feet_textbox.CustomButton.Visible = false;
-            this.flySpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.flySpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.flySpeed_feet_textbox.MaxLength = 32767;
-            this.flySpeed_feet_textbox.Name = "flySpeed_feet_textbox";
-            this.flySpeed_feet_textbox.PasswordChar = '\0';
-            this.flySpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.flySpeed_feet_textbox.SelectedText = "";
-            this.flySpeed_feet_textbox.SelectionLength = 0;
-            this.flySpeed_feet_textbox.SelectionStart = 0;
-            this.flySpeed_feet_textbox.ShortcutsEnabled = true;
-            this.flySpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.flySpeed_feet_textbox.TabIndex = 4;
-            this.flySpeed_feet_textbox.Text = "0";
-            this.flySpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.flySpeed_feet_textbox.UseSelectable = true;
-            this.flySpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.flySpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.flySpeed_feet_textbox.TextChanged += new System.EventHandler(this.flySpeed_feet_textbox_TextChanged);
-            // 
-            // flySpeed_squares_lbl
-            // 
-            this.flySpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flySpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
-            this.flySpeed_squares_lbl.Name = "flySpeed_squares_lbl";
-            this.flySpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
-            this.flySpeed_squares_lbl.TabIndex = 3;
-            this.flySpeed_squares_lbl.Text = "0";
-            this.flySpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // fly_lbl
-            // 
-            this.fly_lbl.AutoSize = true;
-            this.fly_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.fly_lbl.Location = new System.Drawing.Point(3, 5);
-            this.fly_lbl.Name = "fly_lbl";
-            this.fly_lbl.Size = new System.Drawing.Size(28, 19);
-            this.fly_lbl.TabIndex = 2;
-            this.fly_lbl.Text = "Fly";
-            this.fly_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // armorSpeed_panel
-            // 
-            this.armorSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.armorSpeed_panel.Controls.Add(this.armorSpeed_feet_textbox);
-            this.armorSpeed_panel.Controls.Add(this.armorSpeed_squares_lbl);
-            this.armorSpeed_panel.Controls.Add(this.armor_lbl);
-            this.armorSpeed_panel.HorizontalScrollbarBarColor = true;
-            this.armorSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.armorSpeed_panel.HorizontalScrollbarSize = 10;
-            this.armorSpeed_panel.Location = new System.Drawing.Point(5, 68);
-            this.armorSpeed_panel.Name = "armorSpeed_panel";
-            this.armorSpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.armorSpeed_panel.TabIndex = 5;
-            this.armorSpeed_panel.VerticalScrollbarBarColor = true;
-            this.armorSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.armorSpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // armorSpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.armorSpeed_feet_textbox.CustomButton.Image = null;
-            this.armorSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.armorSpeed_feet_textbox.CustomButton.Name = "";
-            this.armorSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.armorSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.armorSpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.armorSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.armorSpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.armorSpeed_feet_textbox.CustomButton.Visible = false;
-            this.armorSpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.armorSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.armorSpeed_feet_textbox.MaxLength = 32767;
-            this.armorSpeed_feet_textbox.Name = "armorSpeed_feet_textbox";
-            this.armorSpeed_feet_textbox.PasswordChar = '\0';
-            this.armorSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.armorSpeed_feet_textbox.SelectedText = "";
-            this.armorSpeed_feet_textbox.SelectionLength = 0;
-            this.armorSpeed_feet_textbox.SelectionStart = 0;
-            this.armorSpeed_feet_textbox.ShortcutsEnabled = true;
-            this.armorSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.armorSpeed_feet_textbox.TabIndex = 4;
-            this.armorSpeed_feet_textbox.Text = "0";
-            this.armorSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.armorSpeed_feet_textbox.UseSelectable = true;
-            this.armorSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.armorSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.armorSpeed_feet_textbox.TextChanged += new System.EventHandler(this.armorSpeed_feet_textbox_TextChanged);
-            // 
-            // armorSpeed_squares_lbl
-            // 
-            this.armorSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.armorSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
-            this.armorSpeed_squares_lbl.Name = "armorSpeed_squares_lbl";
-            this.armorSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
-            this.armorSpeed_squares_lbl.TabIndex = 3;
-            this.armorSpeed_squares_lbl.Text = "0";
-            this.armorSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // armor_lbl
-            // 
-            this.armor_lbl.AutoSize = true;
-            this.armor_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.armor_lbl.Location = new System.Drawing.Point(3, 5);
-            this.armor_lbl.Name = "armor_lbl";
-            this.armor_lbl.Size = new System.Drawing.Size(53, 19);
-            this.armor_lbl.TabIndex = 2;
-            this.armor_lbl.Text = "Armor";
-            this.armor_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // baseSpeed_panel
-            // 
-            this.baseSpeed_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.baseSpeed_panel.Controls.Add(this.baseSpeed_feet_textbox);
-            this.baseSpeed_panel.Controls.Add(this.baseSpeed_squares_lbl);
-            this.baseSpeed_panel.Controls.Add(this.baseSpeed_lbl);
-            this.baseSpeed_panel.HorizontalScrollbarBarColor = true;
-            this.baseSpeed_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.baseSpeed_panel.HorizontalScrollbarSize = 10;
-            this.baseSpeed_panel.Location = new System.Drawing.Point(5, 31);
-            this.baseSpeed_panel.Name = "baseSpeed_panel";
-            this.baseSpeed_panel.Size = new System.Drawing.Size(240, 33);
-            this.baseSpeed_panel.TabIndex = 3;
-            this.baseSpeed_panel.VerticalScrollbarBarColor = true;
-            this.baseSpeed_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.baseSpeed_panel.VerticalScrollbarSize = 10;
-            // 
-            // baseSpeed_feet_textbox
-            // 
-            // 
-            // 
-            // 
-            this.baseSpeed_feet_textbox.CustomButton.Image = null;
-            this.baseSpeed_feet_textbox.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.baseSpeed_feet_textbox.CustomButton.Name = "";
-            this.baseSpeed_feet_textbox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.baseSpeed_feet_textbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.baseSpeed_feet_textbox.CustomButton.TabIndex = 1;
-            this.baseSpeed_feet_textbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.baseSpeed_feet_textbox.CustomButton.UseSelectable = true;
-            this.baseSpeed_feet_textbox.CustomButton.Visible = false;
-            this.baseSpeed_feet_textbox.Lines = new string[] {
-        "0"};
-            this.baseSpeed_feet_textbox.Location = new System.Drawing.Point(63, 5);
-            this.baseSpeed_feet_textbox.MaxLength = 32767;
-            this.baseSpeed_feet_textbox.Name = "baseSpeed_feet_textbox";
-            this.baseSpeed_feet_textbox.PasswordChar = '\0';
-            this.baseSpeed_feet_textbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.baseSpeed_feet_textbox.SelectedText = "";
-            this.baseSpeed_feet_textbox.SelectionLength = 0;
-            this.baseSpeed_feet_textbox.SelectionStart = 0;
-            this.baseSpeed_feet_textbox.ShortcutsEnabled = true;
-            this.baseSpeed_feet_textbox.Size = new System.Drawing.Size(75, 23);
-            this.baseSpeed_feet_textbox.TabIndex = 4;
-            this.baseSpeed_feet_textbox.Text = "0";
-            this.baseSpeed_feet_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.baseSpeed_feet_textbox.UseSelectable = true;
-            this.baseSpeed_feet_textbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.baseSpeed_feet_textbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.baseSpeed_feet_textbox.TextChanged += new System.EventHandler(this.baseSpeed_feet_textbox_TextChanged);
-            // 
-            // baseSpeed_squares_lbl
-            // 
-            this.baseSpeed_squares_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.baseSpeed_squares_lbl.Location = new System.Drawing.Point(151, 5);
-            this.baseSpeed_squares_lbl.Name = "baseSpeed_squares_lbl";
-            this.baseSpeed_squares_lbl.Size = new System.Drawing.Size(75, 23);
-            this.baseSpeed_squares_lbl.TabIndex = 3;
-            this.baseSpeed_squares_lbl.Text = "0";
-            this.baseSpeed_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // baseSpeed_lbl
-            // 
-            this.baseSpeed_lbl.AutoSize = true;
-            this.baseSpeed_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.baseSpeed_lbl.Location = new System.Drawing.Point(3, 5);
-            this.baseSpeed_lbl.Name = "baseSpeed_lbl";
-            this.baseSpeed_lbl.Size = new System.Drawing.Size(40, 19);
-            this.baseSpeed_lbl.TabIndex = 2;
-            this.baseSpeed_lbl.Text = "Base";
-            this.baseSpeed_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Speed_feet_squares_lbl
-            // 
-            this.Speed_feet_squares_lbl.AutoSize = true;
-            this.Speed_feet_squares_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Speed_feet_squares_lbl.Location = new System.Drawing.Point(62, 6);
-            this.Speed_feet_squares_lbl.Name = "Speed_feet_squares_lbl";
-            this.Speed_feet_squares_lbl.Size = new System.Drawing.Size(160, 19);
-            this.Speed_feet_squares_lbl.TabIndex = 2;
-            this.Speed_feet_squares_lbl.Text = "Speed (Feet / Squares)";
-            this.Speed_feet_squares_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Skills_TabPage
             // 
             this.Skills_TabPage.Controls.Add(this.SkillsPage_Panel);
@@ -3963,6 +3966,15 @@
             this.SkillsPage_Panel.VerticalScrollbarBarColor = true;
             this.SkillsPage_Panel.VerticalScrollbarHighlightOnWheel = false;
             this.SkillsPage_Panel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel21
+            // 
+            this.metroLabel21.AutoSize = true;
+            this.metroLabel21.Location = new System.Drawing.Point(11, 3);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(38, 38);
+            this.metroLabel21.TabIndex = 9;
+            this.metroLabel21.Text = "Class\r\nSkill";
             // 
             // SkillPanelTemplate
             // 
@@ -4272,20 +4284,11 @@
             this.AddAllSkills.Visible = false;
             this.AddAllSkills.Click += new System.EventHandler(this.AddAllSkills_Click);
             // 
-            // metroLabel21
-            // 
-            this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(11, 3);
-            this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(38, 38);
-            this.metroLabel21.TabIndex = 9;
-            this.metroLabel21.Text = "Class\r\nSkill";
-            // 
             // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 843);
+            this.ClientSize = new System.Drawing.Size(479, 804);
             this.Controls.Add(this.AddAllSkills);
             this.Controls.Add(this.Menu_Dropdown_label);
             this.Controls.Add(this.Character_TabControl);
@@ -4322,6 +4325,20 @@
             this.ability_constitution_panel.ResumeLayout(false);
             this.ability_dexertity_panel.ResumeLayout(false);
             this.ability_strength_panel.ResumeLayout(false);
+            this.Speed_panel.ResumeLayout(false);
+            this.Speed_panel.PerformLayout();
+            this.burrowSpeed_panel.ResumeLayout(false);
+            this.burrowSpeed_panel.PerformLayout();
+            this.climbSpeed_panel.ResumeLayout(false);
+            this.climbSpeed_panel.PerformLayout();
+            this.swimSpeed_panel.ResumeLayout(false);
+            this.swimSpeed_panel.PerformLayout();
+            this.flySpeed_panel.ResumeLayout(false);
+            this.flySpeed_panel.PerformLayout();
+            this.armorSpeed_panel.ResumeLayout(false);
+            this.armorSpeed_panel.PerformLayout();
+            this.baseSpeed_panel.ResumeLayout(false);
+            this.baseSpeed_panel.PerformLayout();
             this.savingThrows_panel.ResumeLayout(false);
             this.savingThrows_panel.PerformLayout();
             this.save_tempMod_panel.ResumeLayout(false);
@@ -4337,20 +4354,6 @@
             this.Saves_panel.ResumeLayout(false);
             this.Saves_panel.PerformLayout();
             this.acMods_Panel.ResumeLayout(false);
-            this.Speed_panel.ResumeLayout(false);
-            this.Speed_panel.PerformLayout();
-            this.burrowSpeed_panel.ResumeLayout(false);
-            this.burrowSpeed_panel.PerformLayout();
-            this.climbSpeed_panel.ResumeLayout(false);
-            this.climbSpeed_panel.PerformLayout();
-            this.swimSpeed_panel.ResumeLayout(false);
-            this.swimSpeed_panel.PerformLayout();
-            this.flySpeed_panel.ResumeLayout(false);
-            this.flySpeed_panel.PerformLayout();
-            this.armorSpeed_panel.ResumeLayout(false);
-            this.armorSpeed_panel.PerformLayout();
-            this.baseSpeed_panel.ResumeLayout(false);
-            this.baseSpeed_panel.PerformLayout();
             this.Skills_TabPage.ResumeLayout(false);
             this.SkillsPage_Panel.ResumeLayout(false);
             this.SkillsPage_Panel.PerformLayout();

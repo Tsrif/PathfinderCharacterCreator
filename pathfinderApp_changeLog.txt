@@ -59,6 +59,10 @@
 - changed a bunch of other non editable textboxes to labels 
 - Small UI improvements
 
+5/28/2018
+- A new thread is created when the program is started to get all of the detailed skill information
+
+
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
 - ability mods should be labels?
@@ -68,5 +72,7 @@
 - Fix saving???
 - Save detailed skills list to a file to try to increase performance
 - Shorten skill names if they are too long 
+- add window resizing?
+- HP - Lethal vs NonLethal 
 
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using System.Threading;
 
 
 /*This Script handles basically everything for the Character Form
@@ -113,11 +114,16 @@ namespace PathfinderApp
         //Create list of everything that will be updated when cha mod changes
         List<MetroFramework.Controls.MetroLabel> chaModList = new List<MetroFramework.Controls.MetroLabel>();
 
+        //clsResize _form_resize;
 
+        System.Threading.Thread myThread;
+        bool taskDone = false;
 
         public CharacterForm()
         {
             InitializeComponent();
+
+
             this.StyleManager = metroStyleManager1;
             this.StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Character_TabControl.SelectedIndex = 0;
@@ -140,7 +146,29 @@ namespace PathfinderApp
             conModList.Add(fortitude_abilityMod_textbox);
             wisModList.Add(will_abilityMod_textbox);
 
+            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
+
+            //this.myThread.Start();
+
+            StartSkillsTask();
+
+            //_form_resize = new clsResize(this);
+            //this.Load += _Load;
+            //this.Resize += _Resize;
+
         }
+
+        //#region shit needed for resizing 
+        //private void _Load(object sender, EventArgs e)
+        //{
+        //    _form_resize._get_initial_size();
+        //}
+
+        //private void _Resize(object sender, EventArgs e)
+        //{
+        //    _form_resize._resize();
+        //}
+        //#endregion
 
         //Create a new character
         //Should probably save and then create the new form
@@ -795,11 +823,12 @@ namespace PathfinderApp
             {
                 Skill aSkill = new Skill(dSkill.name, "0", dSkill.stat, "0", "0", "0");
                 CreateSkillPanel(aSkill);
-                PlacePanels();
+                PlaceSkillPanels();
             }
 
         }
-        public void PlacePanels()
+        //Places all of the skill panelsi
+        public void PlaceSkillPanels()
         {
             //Don't place the first one 
             if (list_skillsPanels.Count > 1)
@@ -864,6 +893,21 @@ namespace PathfinderApp
             {
                 chaModList.Add(mod);
             }
+        }
+
+
+        public void GetSkillsDataThread()
+        {
+            detailedSkills = GetSkillsData();
+        }
+
+        public void StartSkillsTask()
+        {
+            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
+            Task task = Task.Factory.StartNew(this.GetSkillsDataThread);
+            //taskDone = task.IsCompleted; // See if you're done
+            //task.Wait(); // Block until you're done
+                         // this.myThread.Start();
         }
 
         #endregion
@@ -1032,13 +1076,14 @@ namespace PathfinderApp
 
         #endregion
 
-       
-
-
         private void AddAllSkills_Click(object sender, EventArgs e)
         {
-            detailedSkills = GetSkillsData();
+            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
+
+            //this.myThread.Start();
+            ////detailedSkills = GetSkillsData();
             CreateABunch(detailedSkills);
+            AddAllSkills.Enabled = false;
         }
 
 

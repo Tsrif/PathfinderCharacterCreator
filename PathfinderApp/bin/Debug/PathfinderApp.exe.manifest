@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HcYT3oymKyDOEH23ac713f6frBpOsPAAhbPCa6roHoM=</dsig:DigestValue>
+        <dsig:DigestValue>7SAlCJdRqF7Lkgnx7YynHVz8WRqDncfQWyDBK5J6sKo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -125,22 +125,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="MetroFramework.txt" size="1266">
+  <file name="MetroFramework.txt" size="1241">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+yV6adEVlpUIOiH/IdsfqaixKo0MB7DiB/hBOyI4wKw=</dsig:DigestValue>
+      <dsig:DigestValue>SKU4r0IkmbHnnFfl6rJRB7fC4TZdnkB3idz22Odjpgo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PathfinderApp.exe.config" size="541">
+  <file name="PathfinderApp.exe.config" size="528">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>IA/EBT5nptZ62Xjoa3TGKZZee+5rtklTw7DVtmSMEGQ=</dsig:DigestValue>
+      <dsig:DigestValue>RftvKMG4eyzotuKcp0voSQH7nGOenFGwnDAdGYTDm48=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
