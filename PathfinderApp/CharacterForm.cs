@@ -116,9 +116,6 @@ namespace PathfinderApp
 
         //clsResize _form_resize;
 
-        System.Threading.Thread myThread;
-        bool taskDone = false;
-
         public CharacterForm()
         {
             InitializeComponent();
@@ -898,16 +895,21 @@ namespace PathfinderApp
 
         public void GetSkillsDataThread()
         {
+            AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = false);
             detailedSkills = GetSkillsData();
+            Console.WriteLine("DETAILED SKILL DATA LOADED");
+            AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = true);
         }
 
         public void StartSkillsTask()
         {
+            
             //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
             Task task = Task.Factory.StartNew(this.GetSkillsDataThread);
             //taskDone = task.IsCompleted; // See if you're done
             //task.Wait(); // Block until you're done
-                         // this.myThread.Start();
+            //this.myThread.Start();
+           // AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = true);
         }
 
         #endregion
@@ -1085,7 +1087,6 @@ namespace PathfinderApp
             CreateABunch(detailedSkills);
             AddAllSkills.Enabled = false;
         }
-
 
     }
 }

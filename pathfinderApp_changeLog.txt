@@ -62,6 +62,11 @@
 5/28/2018
 - A new thread is created when the program is started to get all of the detailed skill information
 
+5/30/2018
+- A new task is created on character form start
+- Task gets the detailed skill information in the background
+- Once finished, the add skills button is enabled
+
 
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???

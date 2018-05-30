@@ -101,6 +101,7 @@
       <DependentUpon>CharacterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="clsResize.cs" />
+    <Compile Include="ExtensionMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill.cs" />
