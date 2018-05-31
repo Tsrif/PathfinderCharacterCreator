@@ -142,11 +142,7 @@ namespace PathfinderApp
             dexModList.Add(reflex_abilityMod_textbox);
             conModList.Add(fortitude_abilityMod_textbox);
             wisModList.Add(will_abilityMod_textbox);
-
-            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
-
-            //this.myThread.Start();
-
+            //Start task 
             StartSkillsTask();
 
             //_form_resize = new clsResize(this);
@@ -835,6 +831,7 @@ namespace PathfinderApp
             }
         }
 
+        //Returns a list of detailed skill data
         public List<Skills_Detail> GetSkillsData()
         {
             List<Skills_Detail> detailedList = new List<Skills_Detail>();
@@ -851,12 +848,14 @@ namespace PathfinderApp
                 {
                     //from a skill name, get the details for it 
                     json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/detail?name=" + askill.name);
+                    Console.WriteLine(json);
                     //Each single skill detail is held as a list, so I have to create a list to match that format
                     List<Skills_Detail> deserialSkill = (List<Skills_Detail>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<Skills_Detail>));
                     //Get first element in list and add it to the details list 
                     detailedList.Add(deserialSkill[0]);
                 }
             }
+            WriteJSONToFile(detailedList, "data", "DetailedSkills");
             //foreach (Skills_Detail detailedSkill in detailedList) {
             //    Console.WriteLine("Name: " +detailedSkill.name + "Stat: "+ detailedSkill.stat);
             //}
@@ -892,24 +891,36 @@ namespace PathfinderApp
             }
         }
 
-
+        //Task/thread calls this to get the skill data 
         public void GetSkillsDataThread()
         {
+            //Disable the addAllSkills button
             AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = false);
-            detailedSkills = GetSkillsData();
+            //Get the skills data from file if it exists 
+            string skillsLocation = "./data/DetailedSkills.json";
+            if (File.Exists(skillsLocation))
+            {
+                // read file into a string and deserialize JSON to a type
+                List<Skills_Detail> deserialSkill = JsonConvert.DeserializeObject<List<Skills_Detail>>(File.ReadAllText(skillsLocation));
+                for (int i = 0; i < deserialSkill.Count; i++)
+                {
+
+                    detailedSkills.Add(deserialSkill[i]);
+                }
+            }
+            //Or get from site 
+            else { detailedSkills = GetSkillsData(); }
+
+            //print
             Console.WriteLine("DETAILED SKILL DATA LOADED");
+            //Save skills to file
+            //Enable the skills buttons
             AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = true);
         }
 
         public void StartSkillsTask()
         {
-            
-            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
             Task task = Task.Factory.StartNew(this.GetSkillsDataThread);
-            //taskDone = task.IsCompleted; // See if you're done
-            //task.Wait(); // Block until you're done
-            //this.myThread.Start();
-           // AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = true);
         }
 
         #endregion
@@ -1086,6 +1097,21 @@ namespace PathfinderApp
             ////detailedSkills = GetSkillsData();
             CreateABunch(detailedSkills);
             AddAllSkills.Enabled = false;
+        }
+
+        private void WriteJSONToFile<T>(T genObject, string directory, string fileName)
+        {
+            //Create a directory called Characters if it doesn't exist
+            System.IO.Directory.CreateDirectory("./" + directory);
+            // serialize JSON to a string and then write string to a file
+            File.WriteAllText(@directory + "/" + fileName + ".json", JsonConvert.SerializeObject(genObject));
+
+            // serialize JSON directly to a file
+            using (StreamWriter file = File.CreateText(@directory + "/" + fileName + ".json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, genObject);
+            }
         }
 
     }

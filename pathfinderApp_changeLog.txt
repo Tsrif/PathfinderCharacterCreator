@@ -67,6 +67,8 @@
 - Task gets the detailed skill information in the background
 - Once finished, the add skills button is enabled
 
+- Created a method that when given an object and a location, can create json using the information from the object, and write to the given location 
+- If the detailed skills file already exists, then read data from that instead of pulling from site 
 
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
