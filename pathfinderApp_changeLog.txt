@@ -70,6 +70,15 @@
 - Created a method that when given an object and a location, can create json using the information from the object, and write to the given location 
 - If the detailed skills file already exists, then read data from that instead of pulling from site 
 
+
+6/8/2018
+- Detailed feat data is now pulled from API and saved to json file if the file doesn't already exist 
+- Add all skills button no longer exists 
+- Feat Panels are created in a similar fashion to the skills panels, create a feat panel based off the template feat panel, add that feat panel to a list, then place the panel beneath the last panel 
+- You can add a new feat by clicking "Add Feat" button, then a combo Box of all the feats we have will appear, then you select a feat from that list and a new feat panel will be created
+- Once a feat panel is created, you can select the button with 3 lines on it to bring up a panel with a description of the currently selected feat. 
+- Custom feat button doesn't work yet 
+
 /*SHIT TO DO*/
 - attack Bonus increases are manual for now???
 - ability mods should be labels?
@@ -81,5 +90,6 @@
 - Shorten skill names if they are too long 
 - add window resizing?
 - HP - Lethal vs NonLethal 
+- Skills panel needs to be slightly bigger 
 
 

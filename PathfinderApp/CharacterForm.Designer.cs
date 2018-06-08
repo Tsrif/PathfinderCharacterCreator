@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterForm));
             this.Character_TabControl = new MetroFramework.Controls.MetroTabControl();
             this.CharacterInfo_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.CharacterInfo_Panel = new MetroFramework.Controls.MetroPanel();
@@ -233,6 +234,16 @@
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.Feats_TabPage = new MetroFramework.Controls.MetroTabPage();
+            this.AllFeats_ComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.addNewFeat_Btn = new MetroFramework.Controls.MetroButton();
+            this.addCustomFeat_btn = new MetroFramework.Controls.MetroButton();
+            this.FeatDescription_panel = new MetroFramework.Controls.MetroPanel();
+            this.FeatDescription_textBox = new MetroFramework.Controls.MetroTextBox();
+            this.CloseFeatDescription_btn = new MetroFramework.Controls.MetroButton();
+            this.AllFeats_panel = new MetroFramework.Controls.MetroPanel();
+            this.FeatTemplate_panel = new MetroFramework.Controls.MetroPanel();
+            this.FeatTemplate_showDescription_btn = new MetroFramework.Controls.MetroButton();
+            this.FeatTemplate_Name_lbl = new MetroFramework.Controls.MetroLabel();
             this.Equipment_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.Spells_TabPage = new MetroFramework.Controls.MetroTabPage();
             this.SpecialAbilities_TabPage = new MetroFramework.Controls.MetroTabPage();
@@ -243,7 +254,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Dropdown_label = new MetroFramework.Controls.MetroLabel();
-            this.AddAllSkills = new MetroFramework.Controls.MetroButton();
             this.Character_TabControl.SuspendLayout();
             this.CharacterInfo_TabPage.SuspendLayout();
             this.CharacterInfo_Panel.SuspendLayout();
@@ -282,6 +292,10 @@
             this.Skills_TabPage.SuspendLayout();
             this.SkillsPage_Panel.SuspendLayout();
             this.SkillPanelTemplate.SuspendLayout();
+            this.Feats_TabPage.SuspendLayout();
+            this.FeatDescription_panel.SuspendLayout();
+            this.AllFeats_panel.SuspendLayout();
+            this.FeatTemplate_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.ctxMenu.SuspendLayout();
             this.SuspendLayout();
@@ -297,7 +311,7 @@
             this.Character_TabControl.Controls.Add(this.SpecialAbilities_TabPage);
             this.Character_TabControl.Location = new System.Drawing.Point(21, 97);
             this.Character_TabControl.Name = "Character_TabControl";
-            this.Character_TabControl.SelectedIndex = 0;
+            this.Character_TabControl.SelectedIndex = 3;
             this.Character_TabControl.Size = new System.Drawing.Size(436, 741);
             this.Character_TabControl.TabIndex = 61;
             this.Character_TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -4165,6 +4179,11 @@
             // 
             // Feats_TabPage
             // 
+            this.Feats_TabPage.Controls.Add(this.AllFeats_ComboBox);
+            this.Feats_TabPage.Controls.Add(this.addNewFeat_Btn);
+            this.Feats_TabPage.Controls.Add(this.addCustomFeat_btn);
+            this.Feats_TabPage.Controls.Add(this.AllFeats_panel);
+            this.Feats_TabPage.Controls.Add(this.FeatDescription_panel);
             this.Feats_TabPage.HorizontalScrollbarBarColor = true;
             this.Feats_TabPage.HorizontalScrollbarHighlightOnWheel = false;
             this.Feats_TabPage.HorizontalScrollbarSize = 10;
@@ -4176,6 +4195,152 @@
             this.Feats_TabPage.VerticalScrollbarBarColor = true;
             this.Feats_TabPage.VerticalScrollbarHighlightOnWheel = false;
             this.Feats_TabPage.VerticalScrollbarSize = 10;
+            // 
+            // AllFeats_ComboBox
+            // 
+            this.AllFeats_ComboBox.FormattingEnabled = true;
+            this.AllFeats_ComboBox.ItemHeight = 23;
+            this.AllFeats_ComboBox.Location = new System.Drawing.Point(194, 3);
+            this.AllFeats_ComboBox.Name = "AllFeats_ComboBox";
+            this.AllFeats_ComboBox.Size = new System.Drawing.Size(206, 29);
+            this.AllFeats_ComboBox.TabIndex = 3;
+            this.AllFeats_ComboBox.UseSelectable = true;
+            this.AllFeats_ComboBox.Visible = false;
+            this.AllFeats_ComboBox.SelectedIndexChanged += new System.EventHandler(this.AllFeats_ComboBox_SelectedIndexChanged);
+            // 
+            // addNewFeat_Btn
+            // 
+            this.addNewFeat_Btn.Location = new System.Drawing.Point(113, 8);
+            this.addNewFeat_Btn.Name = "addNewFeat_Btn";
+            this.addNewFeat_Btn.Size = new System.Drawing.Size(75, 23);
+            this.addNewFeat_Btn.TabIndex = 2;
+            this.addNewFeat_Btn.Text = "Add Feat";
+            this.addNewFeat_Btn.UseSelectable = true;
+            this.addNewFeat_Btn.Click += new System.EventHandler(this.addNewFeat_Btn_Click);
+            // 
+            // addCustomFeat_btn
+            // 
+            this.addCustomFeat_btn.Location = new System.Drawing.Point(22, 8);
+            this.addCustomFeat_btn.Name = "addCustomFeat_btn";
+            this.addCustomFeat_btn.Size = new System.Drawing.Size(75, 23);
+            this.addCustomFeat_btn.TabIndex = 3;
+            this.addCustomFeat_btn.Text = "Custom Feat";
+            this.addCustomFeat_btn.UseSelectable = true;
+            // 
+            // FeatDescription_panel
+            // 
+            this.FeatDescription_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FeatDescription_panel.Controls.Add(this.FeatDescription_textBox);
+            this.FeatDescription_panel.Controls.Add(this.CloseFeatDescription_btn);
+            this.FeatDescription_panel.HorizontalScrollbarBarColor = true;
+            this.FeatDescription_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.FeatDescription_panel.HorizontalScrollbarSize = 10;
+            this.FeatDescription_panel.Location = new System.Drawing.Point(3, 37);
+            this.FeatDescription_panel.Name = "FeatDescription_panel";
+            this.FeatDescription_panel.Size = new System.Drawing.Size(422, 630);
+            this.FeatDescription_panel.TabIndex = 3;
+            this.FeatDescription_panel.VerticalScrollbarBarColor = true;
+            this.FeatDescription_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.FeatDescription_panel.VerticalScrollbarSize = 10;
+            // 
+            // FeatDescription_textBox
+            // 
+            // 
+            // 
+            // 
+            this.FeatDescription_textBox.CustomButton.Image = null;
+            this.FeatDescription_textBox.CustomButton.Location = new System.Drawing.Point(2, 2);
+            this.FeatDescription_textBox.CustomButton.Name = "";
+            this.FeatDescription_textBox.CustomButton.Size = new System.Drawing.Size(195, 195);
+            this.FeatDescription_textBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.FeatDescription_textBox.CustomButton.TabIndex = 1;
+            this.FeatDescription_textBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.FeatDescription_textBox.CustomButton.UseSelectable = true;
+            this.FeatDescription_textBox.CustomButton.Visible = false;
+            this.FeatDescription_textBox.Lines = new string[] {
+        "Type Feat Description.."};
+            this.FeatDescription_textBox.Location = new System.Drawing.Point(95, 12);
+            this.FeatDescription_textBox.MaximumSize = new System.Drawing.Size(500, 500);
+            this.FeatDescription_textBox.MaxLength = 32767;
+            this.FeatDescription_textBox.MinimumSize = new System.Drawing.Size(200, 200);
+            this.FeatDescription_textBox.Multiline = true;
+            this.FeatDescription_textBox.Name = "FeatDescription_textBox";
+            this.FeatDescription_textBox.PasswordChar = '\0';
+            this.FeatDescription_textBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.FeatDescription_textBox.SelectedText = "";
+            this.FeatDescription_textBox.SelectionLength = 0;
+            this.FeatDescription_textBox.SelectionStart = 0;
+            this.FeatDescription_textBox.ShortcutsEnabled = true;
+            this.FeatDescription_textBox.Size = new System.Drawing.Size(200, 200);
+            this.FeatDescription_textBox.TabIndex = 4;
+            this.FeatDescription_textBox.Text = "Type Feat Description..";
+            this.FeatDescription_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FeatDescription_textBox.UseSelectable = true;
+            this.FeatDescription_textBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FeatDescription_textBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // CloseFeatDescription_btn
+            // 
+            this.CloseFeatDescription_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CloseFeatDescription_btn.BackgroundImage")));
+            this.CloseFeatDescription_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CloseFeatDescription_btn.Location = new System.Drawing.Point(3, 3);
+            this.CloseFeatDescription_btn.Name = "CloseFeatDescription_btn";
+            this.CloseFeatDescription_btn.Size = new System.Drawing.Size(57, 33);
+            this.CloseFeatDescription_btn.TabIndex = 2;
+            this.CloseFeatDescription_btn.UseSelectable = true;
+            this.CloseFeatDescription_btn.Click += new System.EventHandler(this.CloseFeatDescription_btn_Click);
+            // 
+            // AllFeats_panel
+            // 
+            this.AllFeats_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AllFeats_panel.Controls.Add(this.FeatTemplate_panel);
+            this.AllFeats_panel.HorizontalScrollbarBarColor = true;
+            this.AllFeats_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.AllFeats_panel.HorizontalScrollbarSize = 10;
+            this.AllFeats_panel.Location = new System.Drawing.Point(3, 37);
+            this.AllFeats_panel.Name = "AllFeats_panel";
+            this.AllFeats_panel.Size = new System.Drawing.Size(422, 630);
+            this.AllFeats_panel.TabIndex = 2;
+            this.AllFeats_panel.VerticalScrollbarBarColor = true;
+            this.AllFeats_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.AllFeats_panel.VerticalScrollbarSize = 10;
+            // 
+            // FeatTemplate_panel
+            // 
+            this.FeatTemplate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FeatTemplate_panel.Controls.Add(this.FeatTemplate_showDescription_btn);
+            this.FeatTemplate_panel.Controls.Add(this.FeatTemplate_Name_lbl);
+            this.FeatTemplate_panel.Enabled = false;
+            this.FeatTemplate_panel.HorizontalScrollbarBarColor = true;
+            this.FeatTemplate_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.FeatTemplate_panel.HorizontalScrollbarSize = 10;
+            this.FeatTemplate_panel.Location = new System.Drawing.Point(3, 5);
+            this.FeatTemplate_panel.Name = "FeatTemplate_panel";
+            this.FeatTemplate_panel.Size = new System.Drawing.Size(414, 43);
+            this.FeatTemplate_panel.TabIndex = 2;
+            this.FeatTemplate_panel.VerticalScrollbarBarColor = true;
+            this.FeatTemplate_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.FeatTemplate_panel.VerticalScrollbarSize = 10;
+            this.FeatTemplate_panel.Visible = false;
+            // 
+            // FeatTemplate_showDescription_btn
+            // 
+            this.FeatTemplate_showDescription_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FeatTemplate_showDescription_btn.BackgroundImage")));
+            this.FeatTemplate_showDescription_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FeatTemplate_showDescription_btn.Location = new System.Drawing.Point(317, 9);
+            this.FeatTemplate_showDescription_btn.Name = "FeatTemplate_showDescription_btn";
+            this.FeatTemplate_showDescription_btn.Size = new System.Drawing.Size(31, 27);
+            this.FeatTemplate_showDescription_btn.TabIndex = 3;
+            this.FeatTemplate_showDescription_btn.UseSelectable = true;
+            // 
+            // FeatTemplate_Name_lbl
+            // 
+            this.FeatTemplate_Name_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FeatTemplate_Name_lbl.Location = new System.Drawing.Point(14, 9);
+            this.FeatTemplate_Name_lbl.Name = "FeatTemplate_Name_lbl";
+            this.FeatTemplate_Name_lbl.Size = new System.Drawing.Size(131, 27);
+            this.FeatTemplate_Name_lbl.TabIndex = 2;
+            this.FeatTemplate_Name_lbl.Text = "Feat Name";
             // 
             // Equipment_TabPage
             // 
@@ -4273,23 +4438,11 @@
             this.Menu_Dropdown_label.MouseEnter += new System.EventHandler(this.Menu_Dropdown_label_MouseEnter);
             this.Menu_Dropdown_label.MouseLeave += new System.EventHandler(this.Menu_Dropdown_label_MouseLeave);
             // 
-            // AddAllSkills
-            // 
-            this.AddAllSkills.Location = new System.Drawing.Point(357, 63);
-            this.AddAllSkills.Name = "AddAllSkills";
-            this.AddAllSkills.Size = new System.Drawing.Size(93, 26);
-            this.AddAllSkills.TabIndex = 67;
-            this.AddAllSkills.Text = "Add All";
-            this.AddAllSkills.UseSelectable = true;
-            this.AddAllSkills.Visible = false;
-            this.AddAllSkills.Click += new System.EventHandler(this.AddAllSkills_Click);
-            // 
             // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 804);
-            this.Controls.Add(this.AddAllSkills);
             this.Controls.Add(this.Menu_Dropdown_label);
             this.Controls.Add(this.Character_TabControl);
             this.ForeColor = System.Drawing.Color.LightGray;
@@ -4359,6 +4512,10 @@
             this.SkillsPage_Panel.PerformLayout();
             this.SkillPanelTemplate.ResumeLayout(false);
             this.SkillPanelTemplate.PerformLayout();
+            this.Feats_TabPage.ResumeLayout(false);
+            this.FeatDescription_panel.ResumeLayout(false);
+            this.AllFeats_panel.ResumeLayout(false);
+            this.FeatTemplate_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ctxMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -4579,8 +4736,17 @@
         private MetroFramework.Controls.MetroLabel TotalBonusTemplate;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroPanel SkillsPage_Panel;
-        private MetroFramework.Controls.MetroButton AddAllSkills;
         private MetroFramework.Controls.MetroLabel metroLabel21;
+        private MetroFramework.Controls.MetroButton addCustomFeat_btn;
+        private MetroFramework.Controls.MetroButton addNewFeat_Btn;
+        private MetroFramework.Controls.MetroPanel AllFeats_panel;
+        private MetroFramework.Controls.MetroPanel FeatTemplate_panel;
+        private MetroFramework.Controls.MetroLabel FeatTemplate_Name_lbl;
+        private MetroFramework.Controls.MetroPanel FeatDescription_panel;
+        private MetroFramework.Controls.MetroButton CloseFeatDescription_btn;
+        private MetroFramework.Controls.MetroTextBox FeatDescription_textBox;
+        private MetroFramework.Controls.MetroButton FeatTemplate_showDescription_btn;
+        private MetroFramework.Controls.MetroComboBox AllFeats_ComboBox;
     }
 }
 

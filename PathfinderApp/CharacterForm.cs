@@ -23,12 +23,17 @@ namespace PathfinderApp
 
     public partial class CharacterForm : MetroFramework.Forms.MetroForm
     {
-        //Create new charactet Object
+        //Create new character Object
         Character character = new Character();
         //Create a list of detailed skills
         List<Skills_Detail> detailedSkills = new List<Skills_Detail>();
+        //Create a list of detailed feats
+        List<Feat_Detail> detailedFeats = new List<Feat_Detail>();
+
         //create a list of the skill panels
         List<MetroFramework.Controls.MetroPanel> list_skillsPanels = new List<MetroFramework.Controls.MetroPanel>();
+        //create a list of the skill panels
+        List<MetroFramework.Controls.MetroPanel> list_featsPanels = new List<MetroFramework.Controls.MetroPanel>();
         //Create dictionary of slow EPT
         Dictionary<string, string> slow = new Dictionary<string, string>
         {
@@ -144,6 +149,8 @@ namespace PathfinderApp
             wisModList.Add(will_abilityMod_textbox);
             //Start task 
             StartSkillsTask();
+            //Start task
+            StartFeatsTask();
 
             //_form_resize = new clsResize(this);
             //this.Load += _Load;
@@ -377,14 +384,7 @@ namespace PathfinderApp
 
         private void Character_TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Character_TabControl.SelectedIndex == 2)
-            {
-                AddAllSkills.Visible = true;
-            }
-            else if (Character_TabControl.SelectedIndex != 2)
-            {
-                AddAllSkills.Visible = false;
-            }
+
         }
 
         /*ABILITY MOD VALUES CHANGED*/
@@ -618,6 +618,8 @@ namespace PathfinderApp
         #endregion
 
         #region OTHER FUNCTIONS
+
+        //Creates a single skill panel 
         public void CreateSkillPanel(Skill skill)
         {
             MetroFramework.Controls.MetroPanel skill_panel = new MetroFramework.Controls.MetroPanel();
@@ -803,14 +805,15 @@ namespace PathfinderApp
             SetModType(abilityType_label, AbilityMod_label);
 
 
-
+            //Add skill panel to list 
             list_skillsPanels.Add(skill_panel);
 
+            //Add skill panel to skillsPage 
             SkillsPage_Panel.Controls.Add(skill_panel);
         }
 
-        //Create all the skills using the information from the detailed skills list 
-        public void CreateABunch(List<Skills_Detail> aBunchOSkills)
+        //Create all the skills panels using the information from the detailed skills list 
+        public void CreateABunchOfSkills(List<Skills_Detail> aBunchOSkills)
         {
             foreach (Skills_Detail dSkill in aBunchOSkills)
             {
@@ -820,7 +823,8 @@ namespace PathfinderApp
             }
 
         }
-        //Places all of the skill panelsi
+
+        //Places all of the skill panels
         public void PlaceSkillPanels()
         {
             //Don't place the first one 
@@ -848,7 +852,7 @@ namespace PathfinderApp
                 {
                     //from a skill name, get the details for it 
                     json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/skills/detail?name=" + askill.name);
-                    Console.WriteLine(json);
+                    //Console.WriteLine(json);
                     //Each single skill detail is held as a list, so I have to create a list to match that format
                     List<Skills_Detail> deserialSkill = (List<Skills_Detail>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<Skills_Detail>));
                     //Get first element in list and add it to the details list 
@@ -894,8 +898,6 @@ namespace PathfinderApp
         //Task/thread calls this to get the skill data 
         public void GetSkillsDataThread()
         {
-            //Disable the addAllSkills button
-            AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = false);
             //Get the skills data from file if it exists 
             string skillsLocation = "./data/DetailedSkills.json";
             if (File.Exists(skillsLocation))
@@ -907,17 +909,22 @@ namespace PathfinderApp
 
                     detailedSkills.Add(deserialSkill[i]);
                 }
+                //print
+                Console.WriteLine("DETAILED SKILL DATA LOADED FROM FILE");
             }
             //Or get from site 
-            else { detailedSkills = GetSkillsData(); }
+            else
+            {
+                detailedSkills = GetSkillsData();
+                //print
+                Console.WriteLine("DETAILED SKILL DATA LOADED FROM API");
+            }
 
-            //print
-            Console.WriteLine("DETAILED SKILL DATA LOADED");
             //Save skills to file
             //Enable the skills buttons
-            AddAllSkills.SafeInvoke(d => AddAllSkills.Enabled = true);
+            SkillsPage_Panel.SafeInvoke(d => CreateABunchOfSkills(detailedSkills));
         }
-
+        //Start a task/thread to get the skills data
         public void StartSkillsTask()
         {
             Task task = Task.Factory.StartNew(this.GetSkillsDataThread);
@@ -956,8 +963,6 @@ namespace PathfinderApp
         {
             burrowSpeed_squares_label.Text = ConvertSpeedToFeet(burrowSpeed_feet_textbox.Text);
         }
-
-
 
         #endregion
 
@@ -1066,7 +1071,8 @@ namespace PathfinderApp
 
         private void will_abilityMod_textbox_TextChanged(object sender, EventArgs e)
         {
-            will_abilityMod_textbox.Text = wis_abilitymodifier_textbox.Text.Replace("+", ""); ;
+            //Remove the + sign 
+            will_abilityMod_textbox.Text = wis_abilitymodifier_textbox.Text.Replace("+", "");
             CalculateWillSaves();
         }
 
@@ -1089,16 +1095,186 @@ namespace PathfinderApp
 
         #endregion
 
-        private void AddAllSkills_Click(object sender, EventArgs e)
-        {
-            //myThread = new Thread(new ThreadStart(this.GetSkillsDataThread));
+        #region Feat Functions
 
-            //this.myThread.Start();
-            ////detailedSkills = GetSkillsData();
-            CreateABunch(detailedSkills);
-            AddAllSkills.Enabled = false;
+        public void CreateFeatPanel(Feat feat)
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterForm));
+            MetroFramework.Controls.MetroPanel Feat_panel = new MetroFramework.Controls.MetroPanel();
+            MetroFramework.Controls.MetroLabel Feat_Name_lbl = new MetroFramework.Controls.MetroLabel();
+            MetroFramework.Controls.MetroButton Feat_showDescription_btn = new MetroFramework.Controls.MetroButton();
+
+
+
+
+            // 
+            // Feat_panel
+            // 
+            Feat_panel.BorderStyle = FeatTemplate_panel.BorderStyle;
+            Feat_panel.Controls.Add(Feat_showDescription_btn);
+            Feat_panel.Controls.Add(Feat_Name_lbl);
+            Feat_panel.HorizontalScrollbarBarColor = FeatTemplate_panel.HorizontalScrollbarBarColor;
+            Feat_panel.HorizontalScrollbarHighlightOnWheel = FeatTemplate_panel.HorizontalScrollbarHighlightOnWheel;
+            Feat_panel.HorizontalScrollbarSize = FeatTemplate_panel.HorizontalScrollbarSize;
+            Feat_panel.Location = FeatTemplate_panel.Location;
+            Feat_panel.Name = "Feat_panel";
+            Feat_panel.Size = FeatTemplate_panel.Size;
+            Feat_panel.TabIndex = FeatTemplate_panel.TabIndex;
+            Feat_panel.VerticalScrollbarBarColor = FeatTemplate_panel.VerticalScrollbarBarColor;
+            Feat_panel.VerticalScrollbarHighlightOnWheel = FeatTemplate_panel.VerticalScrollbarHighlightOnWheel;
+            Feat_panel.VerticalScrollbarSize = FeatTemplate_panel.VerticalScrollbarSize;
+            Feat_panel.Controls.Add(Feat_Name_lbl);
+            Feat_panel.Controls.Add(Feat_showDescription_btn);
+            Feat_panel.Theme = MetroFramework.MetroThemeStyle.Dark;
+
+
+
+            // 
+            // FeatTemplate_Name_lbl
+            // 
+            Feat_Name_lbl.BorderStyle = FeatTemplate_Name_lbl.BorderStyle;
+            Feat_Name_lbl.Location = FeatTemplate_Name_lbl.Location;
+            Feat_Name_lbl.Name = "Feat_Name_lbl";
+            Feat_Name_lbl.Size = FeatTemplate_Name_lbl.Size;
+            Feat_Name_lbl.TabIndex = FeatTemplate_Name_lbl.TabIndex;
+            Feat_Name_lbl.Text = "Feat Name";
+
+            Feat_Name_lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+
+
+            //
+            // showDescription_btn
+            //
+            Feat_showDescription_btn.BackgroundImage = FeatTemplate_showDescription_btn.BackgroundImage;
+            Feat_showDescription_btn.BackgroundImageLayout = FeatTemplate_showDescription_btn.BackgroundImageLayout;
+            Feat_showDescription_btn.Location = FeatTemplate_showDescription_btn.Location;
+            Feat_showDescription_btn.Name = "showDescription_btn";
+            Feat_showDescription_btn.Size = FeatTemplate_showDescription_btn.Size;
+            Feat_showDescription_btn.TabIndex = FeatTemplate_showDescription_btn.TabIndex;
+            Feat_showDescription_btn.UseSelectable = FeatTemplate_showDescription_btn.UseSelectable;
+            Feat_showDescription_btn.Click += (sender, EventArgs) => { FeatTemplate_showDescription_btn_Click(sender, EventArgs, feat.description); };
+            Feat_Name_lbl.Text = feat.featName;
+            Feat_Name_lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+
+
+            Feat_panel.SuspendLayout();
+            AllFeats_panel.Controls.Add(Feat_panel);
+            Feat_panel.ResumeLayout(false);
+            list_featsPanels.Add(Feat_panel);
         }
 
+        //Create all the skills panels using the information from the detailed skills list 
+        public void CreateABunchOfFeats(List<Feat_Detail> aBunchOfFeats)
+        {
+            foreach (Feat_Detail dFeat in aBunchOfFeats)
+            {
+                Feat aFeat = new Feat(dFeat.name, dFeat.description);
+                CreateFeatPanel(aFeat);
+                PlaceFeatPanels();
+            }
+        }
+
+        public void AddFeatInfoToComboBox(List<Feat_Detail> aBunchOfFeats)
+        {
+            foreach (Feat_Detail dFeat in aBunchOfFeats)
+            {
+                Feat aFeat = new Feat(dFeat.name, dFeat.description);
+                AllFeats_ComboBox.Items.Add(aFeat.featName);
+            }
+
+        }
+
+        //Places all of the Feat panels
+        public void PlaceFeatPanels()
+        {
+            //Don't place the first one 
+            if (list_featsPanels.Count > 1)
+            {
+                Point newLocation = new Point(list_featsPanels[list_featsPanels.Count - 2].Location.X, list_featsPanels[list_featsPanels.Count - 2].Location.Y + 41);
+                list_featsPanels[list_featsPanels.Count - 1].Location = newLocation;
+            }
+        }
+
+
+
+        //Start a task/thread to get the feat data
+        public void StartFeatsTask()
+        {
+            Task task = Task.Factory.StartNew(this.GetFeatDataThread);
+        }
+
+        //Task/thread calls this to get the feat data 
+        public void GetFeatDataThread()
+        {
+            //Turn off add button 
+            addNewFeat_Btn.SafeInvoke(d => addNewFeat_Btn.Enabled = false);
+            //Get the skills data from file if it exists 
+            string skillsLocation = "./data/DetailedFeats.json";
+            if (File.Exists(skillsLocation))
+            {
+                // read file into a string and deserialize JSON to a type
+                List<Feat_Detail> deserialFeat = JsonConvert.DeserializeObject<List<Feat_Detail>>(File.ReadAllText(skillsLocation));
+                for (int i = 0; i < deserialFeat.Count; i++)
+                {
+
+                    detailedFeats.Add(deserialFeat[i]);
+                }
+                //print
+                Console.WriteLine("DETAILED FEAT DATA LOADED FROM FILE");
+            }
+            //Or get from site 
+            else
+            {
+                detailedFeats = GetFeatData();
+                Console.WriteLine("DETAILED FEAT DATA LOADED FROM API");
+            }
+
+            //Turn on add button 
+            addNewFeat_Btn.SafeInvoke(d => addNewFeat_Btn.Enabled = true);
+            //Add all feats to the comboBox
+            Feats_TabPage.SafeInvoke(d => AddFeatInfoToComboBox(detailedFeats));
+        }
+
+        //Returns a list of detailed feat data
+        public List<Feat_Detail> GetFeatData()
+        {
+            List<Feat_Detail> detailedList = new List<Feat_Detail>();
+            //Create a list of ASkill objects from the string from the skills site
+            using (WebClient webClient = new System.Net.WebClient())
+            {
+                WebClient n = new WebClient();
+                //Get all skill names 
+                var json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/feats/all");
+                string valueOriginal = Convert.ToString(json);
+                //Create a list of all skill names
+                List<AFeat> myDeserializedObjList = (List<AFeat>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<AFeat>));
+                foreach (AFeat afeat in myDeserializedObjList)
+                {
+                    //from a skill name, get the details for it 
+                    json = n.DownloadString("https://pathfinder-lookup.herokuapp.com/feats/detail?name=" + afeat.name);
+                    //Console.WriteLine(json);
+                    //Each single skill detail is held as a list, so I have to create a list to match that format
+                    List<Feat_Detail> deserialFeat = (List<Feat_Detail>)Newtonsoft.Json.JsonConvert.DeserializeObject(json, typeof(List<Feat_Detail>));
+                    //Get first element in list and add it to the details list 
+                    detailedList.Add(deserialFeat[0]);
+                }
+            }
+            WriteJSONToFile(detailedList, "data", "DetailedFeats");
+            //foreach (Skills_Detail detailedSkill in detailedList) {
+            //    Console.WriteLine("Name: " +detailedSkill.name + "Stat: "+ detailedSkill.stat);
+            //}
+            return detailedList;
+        }
+
+
+
+
+        #endregion
+
+        /*
+         * Method that accepts generic objects, the directory you're putting it in, and the file name. 
+         * And then takes everything from that object and writes it to the location as a json file 
+         */
         private void WriteJSONToFile<T>(T genObject, string directory, string fileName)
         {
             //Create a directory called Characters if it doesn't exist
@@ -1114,6 +1290,33 @@ namespace PathfinderApp
             }
         }
 
+        private void CloseFeatDescription_btn_Click(object sender, EventArgs e)
+        {
+            FeatDescription_panel.SendToBack();
+            //AllFeats_panel.BringToFront();
+            FeatDescription_panel.Hide();
+        }
+
+        private void FeatTemplate_showDescription_btn_Click(object sender, EventArgs e, String description)
+        {
+            //AllFeats_panel.SendToBack();
+            FeatDescription_panel.BringToFront();
+            FeatDescription_panel.Show();
+            FeatDescription_textBox.Text = description;
+        }
+
+        private void addNewFeat_Btn_Click(object sender, EventArgs e)
+        {
+            AllFeats_ComboBox.Show();
+        }
+
+        private void AllFeats_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Feat newFeat = new Feat(detailedFeats[AllFeats_ComboBox.SelectedIndex].name, detailedFeats[AllFeats_ComboBox.SelectedIndex].description);
+            CreateFeatPanel(newFeat);
+            PlaceFeatPanels();
+            AllFeats_ComboBox.Hide();
+        }
     }
 }
 
